@@ -1,6 +1,6 @@
-﻿namespace HCI
+﻿namespace HCI.Forms
 {
-    partial class Form1
+    partial class RootForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // RootForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(0, 0);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Location = new System.Drawing.Point(-99, -99);
+            this.Name = "RootForm";
+            this.Opacity = 0D;
+            this.ShowInTaskbar = false;
+            this.Text = "RootForm";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

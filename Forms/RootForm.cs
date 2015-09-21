@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace HCI
+//using HCI.Forms.Foundation;
+
+namespace HCI.Forms
 {
-    public partial class Form1 : Form
+    public partial class RootForm : Form
     {
-        public Form1()
+        public RootForm()
         {
             InitializeComponent();
+            //new LoginForm(this).Show();
         }
     }
 }
