@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-//using HCI.Forms.Foundation;
-
 namespace HCI.Forms
 {
     public partial class RootForm : Form
@@ -16,7 +14,9 @@ namespace HCI.Forms
         public RootForm()
         {
             InitializeComponent();
-            new LoginForm(this).Show();
+            LoginForm form = new LoginForm(this);
+            form.Show();
+            form.UpdateNavigation("Login");
         }
     }
 }

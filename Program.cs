@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-using HCI.Forms;
-
 namespace HCI
 {
     static class Program
@@ -17,7 +15,7 @@ namespace HCI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RootForm());
+            Application.Run(new HCI.Forms.RootForm());
         }
     }
 }
