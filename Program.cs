@@ -13,9 +13,14 @@ namespace HCI
         [STAThread]
         static void Main()
         {
+            // Enforce DPI awareness from user32.dll
+            if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new HCI.Forms.RootForm());
         }
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
     }
 }
