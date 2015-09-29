@@ -14,9 +14,8 @@ namespace HCI.Forms
         public RootForm()
         {
             InitializeComponent();
-            LoginForm form = new LoginForm(this);
+            LoginForm form = new LoginForm(this, null);
             form.Show();
-            form.UpdateNavigation("Login");
         }
     }
 }

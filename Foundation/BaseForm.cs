@@ -19,6 +19,11 @@ namespace HCI.Foundation
             get;
             set;
         }
+        public BaseForm Prev
+        {
+            get;
+            set;
+        }
         private DropShadow Shadow;
 
         public BaseForm()
@@ -81,10 +86,28 @@ namespace HCI.Foundation
          *     public methods    *
         \* * * * * * * * * * * * */
 
-        // method for setting navigation
-        public void UpdateNavigation(string Title, bool Backable = false)
+        // init necessary attributes
+        public void InitializeAttribute(RootForm root, BaseForm prev)
         {
-            BaseNavigationText.Text = (Backable ? "‹  " : "") + Title;
+            Root = root;
+            Prev = prev;
+            // hide previous form for backing
+            if (Prev != null)
+                Prev.Hide();
+        }
+
+        // method for setting navigation
+        public void UpdateNavigation(string Title)
+        {
+            BaseNavigationText.Text = (Prev != null ? "‹  " : "") + Title;
+            if (Prev != null)
+            {
+                BaseNavigationText.Click += (sender, e) =>
+                {
+                    Prev.Show();
+                    this.Close();
+                };
+            }
         }
 
     }

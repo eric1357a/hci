@@ -11,19 +11,13 @@ using HCI.Foundation;
 
 namespace HCI.Forms
 {
-    public partial class LoginForm : BaseForm
+    public partial class MainMenuForm : BaseForm
     {
-        public LoginForm(RootForm root, BaseForm prev)
+        public MainMenuForm(RootForm root, BaseForm prev = null)
         {
             InitializeComponent();
             InitializeAttribute(root, prev);
-            UpdateNavigation("Login");
-        }
-
-        private void LoginButtonLogin_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            new MainMenuForm(Root, null).Show();
+            UpdateNavigation("Menu");
         }
     }
 }

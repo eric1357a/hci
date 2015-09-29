@@ -147,6 +147,7 @@
             // BaseNavigationText
             // 
             this.BaseNavigationText.ActiveLinkColor = System.Drawing.Color.MediumPurple;
+            this.BaseNavigationText.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(13)))));
             this.BaseNavigationText.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BaseNavigationText.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.BaseNavigationText.ForeColor = System.Drawing.Color.White;
