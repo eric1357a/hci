@@ -7,23 +7,19 @@
 ## Work撈 distribu純
 
 S
-> View Course Detail
->
-> Membership System
+- [x] Build template
+- [ ] View Course Detail
+- [ ] Membership System
 
 E
-> Main & Staff Menu
->
-> Promotions
+- [ ] Main & Staff Menu
+- [ ] Promotions
 
 K
-> Login 分唇
->
-> Search 分唇
->
-> Administrative 分唇
+- [ ] Login 分唇
+- [ ] Search 分唇
+- [ ] Administrative 分唇
 
 C
-> Course registration
-> 
-> 入聲
+- [ ] Course registration
+- [ ] 入聲
