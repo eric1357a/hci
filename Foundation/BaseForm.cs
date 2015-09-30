@@ -14,21 +14,13 @@ namespace HCI.Foundation
 {
     public partial class BaseForm : Form
     {
-        public RootForm Root
-        {
-            get;
-            set;
-        }
-        public BaseForm Prev
-        {
-            get;
-            set;
-        }
+        public BaseForm Prev { get; set; }
         private DropShadow Shadow;
 
         public BaseForm()
         {
             InitializeComponent();
+            Initialize();
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -74,7 +66,7 @@ namespace HCI.Foundation
 
         private void BaseButtonCloseWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Root.Close();
+            Program.Root.Close();
         }
 
         private void BaseButtonHideWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -82,24 +74,15 @@ namespace HCI.Foundation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        /* * * * * * * * * * * * *\
-         *     public methods    *
-        \* * * * * * * * * * * * */
-
-        // init necessary attributes
-        public void InitializeAttribute(RootForm root, BaseForm prev)
+        private void Initialize()
         {
-            Root = root;
-            Prev = prev;
             // hide previous form for backing
             if (Prev != null)
                 Prev.Hide();
-        }
 
-        // method for setting navigation
-        public void UpdateNavigation(string Title)
-        {
-            BaseNavigationText.Text = (Prev != null ? "‹  " : "") + Title;
+            // update title and add delegate if backable
+            string title = (Prev != null ? "‹  " : "") + BaseNavigationText.Text;
+            BaseNavigationText.Text = title;
             if (Prev != null)
             {
                 BaseNavigationText.Click += (sender, e) =>
@@ -110,5 +93,8 @@ namespace HCI.Foundation
             }
         }
 
+        /* * * * * * * * * * * * *\
+         *     public methods    *
+        \* * * * * * * * * * * * */
     }
 }

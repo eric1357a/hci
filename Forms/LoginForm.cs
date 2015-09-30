@@ -13,17 +13,15 @@ namespace HCI.Forms
 {
     public partial class LoginForm : BaseForm
     {
-        public LoginForm(RootForm root, BaseForm prev)
+        public LoginForm()
         {
             InitializeComponent();
-            InitializeAttribute(root, prev);
-            UpdateNavigation("Login");
         }
 
-        private void LoginButtonLogin_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            new MainMenuForm(Root, null).Show();
+            new MainMenuForm() { Prev = null }.Show();
         }
     }
 }

@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
+using HCI.Forms;
+
 namespace HCI
 {
     static class Program
     {
+        public static RootForm Root;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -17,7 +21,8 @@ namespace HCI
             if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HCI.Forms.RootForm());
+            Root = new HCI.Forms.RootForm();
+            Application.Run(Root);
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

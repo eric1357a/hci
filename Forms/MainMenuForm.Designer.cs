@@ -31,6 +31,14 @@
             this.MainMenuControlsWrapper = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
+            // BaseNavigationText
+            // 
+            this.BaseNavigationText.Text = "Menu";
+            // 
+            // BaseContentPanel
+            // 
+            this.BaseContentPanel.Size = new System.Drawing.Size(640, 360);
+            // 
             // MainMenuControlsWrapper
             // 
             this.MainMenuControlsWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -48,6 +56,7 @@
             this.Controls.Add(this.MainMenuControlsWrapper);
             this.Name = "MainMenuForm";
             this.Text = "MainMenuForm";
+            this.Controls.SetChildIndex(this.BaseContentPanel, 0);
             this.Controls.SetChildIndex(this.MainMenuControlsWrapper, 0);
             this.ResumeLayout(false);
             this.PerformLayout();

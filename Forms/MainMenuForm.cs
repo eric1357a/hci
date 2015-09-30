@@ -13,11 +13,9 @@ namespace HCI.Forms
 {
     public partial class MainMenuForm : BaseForm
     {
-        public MainMenuForm(RootForm root, BaseForm prev = null)
+        public MainMenuForm()
         {
             InitializeComponent();
-            InitializeAttribute(root, prev);
-            UpdateNavigation("Menu");
         }
     }
 }

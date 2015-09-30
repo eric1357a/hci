@@ -36,6 +36,7 @@
             this.BaseMenuActions = new System.Windows.Forms.Panel();
             this.BaseNavigation = new System.Windows.Forms.Panel();
             this.BaseNavigationText = new System.Windows.Forms.LinkLabel();
+            this.BaseContentPanel = new System.Windows.Forms.Panel();
             this.BaseTable.SuspendLayout();
             this.BaseWindowBar.SuspendLayout();
             this.BaseHeader.SuspendLayout();
@@ -56,7 +57,7 @@
             this.BaseTable.RowCount = 2;
             this.BaseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.BaseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.BaseTable.Size = new System.Drawing.Size(600, 80);
+            this.BaseTable.Size = new System.Drawing.Size(480, 80);
             this.BaseTable.TabIndex = 0;
             // 
             // BaseWindowBar
@@ -69,7 +70,7 @@
             this.BaseWindowBar.Location = new System.Drawing.Point(0, 0);
             this.BaseWindowBar.Margin = new System.Windows.Forms.Padding(0);
             this.BaseWindowBar.Name = "BaseWindowBar";
-            this.BaseWindowBar.Size = new System.Drawing.Size(600, 36);
+            this.BaseWindowBar.Size = new System.Drawing.Size(480, 36);
             this.BaseWindowBar.TabIndex = 0;
             this.BaseWindowBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BaseWindowActions_MouseDown);
             // 
@@ -80,7 +81,7 @@
             this.BaseButtonHideWindow.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.BaseButtonHideWindow.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.BaseButtonHideWindow.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.BaseButtonHideWindow.Location = new System.Drawing.Point(526, 0);
+            this.BaseButtonHideWindow.Location = new System.Drawing.Point(406, 0);
             this.BaseButtonHideWindow.Margin = new System.Windows.Forms.Padding(0);
             this.BaseButtonHideWindow.Name = "BaseButtonHideWindow";
             this.BaseButtonHideWindow.Size = new System.Drawing.Size(37, 36);
@@ -97,7 +98,7 @@
             this.BaseButtonCloseWindow.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.BaseButtonCloseWindow.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.BaseButtonCloseWindow.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.BaseButtonCloseWindow.Location = new System.Drawing.Point(563, 0);
+            this.BaseButtonCloseWindow.Location = new System.Drawing.Point(443, 0);
             this.BaseButtonCloseWindow.Margin = new System.Windows.Forms.Padding(0);
             this.BaseButtonCloseWindow.Name = "BaseButtonCloseWindow";
             this.BaseButtonCloseWindow.Size = new System.Drawing.Size(37, 36);
@@ -121,7 +122,7 @@
             this.BaseHeader.Name = "BaseHeader";
             this.BaseHeader.RowCount = 1;
             this.BaseHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.BaseHeader.Size = new System.Drawing.Size(600, 44);
+            this.BaseHeader.Size = new System.Drawing.Size(480, 44);
             this.BaseHeader.TabIndex = 2;
             // 
             // BaseMenuActions
@@ -131,7 +132,7 @@
             this.BaseMenuActions.Location = new System.Drawing.Point(267, 0);
             this.BaseMenuActions.Margin = new System.Windows.Forms.Padding(0);
             this.BaseMenuActions.Name = "BaseMenuActions";
-            this.BaseMenuActions.Size = new System.Drawing.Size(333, 44);
+            this.BaseMenuActions.Size = new System.Drawing.Size(213, 44);
             this.BaseMenuActions.TabIndex = 0;
             // 
             // BaseNavigation
@@ -160,15 +161,25 @@
             this.BaseNavigationText.Size = new System.Drawing.Size(267, 44);
             this.BaseNavigationText.TabIndex = 0;
             this.BaseNavigationText.TabStop = true;
-            this.BaseNavigationText.Text = "navigation";
+            this.BaseNavigationText.Text = "Title";
             this.BaseNavigationText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // BaseContentPanel
+            // 
+            this.BaseContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BaseContentPanel.Location = new System.Drawing.Point(0, 80);
+            this.BaseContentPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.BaseContentPanel.Name = "BaseContentPanel";
+            this.BaseContentPanel.Size = new System.Drawing.Size(480, 240);
+            this.BaseContentPanel.TabIndex = 1;
             // 
             // BaseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(600, 360);
+            this.ClientSize = new System.Drawing.Size(480, 320);
+            this.Controls.Add(this.BaseContentPanel);
             this.Controls.Add(this.BaseTable);
             this.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
@@ -198,7 +209,8 @@
         private System.Windows.Forms.Panel BaseNavigation;
         private System.Windows.Forms.LinkLabel BaseButtonCloseWindow;
         private System.Windows.Forms.LinkLabel BaseButtonHideWindow;
-        private System.Windows.Forms.LinkLabel BaseNavigationText;
+        public System.Windows.Forms.LinkLabel BaseNavigationText;
+        public System.Windows.Forms.Panel BaseContentPanel;
 
 
 
