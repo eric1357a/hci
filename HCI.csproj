@@ -65,6 +65,12 @@
     <Compile Include="Forms\RootForm.Designer.cs">
       <DependentUpon>RootForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SMainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SMainMenuForm.Designer.cs">
+      <DependentUpon>SMainMenuForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Foundation\BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SMainMenuForm.resx">
+      <DependentUpon>SMainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Foundation\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
