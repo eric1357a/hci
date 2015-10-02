@@ -1,6 +1,6 @@
 ﻿namespace HCI.Forms
 {
-    partial class SMainMenuForm
+    partial class StaffMenuForm
     {
         /// <summary>
         /// Required designer variable.

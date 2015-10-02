@@ -8,15 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using HCI.Foundation;
 
-
 namespace HCI.Forms
 {
     //TODO List: Registration function
     //            Change the amount of the discounts
     //            Set the profit margin
-    public partial class SMainMenuForm : BaseForm
+    public partial class StaffMenuForm : BaseForm
     {
-        public SMainMenuForm()
+        public StaffMenuForm()
         {
             InitializeComponent();
         }

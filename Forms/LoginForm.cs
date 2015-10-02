@@ -21,7 +21,10 @@ namespace HCI.Forms
         private void LoginButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            new MainMenuForm() { Prev = null }.Show();
+            if (1 + 1 == 2)
+              new MainMenuForm() { Prev = null }.Show();
+            else
+              new StaffMenuForm() { Prev = null }.Show();
         }
     }
 }
