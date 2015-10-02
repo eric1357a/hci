@@ -47,6 +47,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CourseRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CourseRegistration.Designer.cs">
+      <DependentUpon>CourseRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,8 +89,12 @@
     <Compile Include="Foundation\DropShadow.Designer.cs">
       <DependentUpon>DropShadow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CourseCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CourseRegistration.resx">
+      <DependentUpon>CourseRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

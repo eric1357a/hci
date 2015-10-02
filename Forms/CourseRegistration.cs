@@ -6,15 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using HCI.Foundation;
+using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class RootForm : Form
+    public partial class CourseRegistration : BaseForm
     {
-        public RootForm()
+        public CourseRegistration()
         {
             InitializeComponent();
-            new CourseRegistration() { Prev = null }.Show();
         }
     }
 }

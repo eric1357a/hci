@@ -47,6 +47,7 @@
             this.BaseContentPanel.Controls.Add(this.LoginUsername);
             this.BaseContentPanel.Controls.Add(this.LoginLabelPassword);
             this.BaseContentPanel.Controls.Add(this.LoginLabelUsername);
+            this.BaseContentPanel.Size = new System.Drawing.Size(480, 220);
             // 
             // LoginLabelUsername
             // 
@@ -55,7 +56,7 @@
             this.LoginLabelUsername.Location = new System.Drawing.Point(89, 39);
             this.LoginLabelUsername.Margin = new System.Windows.Forms.Padding(0);
             this.LoginLabelUsername.Name = "LoginLabelUsername";
-            this.LoginLabelUsername.Size = new System.Drawing.Size(86, 20);
+            this.LoginLabelUsername.Size = new System.Drawing.Size(107, 25);
             this.LoginLabelUsername.TabIndex = 0;
             this.LoginLabelUsername.Text = "Username";
             this.LoginLabelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -67,7 +68,7 @@
             this.LoginLabelPassword.Location = new System.Drawing.Point(89, 83);
             this.LoginLabelPassword.Margin = new System.Windows.Forms.Padding(0);
             this.LoginLabelPassword.Name = "LoginLabelPassword";
-            this.LoginLabelPassword.Size = new System.Drawing.Size(80, 20);
+            this.LoginLabelPassword.Size = new System.Drawing.Size(102, 25);
             this.LoginLabelPassword.TabIndex = 1;
             this.LoginLabelPassword.Text = "Password";
             this.LoginLabelPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -80,7 +81,7 @@
             this.LoginUsername.Location = new System.Drawing.Point(221, 39);
             this.LoginUsername.Margin = new System.Windows.Forms.Padding(0);
             this.LoginUsername.Name = "LoginUsername";
-            this.LoginUsername.Size = new System.Drawing.Size(179, 22);
+            this.LoginUsername.Size = new System.Drawing.Size(179, 27);
             this.LoginUsername.TabIndex = 2;
             // 
             // LoginPassword
@@ -92,7 +93,7 @@
             this.LoginPassword.Margin = new System.Windows.Forms.Padding(0);
             this.LoginPassword.Name = "LoginPassword";
             this.LoginPassword.PasswordChar = '．';
-            this.LoginPassword.Size = new System.Drawing.Size(179, 22);
+            this.LoginPassword.Size = new System.Drawing.Size(179, 27);
             this.LoginPassword.TabIndex = 3;
             // 
             // LoginButton
@@ -102,7 +103,7 @@
             this.LoginButton.Location = new System.Drawing.Point(318, 159);
             this.LoginButton.Margin = new System.Windows.Forms.Padding(0);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(82, 30);
+            this.LoginButton.Size = new System.Drawing.Size(82, 36);
             this.LoginButton.TabIndex = 4;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
@@ -110,7 +111,7 @@
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 320);
             this.Margin = new System.Windows.Forms.Padding(8, 12, 8, 12);
