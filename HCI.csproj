@@ -47,6 +47,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\NewGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\CourseRegistration.cs">
       <SubType>Form</SubType>
     </Compile>

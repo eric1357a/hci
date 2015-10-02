@@ -18,6 +18,8 @@ namespace HCI
         static void Main()
         {
             // Enforce DPI awareness from user32.dll
+            // Answer from Hans Passant, http://stackoverflow.com/a/13228495
+
             if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
