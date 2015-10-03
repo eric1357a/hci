@@ -7,6 +7,11 @@ using System.Windows.Forms;
 
 namespace HCI.Controls
 {
+    public enum Lposition
+    {
+        Left, Center, Right
+    }
+
     public class NewGroupBox : GroupBox
     {
         // Answer from Vin Jin, 
@@ -14,6 +19,14 @@ namespace HCI.Controls
 
         // Default light medium purple
         private Color _borderColor = Color.FromArgb(182, 155, 242);
+
+        // Default legend centering
+        private Lposition _legendPosition = Lposition.Center;
+        public Lposition LegendPosition
+        {
+            get { return _legendPosition; }
+            set { this._legendPosition = value; }
+        }
 
         public Color BorderColor
         {
@@ -30,11 +43,22 @@ namespace HCI.Controls
             borderRect.Y = (int)(borderRect.Y + (tSize.Height / 2));
             borderRect.Height = (int)(borderRect.Height - (tSize.Height / 2));
             ControlPaint.DrawBorder(e.Graphics, borderRect, this._borderColor, ButtonBorderStyle.Solid);
-            
+
             Rectangle textRect = this.ClientRectangle;
-            textRect.X = (int)(textRect.X + this.Width / 2 - tSize.Width / 2);
-            textRect.Width = (int)tSize.Width;
-            textRect.Height = (int)tSize.Height;
+            switch (_legendPosition)
+            {
+                case Lposition.Center:
+                    textRect.X = (int)Math.Ceiling(textRect.X + this.Width / 2 - tSize.Width / 2);
+                    break;
+                case Lposition.Right:
+                    textRect.X = (int)(this.Width - tSize.Width - 6);
+                    break;
+                default:
+                    textRect.X = (textRect.X + 6);
+                    break;
+            }
+            textRect.Width = (int)Math.Ceiling(tSize.Width);
+            textRect.Height = (int)Math.Ceiling(tSize.Height);
 
             StringFormat stringFormat = new StringFormat();
             stringFormat.Alignment = StringAlignment.Center;

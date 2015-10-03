@@ -11,7 +11,12 @@ namespace HCI.Model
          * Course definition for entire project, alter if you need
          * 2015/10/02 23:02 Cedric
          */
-        public readonly static LinkedList<Course> courses = init();
+        public readonly static LinkedList<Course> courses = initCourses();
+
+        public static int Count
+        {
+            get { return courses.Count; }
+        }
 
         public static String find(String key)
         {
@@ -30,20 +35,20 @@ namespace HCI.Model
             return "";
         }
 
-        static LinkedList<Course> init()
+        static LinkedList<Course> initCourses()
         {
             LinkedList<Course> courses = new LinkedList<Course>();
 
             courses.AddLast(new Course(
                 "AA",
-                "Kung Fu",
-                new String[] { "Wing Chun", "Jeet Kune Do", "Thai Boxing" }
+                "Sports",
+                new String[] { "Tennis", "Basketball", "Cue Sports" }
             ));
 
             courses.AddLast(new Course(
                 "BB",
-                "Cue Sports",
-                new String[] { "Snooker", "8-Ball", "9-Ball" }
+                "Visual Art",
+                new String[] { "Snapshot", "Oil Painting", "Sketching" }
             ));
 
             courses.AddLast(new Course(
@@ -61,6 +66,11 @@ namespace HCI.Model
         public readonly String category;
         public readonly String[] courses;
         public readonly String key;
+
+        public int Count
+        {
+            get { return courses.Length; }
+        }
 
         public Course(String key, String category, String[] courses)
         {
