@@ -14,13 +14,22 @@ namespace HCI.Foundation
 {
     public partial class BaseForm : Form
     {
-        public BaseForm Prev { get; set; }
+        public BaseForm Prev
+        {
+            get { return _prev; }
+            set
+            {
+                _prev = value;
+                Initialize();
+            }
+        }
+
+        private BaseForm _prev;
         private DropShadow Shadow;
 
         public BaseForm()
         {
             InitializeComponent();
-            Initialize();
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -77,17 +86,17 @@ namespace HCI.Foundation
         private void Initialize()
         {
             // hide previous form for backing
-            if (Prev != null)
-                Prev.Hide();
+            if (_prev != null)
+                _prev.Hide();
 
             // update title and add delegate if backable
-            string title = (Prev != null ? "‹  " : "") + BaseNavigationText.Text;
+            string title = (_prev != null ? "‹  " : "") + BaseNavigationText.Text;
             BaseNavigationText.Text = title;
-            if (Prev != null)
+            if (_prev != null)
             {
                 BaseNavigationText.Click += (sender, e) =>
                 {
-                    Prev.Show();
+                    _prev.Show();
                     this.Close();
                 };
             }

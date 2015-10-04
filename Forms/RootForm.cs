@@ -14,7 +14,7 @@ namespace HCI.Forms
         public RootForm()
         {
             InitializeComponent();
-            new CourseRegistration() { Prev = null }.Show();
+            new CourseSelection().Show();
         }
     }
 }
