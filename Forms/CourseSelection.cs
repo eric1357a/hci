@@ -61,9 +61,16 @@ namespace HCI.Forms
             }
         }
 
+        private Control toRootControl(Control control)
+        {
+            while (control.Parent.Parent.Parent.Parent.Parent != null)
+                control = control.Parent;
+            return control;
+        }
+
         private void TableItem_MouseEnter(object sender, EventArgs e)
         {
-            ((Control)sender).Parent.BackColor = Color.FromArgb(
+            toRootControl((Control)sender).BackColor = Color.FromArgb(
                 orgBorderColor.R + 15,
                 orgBorderColor.G + 15,
                 orgBorderColor.B + 15
@@ -72,12 +79,12 @@ namespace HCI.Forms
 
         private void TableItem_MouseLeave(object sender, EventArgs e)
         {
-            ((Control)sender).Parent.BackColor = orgBorderColor;
+            toRootControl((Control)sender).BackColor = orgBorderColor;
         }
 
         private void TableItem_MouseClick(object sender, MouseEventArgs e)
         {
-            TableLayoutPanel tlp = ((TableLayoutPanel)((Control)sender).Parent);
+            TableLayoutPanel tlp = (TableLayoutPanel)toRootControl((Control)sender);
             Control label = tlp.GetControlFromPosition(1, 0);
             string key = label.Name.Replace("Label", "");
             string[] array = label.Text.Split('\n');

@@ -12,14 +12,14 @@
 - [x] Membership System
 - [x] Login 分唇
 
-E
+> E
 - [ ] Main & Staff Menu
 - [ ] Promotions
 
-K
+> K
 - [ ] Administrative 分唇
 
-C
-- [ ] Course registration
+> C
+- [x] Course registration
 - [ ] Search 分唇
 - [ ] 入聲

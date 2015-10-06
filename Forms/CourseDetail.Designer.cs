@@ -44,12 +44,13 @@
             this.BaseContentPanel.Controls.Add(this.CourseImage);
             this.BaseContentPanel.Controls.Add(this.CourseDetails);
             this.BaseContentPanel.Controls.Add(this.CourseRegButton);
+            this.BaseContentPanel.Size = new System.Drawing.Size(440, 336);
             // 
             // CourseRegButton
             // 
             this.CourseRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CourseRegButton.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
-            this.CourseRegButton.Location = new System.Drawing.Point(358, 185);
+            this.CourseRegButton.Location = new System.Drawing.Point(315, 272);
             this.CourseRegButton.Margin = new System.Windows.Forms.Padding(0);
             this.CourseRegButton.Name = "CourseRegButton";
             this.CourseRegButton.Size = new System.Drawing.Size(101, 36);
@@ -61,10 +62,10 @@
             // CourseDetails
             // 
             this.CourseDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CourseDetails.Location = new System.Drawing.Point(146, 20);
+            this.CourseDetails.Location = new System.Drawing.Point(140, 20);
             this.CourseDetails.Margin = new System.Windows.Forms.Padding(0);
             this.CourseDetails.Name = "CourseDetails";
-            this.CourseDetails.Size = new System.Drawing.Size(313, 147);
+            this.CourseDetails.Size = new System.Drawing.Size(276, 234);
             this.CourseDetails.TabIndex = 6;
             this.CourseDetails.Text = "label1";
             // 
@@ -80,9 +81,8 @@
             // 
             // CourseDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 320);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(440, 436);
             this.Name = "CourseDetail";
             this.Text = "CourseDetail";
             this.BaseContentPanel.ResumeLayout(false);

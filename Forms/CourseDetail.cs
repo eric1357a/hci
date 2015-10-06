@@ -34,7 +34,7 @@ namespace HCI.Forms
             string weekday = course.Day;
             if (new Random().Next(4) == 0)
                 // If course is not available by random
-                MessageBox.Show("Course \"" + course + "\" is full right now");
+                MessageBox.Show("Course \"" + course.Name + "\" is full right now");
             else
                 new CourseRegistration(course.Name, weekday) { Prev = this }.Show();
         }

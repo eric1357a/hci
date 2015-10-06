@@ -7,10 +7,6 @@ namespace HCI.Model
 {
     class CourseCollection
     {
-        /*
-         * Course definition for entire project, alter if you need
-         * 2015/10/02 23:02 Cedric
-         */
         public readonly static LinkedList<Programme> Programmes = _InitProgrammes();
 
         public static int Count
@@ -39,18 +35,18 @@ namespace HCI.Model
                         "Tennis is a racquet sport that can be played "+
                             "individually against a single opponent (singles) or "+
                             "between two teams of two players each (doubles).",
-                        "Sun",
-                        2000),
+                        "Mon",
+                        400),
                     new Course("Basketball",
                         "Basketball is a sport played by two teams of five "+
                             "players on a rectangular court.",
-                        "Thu",
-                        1500),
+                        "Tue",
+                        700),
                     new Course("Cue Sports",
                         "A wide variety of games of skill generally played with "+
                             "a cue stick which is used to strike billiard balls.",
-                        "Tue",
-                        3999)
+                        "Wed",
+                        800)
                 }
             ));
 
@@ -61,18 +57,18 @@ namespace HCI.Model
                     new Course("Snapshot",
                         "A photograph that is \"shot\" spontaneously and quickly, "+
                             "most often without artistic or journalistic intent.",
-                        "Mon",
-                        1500),
+                        "Tue",
+                        500),
                     new Course("Oil Painting",
                         "Oil painting is the process of painting with pigments "+
                             "that are binded with a medium of drying oil.",
-                        "Sat",
-                        2500),
+                        "Wed",
+                        500),
                     new Course("Sketching",
                         "A rapidly executed freehand drawing that is not usually "+
                             "intended as a finished work.",
                         "Fri",
-                        1999)
+                        600)
                 }
             ));
 
@@ -82,13 +78,13 @@ namespace HCI.Model
                 new Course[] {
                     new Course("Piano",
                         "A musical instrument played using a keyboard.",
-                        "Wed",
-                        4000),
+                        "Thur",
+                        350),
                     new Course("Violin",
                         "The smallest, highest-pitched member of the violin "+
                             "family of string instruments.",
-                        "Mon",
-                        3500),
+                        "Fri",
+                        380),
                 }
             ));
 

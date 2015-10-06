@@ -102,7 +102,7 @@
             // BaseContentPanel
             // 
             this.BaseContentPanel.Controls.Add(this.GroupTable);
-            this.BaseContentPanel.Size = new System.Drawing.Size(906, 462);
+            this.BaseContentPanel.Size = new System.Drawing.Size(912, 481);
             // 
             // GroupCourseAA
             // 
@@ -119,7 +119,7 @@
             this.GroupCourseAA.Margin = new System.Windows.Forms.Padding(0);
             this.GroupCourseAA.Name = "GroupCourseAA";
             this.GroupCourseAA.Padding = new System.Windows.Forms.Padding(1);
-            this.GroupCourseAA.Size = new System.Drawing.Size(266, 426);
+            this.GroupCourseAA.Size = new System.Drawing.Size(268, 426);
             this.GroupCourseAA.TabIndex = 0;
             this.GroupCourseAA.TabStop = false;
             this.GroupCourseAA.Text = "Course AA";
@@ -142,7 +142,7 @@
             this.TableCourseA3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseA3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseA3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseA3.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseA3.Size = new System.Drawing.Size(266, 132);
             this.TableCourseA3.TabIndex = 2;
             // 
             // LabelA3
@@ -150,10 +150,10 @@
             this.LabelA3.BackColor = System.Drawing.Color.Transparent;
             this.LabelA3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelA3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelA3.Location = new System.Drawing.Point(132, 10);
+            this.LabelA3.Location = new System.Drawing.Point(133, 10);
             this.LabelA3.Margin = new System.Windows.Forms.Padding(0);
             this.LabelA3.Name = "LabelA3";
-            this.LabelA3.Size = new System.Drawing.Size(122, 112);
+            this.LabelA3.Size = new System.Drawing.Size(123, 112);
             this.LabelA3.TabIndex = 1;
             this.LabelA3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelA3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -167,7 +167,7 @@
             this.HolderA3.Location = new System.Drawing.Point(10, 10);
             this.HolderA3.Margin = new System.Windows.Forms.Padding(0);
             this.HolderA3.Name = "HolderA3";
-            this.HolderA3.Size = new System.Drawing.Size(122, 112);
+            this.HolderA3.Size = new System.Drawing.Size(123, 112);
             this.HolderA3.TabIndex = 2;
             this.HolderA3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderA3.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -185,6 +185,9 @@
             this.ImageA3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageA3.TabIndex = 3;
             this.ImageA3.TabStop = false;
+            this.ImageA3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageA3.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageA3.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // TableCourseA2
             // 
@@ -204,7 +207,7 @@
             this.TableCourseA2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseA2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseA2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseA2.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseA2.Size = new System.Drawing.Size(266, 132);
             this.TableCourseA2.TabIndex = 1;
             // 
             // LabelA2
@@ -212,10 +215,10 @@
             this.LabelA2.BackColor = System.Drawing.Color.Transparent;
             this.LabelA2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelA2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelA2.Location = new System.Drawing.Point(132, 10);
+            this.LabelA2.Location = new System.Drawing.Point(133, 10);
             this.LabelA2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelA2.Name = "LabelA2";
-            this.LabelA2.Size = new System.Drawing.Size(122, 112);
+            this.LabelA2.Size = new System.Drawing.Size(123, 112);
             this.LabelA2.TabIndex = 1;
             this.LabelA2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelA2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -229,7 +232,7 @@
             this.HolderA2.Location = new System.Drawing.Point(10, 10);
             this.HolderA2.Margin = new System.Windows.Forms.Padding(0);
             this.HolderA2.Name = "HolderA2";
-            this.HolderA2.Size = new System.Drawing.Size(122, 112);
+            this.HolderA2.Size = new System.Drawing.Size(123, 112);
             this.HolderA2.TabIndex = 2;
             this.HolderA2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderA2.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -247,6 +250,9 @@
             this.ImageA2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageA2.TabIndex = 3;
             this.ImageA2.TabStop = false;
+            this.ImageA2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageA2.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageA2.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // TableCourseA1
             // 
@@ -266,7 +272,7 @@
             this.TableCourseA1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseA1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseA1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseA1.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseA1.Size = new System.Drawing.Size(266, 132);
             this.TableCourseA1.TabIndex = 0;
             // 
             // LabelA1
@@ -274,10 +280,10 @@
             this.LabelA1.BackColor = System.Drawing.Color.Transparent;
             this.LabelA1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelA1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelA1.Location = new System.Drawing.Point(132, 10);
+            this.LabelA1.Location = new System.Drawing.Point(133, 10);
             this.LabelA1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelA1.Name = "LabelA1";
-            this.LabelA1.Size = new System.Drawing.Size(122, 112);
+            this.LabelA1.Size = new System.Drawing.Size(123, 112);
             this.LabelA1.TabIndex = 1;
             this.LabelA1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelA1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -291,7 +297,7 @@
             this.HolderA1.Location = new System.Drawing.Point(10, 10);
             this.HolderA1.Margin = new System.Windows.Forms.Padding(0);
             this.HolderA1.Name = "HolderA1";
-            this.HolderA1.Size = new System.Drawing.Size(122, 112);
+            this.HolderA1.Size = new System.Drawing.Size(123, 112);
             this.HolderA1.TabIndex = 2;
             this.HolderA1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderA1.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -309,6 +315,9 @@
             this.ImageA1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageA1.TabIndex = 3;
             this.ImageA1.TabStop = false;
+            this.ImageA1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageA1.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageA1.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // GroupCourseBB
             // 
@@ -321,11 +330,11 @@
             this.GroupCourseBB.Font = new System.Drawing.Font("Microsoft JhengHei", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
             this.GroupCourseBB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
             this.GroupCourseBB.LegendPosition = HCI.Controls.Lposition.Center;
-            this.GroupCourseBB.Location = new System.Drawing.Point(318, 13);
+            this.GroupCourseBB.Location = new System.Drawing.Point(320, 13);
             this.GroupCourseBB.Margin = new System.Windows.Forms.Padding(0);
             this.GroupCourseBB.Name = "GroupCourseBB";
             this.GroupCourseBB.Padding = new System.Windows.Forms.Padding(1);
-            this.GroupCourseBB.Size = new System.Drawing.Size(266, 426);
+            this.GroupCourseBB.Size = new System.Drawing.Size(268, 426);
             this.GroupCourseBB.TabIndex = 1;
             this.GroupCourseBB.TabStop = false;
             this.GroupCourseBB.Text = "Course BB";
@@ -348,7 +357,7 @@
             this.TableCourseB3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseB3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseB3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseB3.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseB3.Size = new System.Drawing.Size(266, 132);
             this.TableCourseB3.TabIndex = 3;
             // 
             // LabelB3
@@ -356,10 +365,10 @@
             this.LabelB3.BackColor = System.Drawing.Color.Transparent;
             this.LabelB3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelB3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelB3.Location = new System.Drawing.Point(132, 10);
+            this.LabelB3.Location = new System.Drawing.Point(133, 10);
             this.LabelB3.Margin = new System.Windows.Forms.Padding(0);
             this.LabelB3.Name = "LabelB3";
-            this.LabelB3.Size = new System.Drawing.Size(122, 112);
+            this.LabelB3.Size = new System.Drawing.Size(123, 112);
             this.LabelB3.TabIndex = 1;
             this.LabelB3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelB3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -373,7 +382,7 @@
             this.HolderB3.Location = new System.Drawing.Point(10, 10);
             this.HolderB3.Margin = new System.Windows.Forms.Padding(0);
             this.HolderB3.Name = "HolderB3";
-            this.HolderB3.Size = new System.Drawing.Size(122, 112);
+            this.HolderB3.Size = new System.Drawing.Size(123, 112);
             this.HolderB3.TabIndex = 2;
             this.HolderB3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderB3.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -391,6 +400,9 @@
             this.ImageB3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageB3.TabIndex = 3;
             this.ImageB3.TabStop = false;
+            this.ImageB3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageB3.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageB3.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // TableCourseB2
             // 
@@ -410,7 +422,7 @@
             this.TableCourseB2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseB2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseB2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseB2.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseB2.Size = new System.Drawing.Size(266, 132);
             this.TableCourseB2.TabIndex = 2;
             // 
             // LabelB2
@@ -418,10 +430,10 @@
             this.LabelB2.BackColor = System.Drawing.Color.Transparent;
             this.LabelB2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelB2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelB2.Location = new System.Drawing.Point(132, 10);
+            this.LabelB2.Location = new System.Drawing.Point(133, 10);
             this.LabelB2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelB2.Name = "LabelB2";
-            this.LabelB2.Size = new System.Drawing.Size(122, 112);
+            this.LabelB2.Size = new System.Drawing.Size(123, 112);
             this.LabelB2.TabIndex = 1;
             this.LabelB2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelB2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -435,7 +447,7 @@
             this.HolderB2.Location = new System.Drawing.Point(10, 10);
             this.HolderB2.Margin = new System.Windows.Forms.Padding(0);
             this.HolderB2.Name = "HolderB2";
-            this.HolderB2.Size = new System.Drawing.Size(122, 112);
+            this.HolderB2.Size = new System.Drawing.Size(123, 112);
             this.HolderB2.TabIndex = 2;
             this.HolderB2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderB2.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -453,6 +465,9 @@
             this.ImageB2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageB2.TabIndex = 3;
             this.ImageB2.TabStop = false;
+            this.ImageB2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageB2.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageB2.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // TableCourseB1
             // 
@@ -472,7 +487,7 @@
             this.TableCourseB1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseB1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseB1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseB1.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseB1.Size = new System.Drawing.Size(266, 132);
             this.TableCourseB1.TabIndex = 1;
             // 
             // LabelB1
@@ -480,10 +495,10 @@
             this.LabelB1.BackColor = System.Drawing.Color.Transparent;
             this.LabelB1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelB1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelB1.Location = new System.Drawing.Point(132, 10);
+            this.LabelB1.Location = new System.Drawing.Point(133, 10);
             this.LabelB1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelB1.Name = "LabelB1";
-            this.LabelB1.Size = new System.Drawing.Size(122, 112);
+            this.LabelB1.Size = new System.Drawing.Size(123, 112);
             this.LabelB1.TabIndex = 1;
             this.LabelB1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelB1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -497,7 +512,7 @@
             this.HolderB1.Location = new System.Drawing.Point(10, 10);
             this.HolderB1.Margin = new System.Windows.Forms.Padding(0);
             this.HolderB1.Name = "HolderB1";
-            this.HolderB1.Size = new System.Drawing.Size(122, 112);
+            this.HolderB1.Size = new System.Drawing.Size(123, 112);
             this.HolderB1.TabIndex = 2;
             this.HolderB1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderB1.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -515,6 +530,9 @@
             this.ImageB1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageB1.TabIndex = 3;
             this.ImageB1.TabStop = false;
+            this.ImageB1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageB1.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageB1.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // GroupTable
             // 
@@ -537,7 +555,7 @@
             this.GroupTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.888094F));
             this.GroupTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.21248F));
             this.GroupTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.899433F));
-            this.GroupTable.Size = new System.Drawing.Size(906, 462);
+            this.GroupTable.Size = new System.Drawing.Size(912, 481);
             this.GroupTable.TabIndex = 3;
             // 
             // GroupCourseCC
@@ -550,11 +568,11 @@
             this.GroupCourseCC.Font = new System.Drawing.Font("Microsoft JhengHei", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
             this.GroupCourseCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
             this.GroupCourseCC.LegendPosition = HCI.Controls.Lposition.Center;
-            this.GroupCourseCC.Location = new System.Drawing.Point(610, 13);
+            this.GroupCourseCC.Location = new System.Drawing.Point(614, 13);
             this.GroupCourseCC.Margin = new System.Windows.Forms.Padding(0);
             this.GroupCourseCC.Name = "GroupCourseCC";
             this.GroupCourseCC.Padding = new System.Windows.Forms.Padding(1);
-            this.GroupCourseCC.Size = new System.Drawing.Size(266, 294);
+            this.GroupCourseCC.Size = new System.Drawing.Size(268, 294);
             this.GroupCourseCC.TabIndex = 2;
             this.GroupCourseCC.TabStop = false;
             this.GroupCourseCC.Text = "Course CC";
@@ -577,7 +595,7 @@
             this.TableCourseC2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseC2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseC2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseC2.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseC2.Size = new System.Drawing.Size(266, 132);
             this.TableCourseC2.TabIndex = 2;
             // 
             // LabelC2
@@ -585,10 +603,10 @@
             this.LabelC2.BackColor = System.Drawing.Color.Transparent;
             this.LabelC2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelC2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelC2.Location = new System.Drawing.Point(132, 10);
+            this.LabelC2.Location = new System.Drawing.Point(133, 10);
             this.LabelC2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelC2.Name = "LabelC2";
-            this.LabelC2.Size = new System.Drawing.Size(122, 112);
+            this.LabelC2.Size = new System.Drawing.Size(123, 112);
             this.LabelC2.TabIndex = 1;
             this.LabelC2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelC2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -602,7 +620,7 @@
             this.HolderC2.Location = new System.Drawing.Point(10, 10);
             this.HolderC2.Margin = new System.Windows.Forms.Padding(0);
             this.HolderC2.Name = "HolderC2";
-            this.HolderC2.Size = new System.Drawing.Size(122, 112);
+            this.HolderC2.Size = new System.Drawing.Size(123, 112);
             this.HolderC2.TabIndex = 2;
             this.HolderC2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderC2.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -620,6 +638,9 @@
             this.ImageC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageC2.TabIndex = 3;
             this.ImageC2.TabStop = false;
+            this.ImageC2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageC2.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageC2.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // TableCourseC1
             // 
@@ -639,7 +660,7 @@
             this.TableCourseC1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TableCourseC1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TableCourseC1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TableCourseC1.Size = new System.Drawing.Size(264, 132);
+            this.TableCourseC1.Size = new System.Drawing.Size(266, 132);
             this.TableCourseC1.TabIndex = 1;
             // 
             // LabelC1
@@ -647,10 +668,10 @@
             this.LabelC1.BackColor = System.Drawing.Color.Transparent;
             this.LabelC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelC1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelC1.Location = new System.Drawing.Point(132, 10);
+            this.LabelC1.Location = new System.Drawing.Point(133, 10);
             this.LabelC1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelC1.Name = "LabelC1";
-            this.LabelC1.Size = new System.Drawing.Size(122, 112);
+            this.LabelC1.Size = new System.Drawing.Size(123, 112);
             this.LabelC1.TabIndex = 1;
             this.LabelC1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LabelC1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
@@ -664,7 +685,7 @@
             this.HolderC1.Location = new System.Drawing.Point(10, 10);
             this.HolderC1.Margin = new System.Windows.Forms.Padding(0);
             this.HolderC1.Name = "HolderC1";
-            this.HolderC1.Size = new System.Drawing.Size(122, 112);
+            this.HolderC1.Size = new System.Drawing.Size(123, 112);
             this.HolderC1.TabIndex = 2;
             this.HolderC1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
             this.HolderC1.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
@@ -682,11 +703,14 @@
             this.ImageC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageC1.TabIndex = 3;
             this.ImageC1.TabStop = false;
+            this.ImageC1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TableItem_MouseClick);
+            this.ImageC1.MouseEnter += new System.EventHandler(this.TableItem_MouseEnter);
+            this.ImageC1.MouseLeave += new System.EventHandler(this.TableItem_MouseLeave);
             // 
             // CourseSelection
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(906, 542);
+            this.ClientSize = new System.Drawing.Size(912, 581);
             this.Name = "CourseSelection";
             this.Text = "CourseSelection";
             this.BaseContentPanel.ResumeLayout(false);
