@@ -6,17 +6,17 @@
 
 ## Work撈 distribu純
 
-S
+> S
 - [x] Build template
-- [ ] View Course Detail
-- [ ] Membership System
+- [x] View Course Detail
+- [x] Membership System
+- [x] Login 分唇
 
 E
 - [ ] Main & Staff Menu
 - [ ] Promotions
 
 K
-- [ ] Login 分唇
 - [ ] Administrative 分唇
 
 C
