@@ -73,19 +73,24 @@ namespace HCI.Forms
             {
                 evnt.DrawBackground();
                 evnt.DrawBorder();
-                evnt.DrawText();
+                evnt.Graphics.DrawString(
+                    evnt.ToolTipText,
+                    new Font(evnt.Font.FontFamily, 12f),
+                    new SolidBrush(hint.ForeColor),
+                    new PointF()
+                );
             });
             hint.BackColor = BackColor;
             hint.ForeColor = lb_852.ForeColor;
             hint.Show(string.Empty, ((Control)sender), 0, 0, 3000);
-            hint.Show("     " + message + "     ", ((Control)sender));
+            hint.Show(" " + message + " ", ((Control)sender));
         }
 
         private void tb_ContactNo_Leave(object sender, EventArgs e)
         {
             if (((Control) sender).Text.Length != 8)
                 // Show tooltip for empty phone
-                showToolTip(sender, "Invalid phone number");
+                showToolTip(sender, "Invalid phone number!");
         }
     }
 }
