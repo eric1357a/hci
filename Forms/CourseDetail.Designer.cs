@@ -67,7 +67,6 @@
             this.CourseDetails.Name = "CourseDetails";
             this.CourseDetails.Size = new System.Drawing.Size(276, 234);
             this.CourseDetails.TabIndex = 6;
-            this.CourseDetails.Text = "label1";
             // 
             // CourseImage
             // 

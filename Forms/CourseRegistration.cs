@@ -71,13 +71,21 @@ namespace HCI.Forms
             hint.OwnerDraw = true;
             hint.Draw += new DrawToolTipEventHandler((snder, evnt) =>
             {
+                SizeF tSize = evnt.Graphics.MeasureString(evnt.ToolTipText, evnt.Font);
+                Rectangle rect = new Rectangle(
+                    0,
+                    0,
+                    (int)Math.Ceiling(tSize.Width),
+                    (int)Math.Ceiling(tSize.Height)
+                );
+
                 evnt.DrawBackground();
                 evnt.DrawBorder();
                 evnt.Graphics.DrawString(
                     evnt.ToolTipText,
-                    new Font(evnt.Font.FontFamily, 12f),
+                    evnt.Font,
                     new SolidBrush(hint.ForeColor),
-                    new PointF()
+                    rect
                 );
             });
             hint.BackColor = BackColor;
