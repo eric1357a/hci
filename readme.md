@@ -18,8 +18,8 @@
 
 > K
 - [ ] Administrative 分唇
+- [ ] Search 分唇
 
 > C
 - [x] Course registration
-- [ ] Search 分唇
 - [ ] 入聲

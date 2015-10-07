@@ -43,6 +43,8 @@
             this.lb_WeekDayTag = new System.Windows.Forms.Label();
             this.lb_Course = new System.Windows.Forms.Label();
             this.lb_CourseTag = new System.Windows.Forms.Label();
+            this.lb_Name = new System.Windows.Forms.Label();
+            this.tb_Name = new System.Windows.Forms.TextBox();
             this.BaseContentPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@
             // 
             // BaseContentPanel
             // 
+            this.BaseContentPanel.Controls.Add(this.tb_Name);
+            this.BaseContentPanel.Controls.Add(this.lb_Name);
             this.BaseContentPanel.Controls.Add(this.checkedListBox1);
             this.BaseContentPanel.Controls.Add(this.label1);
             this.BaseContentPanel.Controls.Add(this.tb_Email);
@@ -67,7 +71,7 @@
             this.BaseContentPanel.Controls.Add(this.lb_WeekDayTag);
             this.BaseContentPanel.Controls.Add(this.lb_Course);
             this.BaseContentPanel.Controls.Add(this.lb_CourseTag);
-            this.BaseContentPanel.Size = new System.Drawing.Size(738, 455);
+            this.BaseContentPanel.Size = new System.Drawing.Size(738, 484);
             // 
             // checkedListBox1
             // 
@@ -79,7 +83,7 @@
             this.checkedListBox1.Items.AddRange(new object[] {
             "Normal",
             "Gold"});
-            this.checkedListBox1.Location = new System.Drawing.Point(463, 221);
+            this.checkedListBox1.Location = new System.Drawing.Point(463, 281);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(100, 58);
             this.checkedListBox1.TabIndex = 3;
@@ -87,7 +91,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(360, 221);
+            this.label1.Location = new System.Drawing.Point(360, 281);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 25);
             this.label1.TabIndex = 35;
@@ -99,7 +103,7 @@
             this.tb_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_Email.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.tb_Email.Location = new System.Drawing.Point(282, 156);
+            this.tb_Email.Location = new System.Drawing.Point(282, 216);
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(331, 38);
             this.tb_Email.TabIndex = 1;
@@ -110,7 +114,7 @@
             this.btn_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Cancel.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_Cancel.Location = new System.Drawing.Point(528, 389);
+            this.btn_Cancel.Location = new System.Drawing.Point(528, 409);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(108, 44);
             this.btn_Cancel.TabIndex = 5;
@@ -123,7 +127,7 @@
             this.btn_Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Submit.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btn_Submit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btn_Submit.Location = new System.Drawing.Point(365, 389);
+            this.btn_Submit.Location = new System.Drawing.Point(365, 409);
             this.btn_Submit.Name = "btn_Submit";
             this.btn_Submit.Size = new System.Drawing.Size(108, 44);
             this.btn_Submit.TabIndex = 4;
@@ -142,15 +146,16 @@
             "June",
             "July",
             "August"});
-            this.clb_Month.Location = new System.Drawing.Point(233, 221);
+            this.clb_Month.Location = new System.Drawing.Point(233, 281);
             this.clb_Month.Name = "clb_Month";
             this.clb_Month.Size = new System.Drawing.Size(100, 87);
             this.clb_Month.TabIndex = 2;
+            this.clb_Month.Leave += new System.EventHandler(this.clb_Month_Leave);
             // 
             // lb_Month
             // 
             this.lb_Month.AutoSize = true;
-            this.lb_Month.Location = new System.Drawing.Point(133, 221);
+            this.lb_Month.Location = new System.Drawing.Point(133, 281);
             this.lb_Month.Name = "lb_Month";
             this.lb_Month.Size = new System.Drawing.Size(89, 25);
             this.lb_Month.TabIndex = 30;
@@ -159,7 +164,7 @@
             // lb_Email
             // 
             this.lb_Email.AutoSize = true;
-            this.lb_Email.Location = new System.Drawing.Point(127, 161);
+            this.lb_Email.Location = new System.Drawing.Point(127, 221);
             this.lb_Email.Name = "lb_Email";
             this.lb_Email.Size = new System.Drawing.Size(149, 25);
             this.lb_Email.TabIndex = 29;
@@ -171,7 +176,7 @@
             this.tb_ContactNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tb_ContactNo.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.tb_ContactNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.tb_ContactNo.Location = new System.Drawing.Point(351, 97);
+            this.tb_ContactNo.Location = new System.Drawing.Point(351, 157);
             this.tb_ContactNo.Name = "tb_ContactNo";
             this.tb_ContactNo.Size = new System.Drawing.Size(154, 38);
             this.tb_ContactNo.TabIndex = 0;
@@ -181,7 +186,7 @@
             // lb_852
             // 
             this.lb_852.AutoSize = true;
-            this.lb_852.Location = new System.Drawing.Point(282, 102);
+            this.lb_852.Location = new System.Drawing.Point(282, 162);
             this.lb_852.Name = "lb_852";
             this.lb_852.Size = new System.Drawing.Size(63, 25);
             this.lb_852.TabIndex = 27;
@@ -190,7 +195,7 @@
             // lb_ContactNo
             // 
             this.lb_ContactNo.AutoSize = true;
-            this.lb_ContactNo.Location = new System.Drawing.Point(103, 102);
+            this.lb_ContactNo.Location = new System.Drawing.Point(103, 162);
             this.lb_ContactNo.Name = "lb_ContactNo";
             this.lb_ContactNo.Size = new System.Drawing.Size(173, 25);
             this.lb_ContactNo.TabIndex = 26;
@@ -217,7 +222,7 @@
             // lb_Course
             // 
             this.lb_Course.AutoSize = true;
-            this.lb_Course.Location = new System.Drawing.Point(282, 58);
+            this.lb_Course.Location = new System.Drawing.Point(282, 59);
             this.lb_Course.Name = "lb_Course";
             this.lb_Course.Size = new System.Drawing.Size(51, 25);
             this.lb_Course.TabIndex = 23;
@@ -226,16 +231,37 @@
             // lb_CourseTag
             // 
             this.lb_CourseTag.AutoSize = true;
-            this.lb_CourseTag.Location = new System.Drawing.Point(194, 58);
+            this.lb_CourseTag.Location = new System.Drawing.Point(194, 59);
             this.lb_CourseTag.Name = "lb_CourseTag";
             this.lb_CourseTag.Size = new System.Drawing.Size(82, 25);
             this.lb_CourseTag.TabIndex = 22;
             this.lb_CourseTag.Text = "Course:";
             // 
+            // lb_Name
+            // 
+            this.lb_Name.AutoSize = true;
+            this.lb_Name.Location = new System.Drawing.Point(124, 104);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(152, 25);
+            this.lb_Name.TabIndex = 36;
+            this.lb_Name.Text = "Student Name:";
+            // 
+            // tb_Name
+            // 
+            this.tb_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tb_Name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tb_Name.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tb_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.tb_Name.Location = new System.Drawing.Point(287, 99);
+            this.tb_Name.Name = "tb_Name";
+            this.tb_Name.Size = new System.Drawing.Size(331, 38);
+            this.tb_Name.TabIndex = 37;
+            this.tb_Name.Leave += new System.EventHandler(this.tb_Name_Leave);
+            // 
             // CourseRegistration
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(738, 555);
+            this.ClientSize = new System.Drawing.Size(738, 584);
             this.Name = "CourseRegistration";
             this.Text = "CourseRegistration";
             this.BaseContentPanel.ResumeLayout(false);
@@ -262,5 +288,7 @@
         private System.Windows.Forms.Label lb_WeekDayTag;
         private System.Windows.Forms.Label lb_Course;
         private System.Windows.Forms.Label lb_CourseTag;
+        private System.Windows.Forms.TextBox tb_Name;
+        private System.Windows.Forms.Label lb_Name;
     }
 }

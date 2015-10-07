@@ -12,6 +12,14 @@ namespace HCI.Forms
 {
     public partial class CourseRegistration : BaseForm
     {
+        private const String PHONE_ERR = "Invalid phone number";
+        private const String EMAIL_ERR = "Invalid email";
+        private const String MONTH_ERR = "No month selected";
+        private const String NAME_ERR = "No student name entered";
+
+        private readonly Color DARK_RED = Color.FromArgb(40, 32, 32);
+        private readonly Color DARK_PURPLE = Color.FromArgb(34, 36, 39);
+
         public CourseRegistration(String course, String weekDay)
         {
             InitializeComponent();
@@ -27,13 +35,6 @@ namespace HCI.Forms
                         e.Handled = true;
         }
 
-        private void tb_Email_Leave(object sender, EventArgs e)
-        {
-            if (!((Control)sender).Text.Contains("@"))
-                // Show tooltip for invalid email type
-                showToolTip(sender, "Invalid email!");
-        }
-
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             Prev.Show();
@@ -42,26 +43,20 @@ namespace HCI.Forms
 
         private void btn_Submit_Click(object sender, EventArgs e)
         {
-            String errMsg = "";
-
-            if (tb_ContactNo.Text.Length != 8)
-                errMsg = "Please input a valid phone number";
-
-            if (tb_Email.Text.Length == 0 || !tb_Email.Text.Contains("@"))
-                errMsg = "Please input a valid email";
-
-            if (clb_Month.SelectedItems.Count == 0)
-                errMsg = "Please select at least a month";
-
-            if (errMsg.Length != 0)
-                MessageBox.Show(errMsg);
-            else if (new Random().Next(4) == 0)
-                // Random course collision for student
-                MessageBox.Show("This timeslot has been registered with another course");
-            else
+            if (checkEmail(tb_Email) &
+                checkMonth(clb_Month) &
+                checkContactNo(tb_ContactNo) &
+                checkName(tb_Name))
             {
-                MessageBox.Show("Registered Successfully!");
-                btn_Cancel_Click(sender, e);
+                // If all validation pass
+                if (new Random().Next(4) == 0)
+                    // Random course collision for student
+                    MessageBox.Show("This timeslot has been registered with another course");
+                else
+                {
+                    MessageBox.Show("Registered Successfully!");
+                    btn_Cancel_Click(sender, e);
+                }
             }
         }
 
@@ -88,17 +83,82 @@ namespace HCI.Forms
                     rect
                 );
             });
-            hint.BackColor = BackColor;
-            hint.ForeColor = lb_852.ForeColor;
+            hint.BackColor = Color.FromArgb(40, 32, 32);
+            hint.ForeColor = Color.LightPink;
             hint.Show(string.Empty, ((Control)sender), 0, 0, 3000);
             hint.Show(" " + message + " ", ((Control)sender));
         }
 
         private void tb_ContactNo_Leave(object sender, EventArgs e)
         {
-            if (((Control) sender).Text.Length != 8)
+            checkContactNo((Control)sender);
+        }
+
+        private void clb_Month_Leave(object sender, EventArgs e)
+        {
+            checkMonth((Control)sender);
+        }
+
+        private void tb_Email_Leave(object sender, EventArgs e)
+        {
+            checkEmail((Control)sender);
+        }
+
+        private void tb_Name_Leave(object sender, EventArgs e)
+        {
+            checkName((Control)sender);
+        }
+
+        private bool checkName(Control sender)
+        {
+            if (sender.Text.Length == 0)
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, NAME_ERR);
+                sender.BackColor = DARK_RED;
+                return false;
+            }
+            sender.BackColor = DARK_PURPLE;
+            return true;
+        }
+
+        private bool checkEmail(Control sender)
+        {
+            if (!sender.Text.Contains("@"))
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, EMAIL_ERR);
+                sender.BackColor = DARK_RED;
+                return false;
+            }
+            sender.BackColor = DARK_PURPLE;
+            return true;
+        }
+
+        private bool checkContactNo(Control sender)
+        {
+            if (sender.Text.Length != 8)
+            {
                 // Show tooltip for empty phone
-                showToolTip(sender, "Invalid phone number!");
+                showToolTip(sender, PHONE_ERR);
+                sender.BackColor = DARK_RED;
+                return false;
+            }
+            sender.BackColor = DARK_PURPLE;
+            return true;
+        }
+
+        private bool checkMonth(Control sender)
+        {
+            if (((CheckedListBox)sender).CheckedItems.Count == 0)
+            {
+                // Show tooltip for no month selected
+                showToolTip(sender, MONTH_ERR);
+                sender.BackColor = DARK_RED;
+                return false;
+            }
+            sender.BackColor = DARK_PURPLE;
+            return true;
         }
     }
 }
