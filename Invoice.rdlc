@@ -7,7 +7,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>079c13f9-54bf-4e70-a472-2f21afbc196a</rd:DataSourceID>
+      <rd:DataSourceID>e0f5332f-99c0-4d8c-bf3a-f9e7f9ba0091</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -40,6 +40,10 @@
         <Field Name="lessonMaterial">
           <DataField>lessonMaterial</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="membershsip">
+          <DataField>membershsip</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="months">
           <DataField>months</DataField>
@@ -1010,7 +1014,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>InvoiceDataSet</DataSetName>
-            <Top>2.88193in</Top>
+            <Top>3.25693in</Top>
             <Left>0.02082in</Left>
             <Height>2.64721in</Height>
             <Width>6.33334in</Width>
@@ -1352,7 +1356,7 @@
             </Style>
           </Textbox>
           <Line Name="Line3">
-            <Top>2.75693in</Top>
+            <Top>3.13193in</Top>
             <Left>0.02082in</Left>
             <Height>0in</Height>
             <Width>6.45835in</Width>
@@ -1421,7 +1425,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox7</rd:DefaultName>
-            <Top>5.61108in</Top>
+            <Top>6.11108in</Top>
             <Left>0.02082in</Left>
             <Height>0.57292in</Height>
             <Width>6.45835in</Width>
@@ -1508,8 +1512,42 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="tb_Membership">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Membersip: Gold</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.72742in</Top>
+            <Left>0.13542in</Left>
+            <Height>0.22916in</Height>
+            <Width>6.20834in</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Color>White</Color>
+                <Style>None</Style>
+              </Border>
+              <BackgroundColor>White</BackgroundColor>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>6.184in</Height>
+        <Height>6.684in</Height>
         <Style />
       </Body>
       <Width>6.47918in</Width>

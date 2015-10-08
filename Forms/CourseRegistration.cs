@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using HCI.Foundation;
+using HCI.Model;
 
 namespace HCI.Forms
 {
@@ -55,7 +56,11 @@ namespace HCI.Forms
                 else
                 {
                     MessageBox.Show("Registered Successfully!");
-                    btn_Cancel_Click(sender, e);
+                    this.Hide();
+
+                    new InvoiceContainer(
+                        new Invoice()
+                    ) { Prev = this.Prev.Prev }.Show();
                 }
             }
         }
