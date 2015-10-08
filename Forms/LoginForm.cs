@@ -38,10 +38,10 @@ namespace HCI.Forms
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            Member m = MemberCollection.Login(LoginUsername.Text, LoginPassword.Text);
+            Staff m = StaffCollection.Login(LoginUsername.Text, LoginPassword.Text);
             if (m != null)
             {
-                if (m.Staff)
+                if (m.Manager)
                     //new StaffMenuForm() { Prev = null }.Show();
                     new CourseSelection() { Prev = null }.Show();
                 else
