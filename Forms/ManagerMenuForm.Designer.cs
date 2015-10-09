@@ -229,7 +229,8 @@
             // 
             // tbdiscount
             // 
-            this.tbdiscount.BackColor = System.Drawing.SystemColors.MenuText;
+            this.tbdiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tbdiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbdiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
             this.tbdiscount.Location = new System.Drawing.Point(500, 45);
             this.tbdiscount.MaxLength = 3;
@@ -241,7 +242,8 @@
             // 
             // tbprofit
             // 
-            this.tbprofit.BackColor = System.Drawing.SystemColors.MenuText;
+            this.tbprofit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tbprofit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbprofit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
             this.tbprofit.Location = new System.Drawing.Point(500, 283);
             this.tbprofit.MaxLength = 3;
@@ -253,7 +255,8 @@
             // 
             // tbCCDiscount
             // 
-            this.tbCCDiscount.BackColor = System.Drawing.SystemColors.MenuText;
+            this.tbCCDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tbCCDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbCCDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
             this.tbCCDiscount.Location = new System.Drawing.Point(500, 160);
             this.tbCCDiscount.MaxLength = 3;

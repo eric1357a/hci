@@ -36,5 +36,13 @@ namespace HCI.Model
         {
             CreditCardDiscount = v;
         }
+        public static int getGoldDiscount()
+        {
+            return GoldDiscount;
+        }
+        public static void setGoldDiscount(int v)
+        {
+            GoldDiscount = v;
+        }
     }
 }

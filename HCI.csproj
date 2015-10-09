@@ -83,6 +83,12 @@
     <Compile Include="Forms\InvoiceContainer.Designer.cs">
       <DependentUpon>InvoiceContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InvoiceContainer.resx">
       <DependentUpon>InvoiceContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

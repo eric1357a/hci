@@ -10,13 +10,19 @@ using HCI.Foundation;
 using HCI.Model;
 using Microsoft.Reporting.WinForms;
 using System.Drawing.Printing;
+using System.Threading;
 
 namespace HCI.Forms
 {
     public partial class InvoiceContainer : LoggedInForm
     {
+        Thread loadingThread;
+
         public InvoiceContainer(Invoice invoice)
         {
+            loadingThread = new Thread(() => { new Loading().ShowDialog(); });
+            loadingThread.Start();
+
             InitializeComponent();
 
             rv_Invoice.LocalReport.DataSources.Add(
@@ -26,11 +32,14 @@ namespace HCI.Forms
 
         private void InvoiceContainer_Load(object sender, EventArgs e)
         {
-            this.rv_Invoice.RefreshReport();
-
             // Pre-enter print layout for ignoring normal layout collpse
             rv_Invoice.SetDisplayMode(DisplayMode.PrintLayout);
             rv_Invoice.ZoomMode = ZoomMode.PageWidth;
+        }
+
+        private void InvoiceContainer_Shown(object sender, EventArgs e)
+        {
+            loadingThread.Abort();
         }
     }
 }

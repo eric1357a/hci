@@ -67,7 +67,20 @@ namespace HCI.Forms
                     String membership = "N/A";
                     if (clb_Member.CheckedItems.Count != 0)
                         membership = clb_Member.CheckedItems[0].ToString();
+
+                    int discount = 0;
+                    switch (membership)
+                    {
+                        case "Normal":
+                            discount = Discounts.getDiscount();
+                            break;
+                        case "Gold":
+                            discount = Discounts.getGoldDiscount();
+                            break;
+                    }
+
                     new InvoiceContainer(
+                        // Parameter passing to rdlc via Invoice object
                         new Invoice()
                         {
                             staffName = root.loggedIn.User,
@@ -83,7 +96,7 @@ namespace HCI.Forms
                             months = getCheckedMonths(),
                             subTotal = course.Cost,
 
-                            discount = 20,
+                            discount = discount,
                             lessonMaterial = programme.materialFee,
                             payment = 1000
                         }

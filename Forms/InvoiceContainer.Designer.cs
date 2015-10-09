@@ -57,6 +57,7 @@
             this.rv_Invoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rv_Invoice.DocumentMapWidth = 394;
             this.rv_Invoice.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.rv_Invoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(80)))), ((int)(((byte)(233)))));
             this.rv_Invoice.LocalReport.ReportEmbeddedResource = "HCI.Invoice.rdlc";
             this.rv_Invoice.Location = new System.Drawing.Point(0, 0);
             this.rv_Invoice.Name = "rv_Invoice";
@@ -70,6 +71,7 @@
             this.Name = "InvoiceContainer";
             this.Text = "InvoiceContainer";
             this.Load += new System.EventHandler(this.InvoiceContainer_Load);
+            this.Shown += new System.EventHandler(this.InvoiceContainer_Shown);
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentWrapper.ResumeLayout(false);
