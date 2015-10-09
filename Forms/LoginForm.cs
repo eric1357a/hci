@@ -42,11 +42,11 @@ namespace HCI.Forms
             if (m != null)
             {
                 if (m.Manager)
-                    //new StaffMenuForm() { Prev = null }.Show();
-                    new CourseSelection() { Prev = null }.Show();
+                    new ManagerMenuForm() { Prev = null }.Show();
+                    //new CourseSelection() { Prev = null }.Show();
                 else
-                    //new MainMenuForm() { Prev = null }.Show();
-                    new CourseSelection() { Prev = null }.Show();
+                    new MainMenuForm() { Prev = null }.Show();
+                    //new CourseSelection() { Prev = null }.Show();
                 this.Close();
             }
             else MessageBox.Show("Incorrect username or password");

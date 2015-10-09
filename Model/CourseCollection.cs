@@ -137,5 +137,25 @@ namespace HCI.Model
             Cost = cost;
         }
     }
-
+    class MenuData
+    {
+        public int Discount = 50;
+        public int Profit = 40;
+        public int getDiscount()
+        {
+            return Discount;
+        }
+        public void setDiscount(int v)
+        {
+            Discount = v;
+        }
+        public int getProfit()
+        {
+            return Profit;
+        }
+        public void setProfit(int v)
+        {
+            Profit = v;
+        }
+    }
 }

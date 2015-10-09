@@ -29,35 +29,51 @@
         private void InitializeComponent()
         {
             this.MainMenuControlsWrapper = new System.Windows.Forms.Panel();
+            this.btn_view = new System.Windows.Forms.Button();
+            this.MainMenuControlsWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationText
             // 
+            this.BaseNavigationText.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
             this.BaseNavigationText.Text = "Menu";
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Size = new System.Drawing.Size(640, 360);
+            this.BaseContentPanel.Size = new System.Drawing.Size(896, 249);
             // 
             // MainMenuControlsWrapper
             // 
+            this.MainMenuControlsWrapper.Controls.Add(this.btn_view);
             this.MainMenuControlsWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainMenuControlsWrapper.Location = new System.Drawing.Point(0, 80);
+            this.MainMenuControlsWrapper.Location = new System.Drawing.Point(0, 120);
             this.MainMenuControlsWrapper.Margin = new System.Windows.Forms.Padding(0);
             this.MainMenuControlsWrapper.Name = "MainMenuControlsWrapper";
-            this.MainMenuControlsWrapper.Size = new System.Drawing.Size(640, 360);
+            this.MainMenuControlsWrapper.Size = new System.Drawing.Size(896, 249);
             this.MainMenuControlsWrapper.TabIndex = 1;
+            // 
+            // btn_view
+            // 
+            this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view.Location = new System.Drawing.Point(228, 59);
+            this.btn_view.Name = "btn_view";
+            this.btn_view.Size = new System.Drawing.Size(448, 105);
+            this.btn_view.TabIndex = 0;
+            this.btn_view.Text = "View Course Details";
+            this.btn_view.UseVisualStyleBackColor = true;
+            this.btn_view.Click += new System.EventHandler(this.btn_viewcourse_Click);
             // 
             // MainMenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 440);
+            this.ClientSize = new System.Drawing.Size(896, 369);
             this.Controls.Add(this.MainMenuControlsWrapper);
             this.Name = "MainMenuForm";
             this.Text = "MainMenuForm";
             this.Controls.SetChildIndex(this.BaseContentPanel, 0);
             this.Controls.SetChildIndex(this.MainMenuControlsWrapper, 0);
+            this.MainMenuControlsWrapper.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -66,5 +82,6 @@
         #endregion
 
         private System.Windows.Forms.Panel MainMenuControlsWrapper;
+        private System.Windows.Forms.Button btn_view;
     }
 }

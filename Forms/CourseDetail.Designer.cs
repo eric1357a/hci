@@ -44,16 +44,16 @@
             this.BaseContentPanel.Controls.Add(this.CourseImage);
             this.BaseContentPanel.Controls.Add(this.CourseDetails);
             this.BaseContentPanel.Controls.Add(this.CourseRegButton);
-            this.BaseContentPanel.Size = new System.Drawing.Size(440, 336);
+            this.BaseContentPanel.Size = new System.Drawing.Size(440, 316);
             // 
             // CourseRegButton
             // 
             this.CourseRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CourseRegButton.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
-            this.CourseRegButton.Location = new System.Drawing.Point(315, 272);
+            this.CourseRegButton.Location = new System.Drawing.Point(300, 271);
             this.CourseRegButton.Margin = new System.Windows.Forms.Padding(0);
             this.CourseRegButton.Name = "CourseRegButton";
-            this.CourseRegButton.Size = new System.Drawing.Size(101, 36);
+            this.CourseRegButton.Size = new System.Drawing.Size(116, 36);
             this.CourseRegButton.TabIndex = 5;
             this.CourseRegButton.Text = "Register";
             this.CourseRegButton.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             // CourseDetails
             // 
             this.CourseDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CourseDetails.Location = new System.Drawing.Point(140, 20);
+            this.CourseDetails.Location = new System.Drawing.Point(140, 10);
             this.CourseDetails.Margin = new System.Windows.Forms.Padding(0);
             this.CourseDetails.Name = "CourseDetails";
             this.CourseDetails.Size = new System.Drawing.Size(276, 234);

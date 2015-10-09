@@ -95,11 +95,11 @@
     <Compile Include="Forms\RootForm.Designer.cs">
       <DependentUpon>RootForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\StaffMenuForm.cs">
+    <Compile Include="Forms\ManagerMenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\StaffMenuForm.Designer.cs">
-      <DependentUpon>StaffMenuForm.cs</DependentUpon>
+    <Compile Include="Forms\ManagerMenuForm.Designer.cs">
+      <DependentUpon>ManagerMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Foundation\BaseForm.cs">
       <SubType>Form</SubType>
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="Forms\RootForm.resx">
       <DependentUpon>RootForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\StaffMenuForm.resx">
-      <DependentUpon>StaffMenuForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManagerMenuForm.resx">
+      <DependentUpon>ManagerMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Foundation\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>

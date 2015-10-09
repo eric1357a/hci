@@ -20,5 +20,16 @@ namespace HCI.Forms
         {
             InitializeComponent();
         }
+
+        private void btn_viewcourse_Click(object sender, EventArgs e)
+        {
+            new CourseSelection() { Prev = this}.Show();
+        }
+
+
+        private void btn_coursesearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
