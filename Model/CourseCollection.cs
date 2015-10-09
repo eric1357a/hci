@@ -7,7 +7,7 @@ namespace HCI.Model
 {
     class CourseCollection
     {
-        public readonly static LinkedList<Programme> Programmes = _InitProgrammes();
+        public static LinkedList<Programme> Programmes = _InitProgrammes();
 
         public static int Count
         {
@@ -30,6 +30,7 @@ namespace HCI.Model
             programmes.AddLast(new Programme(
                 "AA",
                 "Sports",
+                200,
                 new Course[] {
                     new Course("Tennis",
                         "Tennis is a racquet sport that can be played "+
@@ -53,6 +54,7 @@ namespace HCI.Model
             programmes.AddLast(new Programme(
                 "BB",
                 "Arts",
+                500,
                 new Course[] {
                     new Course("Snapshot",
                         "A photograph that is \"shot\" spontaneously and quickly, "+
@@ -75,6 +77,7 @@ namespace HCI.Model
             programmes.AddLast(new Programme(
                 "CC",
                 "Music",
+                1000,
                 new Course[] {
                     new Course("Piano",
                         "A musical instrument played using a keyboard.",
@@ -94,20 +97,22 @@ namespace HCI.Model
 
     class Programme
     {
-        public readonly string Category;
-        public readonly Course[] Courses;
-        public readonly string Key;
+        public string Category;
+        public Course[] Courses;
+        public string Key;
+        public int materialFee;
 
         public int Count
         {
             get { return Courses.Length; }
         }
 
-        public Programme(string key, string category, Course[] courses)
+        public Programme(string key, string category, int materialFee, Course[] courses)
         {
             this.Category = category;
             this.Courses = courses;
             this.Key = key;
+            this.materialFee = materialFee;
         }
 
         public Course Find(string key)
@@ -124,10 +129,10 @@ namespace HCI.Model
 
     class Course
     {
-        public readonly string Name;
-        public readonly string Desc;
-        public readonly string Day;
-        public readonly int Cost;
+        public string Name;
+        public string Desc;
+        public string Day;
+        public int Cost;
 
         public Course(string name, string desc, string day, int cost)
         {
@@ -137,5 +142,4 @@ namespace HCI.Model
             Cost = cost;
         }
     }
-    
 }

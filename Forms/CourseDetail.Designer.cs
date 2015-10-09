@@ -32,6 +32,8 @@
             this.CourseDetails = new System.Windows.Forms.Label();
             this.CourseImage = new System.Windows.Forms.PictureBox();
             this.BaseContentPanel.SuspendLayout();
+            this.BaseNavigation.SuspendLayout();
+            this.BaseContentWrapper.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CourseImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,16 +43,24 @@
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Controls.Add(this.CourseImage);
-            this.BaseContentPanel.Controls.Add(this.CourseDetails);
-            this.BaseContentPanel.Controls.Add(this.CourseRegButton);
-            this.BaseContentPanel.Size = new System.Drawing.Size(440, 316);
+            this.BaseContentPanel.Size = new System.Drawing.Size(592, 393);
+            // 
+            // BaseNavigation
+            // 
+            this.BaseNavigation.Size = new System.Drawing.Size(592, 66);
+            // 
+            // BaseContentWrapper
+            // 
+            this.BaseContentWrapper.Controls.Add(this.CourseDetails);
+            this.BaseContentWrapper.Controls.Add(this.CourseImage);
+            this.BaseContentWrapper.Controls.Add(this.CourseRegButton);
+            this.BaseContentWrapper.Size = new System.Drawing.Size(592, 327);
             // 
             // CourseRegButton
             // 
             this.CourseRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CourseRegButton.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
-            this.CourseRegButton.Location = new System.Drawing.Point(300, 271);
+            this.CourseRegButton.Location = new System.Drawing.Point(420, 254);
             this.CourseRegButton.Margin = new System.Windows.Forms.Padding(0);
             this.CourseRegButton.Name = "CourseRegButton";
             this.CourseRegButton.Size = new System.Drawing.Size(116, 36);
@@ -62,15 +72,15 @@
             // CourseDetails
             // 
             this.CourseDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CourseDetails.Location = new System.Drawing.Point(140, 10);
+            this.CourseDetails.Location = new System.Drawing.Point(159, 27);
             this.CourseDetails.Margin = new System.Windows.Forms.Padding(0);
             this.CourseDetails.Name = "CourseDetails";
-            this.CourseDetails.Size = new System.Drawing.Size(276, 234);
+            this.CourseDetails.Size = new System.Drawing.Size(398, 208);
             this.CourseDetails.TabIndex = 6;
             // 
             // CourseImage
             // 
-            this.CourseImage.Location = new System.Drawing.Point(25, 20);
+            this.CourseImage.Location = new System.Drawing.Point(42, 27);
             this.CourseImage.Margin = new System.Windows.Forms.Padding(0);
             this.CourseImage.Name = "CourseImage";
             this.CourseImage.Size = new System.Drawing.Size(96, 96);
@@ -81,10 +91,12 @@
             // CourseDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(440, 436);
+            this.ClientSize = new System.Drawing.Size(592, 447);
             this.Name = "CourseDetail";
             this.Text = "CourseDetail";
             this.BaseContentPanel.ResumeLayout(false);
+            this.BaseNavigation.ResumeLayout(false);
+            this.BaseContentWrapper.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CourseImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

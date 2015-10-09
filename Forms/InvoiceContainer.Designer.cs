@@ -30,6 +30,8 @@
         {
             this.rv_Invoice = new Microsoft.Reporting.WinForms.ReportViewer();
             this.BaseContentPanel.SuspendLayout();
+            this.BaseNavigation.SuspendLayout();
+            this.BaseContentWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationText
@@ -38,28 +40,39 @@
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Controls.Add(this.rv_Invoice);
-            this.BaseContentPanel.Size = new System.Drawing.Size(1189, 643);
+            this.BaseContentPanel.Size = new System.Drawing.Size(900, 846);
+            // 
+            // BaseNavigation
+            // 
+            this.BaseNavigation.Size = new System.Drawing.Size(900, 66);
+            // 
+            // BaseContentWrapper
+            // 
+            this.BaseContentWrapper.Controls.Add(this.rv_Invoice);
+            this.BaseContentWrapper.Size = new System.Drawing.Size(900, 780);
             // 
             // rv_Invoice
             // 
             this.rv_Invoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.rv_Invoice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rv_Invoice.DocumentMapWidth = 394;
+            this.rv_Invoice.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.rv_Invoice.LocalReport.ReportEmbeddedResource = "HCI.Invoice.rdlc";
             this.rv_Invoice.Location = new System.Drawing.Point(0, 0);
             this.rv_Invoice.Name = "rv_Invoice";
-            this.rv_Invoice.Size = new System.Drawing.Size(1189, 643);
+            this.rv_Invoice.Size = new System.Drawing.Size(900, 780);
             this.rv_Invoice.TabIndex = 0;
             // 
             // InvoiceContainer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 743);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.ClientSize = new System.Drawing.Size(900, 900);
             this.Name = "InvoiceContainer";
             this.Text = "InvoiceContainer";
             this.Load += new System.EventHandler(this.InvoiceContainer_Load);
             this.BaseContentPanel.ResumeLayout(false);
+            this.BaseNavigation.ResumeLayout(false);
+            this.BaseContentWrapper.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

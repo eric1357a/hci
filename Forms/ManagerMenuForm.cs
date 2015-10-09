@@ -11,7 +11,7 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class ManagerMenuForm : BaseForm
+    public partial class ManagerMenuForm : LoggedInForm
     {
         private Discounts data = new Discounts();
         public ManagerMenuForm()
@@ -149,12 +149,6 @@ namespace HCI.Forms
         private void btn_view_Click(object sender, EventArgs e)
         {
             new CourseSelection() { Prev = this }.Show();
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            new LoginForm() { Prev = null }.Show();
-            this.Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

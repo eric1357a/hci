@@ -9,10 +9,11 @@ using System.Windows.Forms;
 using HCI.Foundation;
 using HCI.Model;
 using Microsoft.Reporting.WinForms;
+using System.Drawing.Printing;
 
 namespace HCI.Forms
 {
-    public partial class InvoiceContainer : BaseForm
+    public partial class InvoiceContainer : LoggedInForm
     {
         public InvoiceContainer(Invoice invoice)
         {
@@ -26,6 +27,10 @@ namespace HCI.Forms
         private void InvoiceContainer_Load(object sender, EventArgs e)
         {
             this.rv_Invoice.RefreshReport();
+
+            // Pre-enter print layout for ignoring normal layout collpse
+            rv_Invoice.SetDisplayMode(DisplayMode.PrintLayout);
+            rv_Invoice.ZoomMode = ZoomMode.PageWidth;
         }
     }
 }

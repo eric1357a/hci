@@ -12,7 +12,7 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class AdminForm : BaseForm
+    public partial class AdminForm : LoggedInForm
     {
         public AdminForm()
         {

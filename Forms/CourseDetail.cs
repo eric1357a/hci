@@ -12,15 +12,16 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class CourseDetail : BaseForm
+    public partial class CourseDetail : LoggedInForm
     {
-
         private Course course;
+        private String key;
 
         public CourseDetail(string key)
         {
             InitializeComponent();
-            BaseNavigationText.Text = key;
+
+            this.key = key;
             course = CourseCollection.FindProgramme(key).Find(key);
             BaseNavigationText.Text = course.Name;
             CourseDetails.Text =
@@ -36,7 +37,7 @@ namespace HCI.Forms
                 // If course is not available by random
                 MessageBox.Show("Course \"" + course.Name + "\" is full right now");
             else
-                new CourseRegistration(course.Name, weekday) { Prev = this }.Show();
+                new CourseRegistration(key, weekday) { Prev = this }.Show();
         }
     }
 }

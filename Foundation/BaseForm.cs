@@ -14,6 +14,9 @@ namespace HCI.Foundation
 {
     public partial class BaseForm : Form
     {
+        // Making rootForm accessible as a warehouse of form data
+        public static RootForm root;
+
         public BaseForm Prev
         {
             get { return _prev; }

@@ -11,7 +11,7 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class CourseRegistration : BaseForm
+    public partial class CourseRegistration : LoggedInForm
     {
         private const String PHONE_ERR = "Invalid phone number";
         private const String EMAIL_ERR = "Invalid email";
@@ -21,11 +21,17 @@ namespace HCI.Forms
         private readonly Color DARK_RED = Color.FromArgb(40, 32, 32);
         private readonly Color DARK_PURPLE = Color.FromArgb(34, 36, 39);
 
-        public CourseRegistration(String course, String weekDay)
+        private Course course;
+        private Programme programme;
+
+        public CourseRegistration(String key, String weekDay)
         {
+            programme = CourseCollection.FindProgramme(key);
+            course = CourseCollection.FindProgramme(key).Find(key);
+
             InitializeComponent();
 
-            lb_Course.Text = course;
+            lb_Course.Text = "(" + programme.Category + ")" + " " + course.Name;
             lb_WeekDay.Text = weekDay;
         }
 
@@ -58,11 +64,40 @@ namespace HCI.Forms
                     MessageBox.Show("Registered Successfully!");
                     this.Hide();
 
+                    String membership = "N/A";
+                    if (clb_Member.CheckedItems.Count != 0)
+                        membership = clb_Member.CheckedItems[0].ToString();
                     new InvoiceContainer(
                         new Invoice()
+                        {
+                            staffName = root.loggedIn.User,
+
+                            studentName = tb_Name.Text,
+                            contactNo = tb_ContactNo.Text,
+                            email = tb_Email.Text,
+                            membership = membership,
+
+                            category = programme.Category,
+                            course = course.Name,
+                            weekDay = lb_WeekDay.Text,
+                            months = getCheckedMonths(),
+                            subTotal = course.Cost,
+
+                            discount = 20,
+                            lessonMaterial = programme.materialFee,
+                            payment = 1000
+                        }
                     ) { Prev = this.Prev.Prev }.Show();
                 }
             }
+        }
+
+        private String getCheckedMonths()
+        {
+            String retn = "";
+            for (int i = 0; i < clb_Month.CheckedItems.Count; i++)
+                retn += clb_Month.CheckedItems[i].ToString().Substring(0, 3) + ",";
+            return retn.Substring(0, retn.Length - 1);
         }
 
         private void showToolTip(object sender, String message)
@@ -164,6 +199,15 @@ namespace HCI.Forms
             }
             sender.BackColor = DARK_PURPLE;
             return true;
+        }
+
+        private void clb_Member_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // One tick only
+            if (e.NewValue == CheckState.Checked)
+                for (int i = 0; i < ((CheckedListBox)sender).Items.Count; i++)
+                    if (e.Index != i)
+                        ((CheckedListBox)sender).SetItemChecked(i, false);
         }
     }
 }

@@ -65,6 +65,8 @@
             this.HolderC1 = new System.Windows.Forms.Panel();
             this.ImageC1 = new System.Windows.Forms.PictureBox();
             this.BaseContentPanel.SuspendLayout();
+            this.BaseNavigation.SuspendLayout();
+            this.BaseContentWrapper.SuspendLayout();
             this.GroupCourseAA.SuspendLayout();
             this.TableCourseA3.SuspendLayout();
             this.HolderA3.SuspendLayout();
@@ -101,8 +103,17 @@
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Controls.Add(this.GroupTable);
-            this.BaseContentPanel.Size = new System.Drawing.Size(971, 476);
+            this.BaseContentPanel.Size = new System.Drawing.Size(971, 542);
+            // 
+            // BaseNavigation
+            // 
+            this.BaseNavigation.Size = new System.Drawing.Size(971, 66);
+            // 
+            // BaseContentWrapper
+            // 
+            this.BaseContentWrapper.Controls.Add(this.GroupTable);
+            this.BaseContentWrapper.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BaseContentWrapper.Size = new System.Drawing.Size(971, 476);
             // 
             // GroupCourseAA
             // 
@@ -714,6 +725,8 @@
             this.Name = "CourseSelection";
             this.Text = "CourseSelection";
             this.BaseContentPanel.ResumeLayout(false);
+            this.BaseNavigation.ResumeLayout(false);
+            this.BaseContentWrapper.ResumeLayout(false);
             this.GroupCourseAA.ResumeLayout(false);
             this.TableCourseA3.ResumeLayout(false);
             this.HolderA3.ResumeLayout(false);

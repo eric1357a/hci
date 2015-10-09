@@ -12,7 +12,7 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class CourseSelection : BaseForm
+    public partial class CourseSelection : LoggedInForm
     {
         private TableLayoutPanel[] courses;
         private GroupBox[] courseCategories;
@@ -63,7 +63,7 @@ namespace HCI.Forms
 
         private Control toRootControl(Control control)
         {
-            while (control.Parent.Parent.Parent.Parent.Parent != null)
+            while (control.Parent.Parent.Parent.Parent.Parent.Parent != null)
                 control = control.Parent;
             return control;
         }

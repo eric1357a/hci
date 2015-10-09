@@ -6,22 +6,21 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using HCI.Forms;
 
-using HCI.Foundation;
-using HCI.Model;
-
-namespace HCI.Forms
+namespace HCI.Foundation
 {
-    public partial class RootForm : Form
+    public partial class LoggedInForm : BaseForm
     {
-        // Shared form data
-        public Staff loggedIn;
-
-        public RootForm()
+        public LoggedInForm()
         {
             InitializeComponent();
-            BaseForm.root = this;
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
             new LoginForm().Show();
+            this.Close();
         }
     }
 }

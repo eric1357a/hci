@@ -119,6 +119,12 @@
     <Compile Include="Foundation\DropShadow.Designer.cs">
       <DependentUpon>DropShadow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Foundation\LoggedInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Foundation\LoggedInForm.Designer.cs">
+      <DependentUpon>LoggedInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CourseCollection.cs" />
     <Compile Include="Model\Discounts.cs" />
     <Compile Include="Model\Invoice.cs" />
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Foundation\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Foundation\LoggedInForm.resx">
+      <DependentUpon>LoggedInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoice.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">

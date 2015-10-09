@@ -7,7 +7,7 @@ namespace HCI.Model
 {
     class StaffCollection
     {
-        public readonly static LinkedList<Staff> Staffs = _InitStaffs();
+        public static LinkedList<Staff> Staffs = _InitStaffs();
 
 
         public static Staff Login(string user, string pass)
@@ -38,11 +38,11 @@ namespace HCI.Model
 
     }
 
-    class Staff
+    public class Staff
     {
-        public readonly string User;
-        public readonly string Pass;
-        public readonly bool Manager;
+        public string User;
+        public string Pass;
+        public bool Manager;
         public Staff(string user, string pass, bool manager)
         {
             User = user;

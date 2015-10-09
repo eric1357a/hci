@@ -12,7 +12,7 @@ using HCI.Foundation;
 namespace HCI.Forms
 //TODO List: Logout function
 {
-    public partial class MainMenuForm : BaseForm
+    public partial class MainMenuForm : LoggedInForm
     {
         public MainMenuForm()
         {
@@ -28,12 +28,6 @@ namespace HCI.Forms
         private void btn_coursesearch_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            new LoginForm() { Prev = null }.Show();
-            this.Close();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

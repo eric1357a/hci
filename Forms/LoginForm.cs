@@ -45,6 +45,8 @@ namespace HCI.Forms
                     new ManagerMenuForm() { Prev = null }.Show();
                 else
                     new MainMenuForm() { Prev = null }.Show();
+
+                root.loggedIn = m;
                 this.Close();
             }
             else MessageBox.Show("Incorrect username or password");
