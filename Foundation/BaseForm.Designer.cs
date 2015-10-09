@@ -204,14 +204,11 @@
         private System.Windows.Forms.TableLayoutPanel BaseTable;
         private System.Windows.Forms.Panel BaseWindowBar;
         private System.Windows.Forms.TableLayoutPanel BaseHeader;
-        private System.Windows.Forms.Panel BaseMenuActions;
         private System.Windows.Forms.Panel BaseNavigation;
         private System.Windows.Forms.LinkLabel BaseButtonCloseWindow;
         private System.Windows.Forms.LinkLabel BaseButtonHideWindow;
         public System.Windows.Forms.LinkLabel BaseNavigationText;
         public System.Windows.Forms.Panel BaseContentPanel;
-
-
-
+        public System.Windows.Forms.Panel BaseMenuActions;
     }
 }

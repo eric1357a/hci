@@ -10,9 +10,7 @@ using System.Windows.Forms;
 using HCI.Foundation;
 
 namespace HCI.Forms
-//TODO List:  View Course Details
-//            Course Registration
-//            Search courses
+//TODO List: Logout function
 {
     public partial class MainMenuForm : BaseForm
     {
