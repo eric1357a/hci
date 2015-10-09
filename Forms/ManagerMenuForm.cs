@@ -13,7 +13,7 @@ namespace HCI.Forms
 {
     public partial class ManagerMenuForm : BaseForm
     {
-        private MenuData data = new MenuData();
+        private Discounts data = new Discounts();
         public ManagerMenuForm()
         {
             InitializeComponent();
@@ -25,6 +25,7 @@ namespace HCI.Forms
             discountBar.Value = data.getDiscount();
             tbprofit.Text = (data.getProfit()).ToString();
             profitBar.Value = data.getProfit();
+            Creditbar.Value = data.getCCDiscount();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -38,22 +39,7 @@ namespace HCI.Forms
             else { MessageBox.Show("Reach minimum/maximum of the discount."); }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (!(data.getDiscount() < 1 || (data.getDiscount()) > 100))
-            {
-                data.setDiscount(data.getDiscount() - 1);
-                tbdiscount.Text = (data.getDiscount()).ToString();
-                discountBar.Value = data.getDiscount();
-            }
-            else { MessageBox.Show("Reach minimum/maximum of the discount."); }
-        }
 
-
-        private void discount_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -95,10 +81,6 @@ namespace HCI.Forms
             data.setDiscount(discountBar.Value);
         }
 
-        private void discountBar_Scroll(object sender, EventArgs e)
-        {
-
-        }
 
         private void tbdiscount_TextChanged(object sender, EventArgs e)
         {
@@ -125,16 +107,6 @@ namespace HCI.Forms
           
       
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void profitBar_Scroll(object sender, EventArgs e)
-        {
-
-        }
-
         private void tbprofit_TextChanged(object sender, EventArgs e)
         {
             int profit;
@@ -144,7 +116,7 @@ namespace HCI.Forms
                 if (profit <= 100)
                 {
                     profitBar.Value = profit;
-                    data.setDiscount(profit);
+                    data.setProfit(profit);
                 }
                 else
                 {
@@ -172,6 +144,95 @@ namespace HCI.Forms
         private void profitBar_MouseUp(object sender, MouseEventArgs e)
         {
             data.setProfit(profitBar.Value);
+        }
+
+        private void btn_view_Click(object sender, EventArgs e)
+        {
+            new CourseSelection() { Prev = this }.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new LoginForm() { Prev = null }.Show();
+            this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            int CCdiscount;
+
+            if (Int32.TryParse(tbCCDiscount.Text, out CCdiscount))
+            {
+                if (CCdiscount <= 100)
+                {
+                    Creditbar.Value = CCdiscount;
+                    data.setDiscount(CCdiscount);
+                }
+                else
+                {
+                    tbCCDiscount.Text = "100";
+                    MessageBox.Show("Please input numbers under 100");
+                }
+            }
+            else
+            {
+                tbCCDiscount.Text = "0";
+                MessageBox.Show("Please input number only");
+            }
+        }
+
+        private void Creditbar_ValueChanged(object sender, EventArgs e)
+        {
+            tbCCDiscount.Text = (Creditbar.Value).ToString();
+        }
+
+        private void Creditbar_MouseUp(object sender, MouseEventArgs e)
+        {
+            data.setCCDiscount(Creditbar.Value);
+        }
+
+        private void Creditbar_KeyDown(object sender, KeyEventArgs e)
+        {
+            data.setCCDiscount(Creditbar.Value);
+        }
+
+        private void memberdown_Click(object sender, EventArgs e)
+        {
+            {
+                if (!(data.getDiscount() < 1 || (data.getDiscount()) > 100))
+                {
+                    data.setDiscount(data.getDiscount() - 1);
+                    tbdiscount.Text = (data.getDiscount()).ToString();
+                    discountBar.Value = data.getDiscount();
+                }
+                else { MessageBox.Show("Reach minimum/maximum of the discount."); }
+            }
+        }
+
+        private void CCUp_Click(object sender, EventArgs e)
+        {
+            {
+                if (!(data.getCCDiscount() < 1 || (data.getCCDiscount()) > 100))
+                {
+                    data.setCCDiscount(data.getCCDiscount() + 1);
+                    tbCCDiscount.Text = (data.getCCDiscount()).ToString();
+                    Creditbar.Value = data.getCCDiscount();
+                }
+                else { MessageBox.Show("Reach minimum/maximum of the credit discount."); }
+            }
+        }
+
+        private void CCDown_Click(object sender, EventArgs e)
+        {
+            {
+                if (!(data.getCCDiscount() < 1 || (data.getCCDiscount()) > 100))
+                {
+                    data.setCCDiscount(data.getCCDiscount() - 1);
+                    tbCCDiscount.Text = (data.getCCDiscount()).ToString();
+                    Creditbar.Value = data.getCCDiscount();
+                }
+                else { MessageBox.Show("Reach minimum/maximum of the credit discount."); }
+            }
         }
     }
 }

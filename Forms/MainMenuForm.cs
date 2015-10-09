@@ -29,5 +29,11 @@ namespace HCI.Forms
         {
 
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new LoginForm() { Prev = null }.Show();
+            this.Close();
+        }
     }
 }
