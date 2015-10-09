@@ -17,22 +17,26 @@ namespace HCI.Forms
         public LoginForm()
         {
             InitializeComponent();
-            LoginUsername.Text = "peter";
-            Timer alan = new Timer();
-            Timer peter = new Timer();
-            alan.Tick += (send, e) =>
+
+            LoginUsername.Text = "Ada";
+            Timer timer = new Timer();
+            timer.Interval = 1000;
+            timer.Tick += (sender, e) => 
             {
-                LoginUsername.Text = "alan";
+                switch (LoginUsername.Text)
+                {
+                    case "Ada":
+                        LoginUsername.Text = "Peter";
+                        break;
+                    case "Peter":
+                        LoginUsername.Text = "Alan";
+                        break;
+                    case "Alan":
+                        LoginUsername.Text = "Ada";
+                        break;
+                }
             };
-            alan.Interval = 2000;
-            alan.Start();
-            peter.Tick += (send, e) =>
-            {
-                LoginUsername.Text = "peter";
-            };
-            peter.Interval = 2000;
-            System.Threading.Thread.Sleep(1000);
-            peter.Start();
+            timer.Start();
             LoginPassword.Text = "1234";
         }
 
@@ -40,13 +44,16 @@ namespace HCI.Forms
         {
             Staff m = StaffCollection.Login(LoginUsername.Text, LoginPassword.Text);
             if (m != null)
-            {
-                if (m.Manager)
-                    new ManagerMenuForm() { Prev = null }.Show();
-                else
-                    new MainMenuForm() { Prev = null }.Show();
-
+            {                
                 root.loggedIn = m;
+
+                if (m.Role == JobPosition.Manager)
+                    new ManagerMenuForm() { Prev = null }.Show();
+                else if (m.Role == JobPosition.Staff)
+                    new MainMenuForm() { Prev = null }.Show();
+                else
+                    new AdminForm() { Prev = null }.Show();
+
                 this.Close();
             }
             else MessageBox.Show("Incorrect username or password");

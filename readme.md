@@ -22,4 +22,4 @@
 
 > C
 - [x] Course registration
-- [ ] 入聲
+- [x] 入聲

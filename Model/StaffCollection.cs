@@ -5,6 +5,11 @@ using System.Text;
 
 namespace HCI.Model
 {
+    public enum JobPosition
+    {
+        Staff, Manager, Admin
+    }
+
     class StaffCollection
     {
         public static LinkedList<Staff> Staffs = _InitStaffs();
@@ -24,14 +29,19 @@ namespace HCI.Model
         {
             LinkedList<Staff> members = new LinkedList<Staff>();
             members.AddLast(new Staff(
-                "peter",
+                "Peter",
                 "1234",
-                false
+                JobPosition.Staff
             ));
             members.AddLast(new Staff(
-                "alan",
+                "Alan",
                 "1234",
-                true
+                JobPosition.Manager
+            ));
+            members.AddLast(new Staff(
+                "Ada",
+                "1234",
+                JobPosition.Admin
             ));
             return members;
         }
@@ -42,12 +52,12 @@ namespace HCI.Model
     {
         public string User;
         public string Pass;
-        public bool Manager;
-        public Staff(string user, string pass, bool manager)
+        public JobPosition Role;
+        public Staff(string user, string pass, JobPosition role)
         {
             User = user;
             Pass = pass;
-            Manager = manager;
+            Role = role;
         }
     }
 }

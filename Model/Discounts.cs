@@ -7,30 +7,32 @@ namespace HCI.Model
 {
     public class Discounts
     {
-        public int Discount;
-        public int Profit;
-        public int CreditCardDiscount;
-        public int getDiscount()
+        private static int Discount = 10;
+        private static int GoldDiscount = 20;
+        private static int Profit = 40;
+        private static int CreditCardDiscount = 5;
+
+        public static int getDiscount()
         {
             return Discount;
         }
-        public void setDiscount(int v)
+        public static void setDiscount(int v)
         {
             Discount = v;
         }
-        public int getProfit()
+        public static int getProfit()
         {
             return Profit;
         }
-        public void setProfit(int v)
+        public static void setProfit(int v)
         {
             Profit = v;
         }
-        public int getCCDiscount()
+        public static int getCCDiscount()
         {
             return CreditCardDiscount;
         }
-        public void setCCDiscount(int v)
+        public static void setCCDiscount(int v)
         {
             CreditCardDiscount = v;
         }

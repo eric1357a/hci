@@ -29,40 +29,53 @@
         private void InitializeComponent()
         {
             this.btn_Logout = new System.Windows.Forms.Button();
-            this.LogoutPanel = new System.Windows.Forms.Panel();
+            this.BaseNavigationAction = new System.Windows.Forms.Panel();
+            this.lb_User = new System.Windows.Forms.Label();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
-            this.LogoutPanel.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigation
             // 
-            this.BaseNavigation.Controls.Add(this.LogoutPanel);
+            this.BaseNavigation.Controls.Add(this.BaseNavigationAction);
+            this.BaseNavigation.Controls.SetChildIndex(this.BaseNavigationAction, 0);
             this.BaseNavigation.Controls.SetChildIndex(this.BaseNavigationText, 0);
-            this.BaseNavigation.Controls.SetChildIndex(this.LogoutPanel, 0);
             // 
             // btn_Logout
             // 
-            this.btn_Logout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Logout.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.Location = new System.Drawing.Point(5, 10);
+            this.btn_Logout.Location = new System.Drawing.Point(613, 10);
             this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Size = new System.Drawing.Size(97, 46);
+            this.btn_Logout.Size = new System.Drawing.Size(102, 46);
             this.btn_Logout.TabIndex = 1;
             this.btn_Logout.Text = "Logout";
             this.btn_Logout.UseVisualStyleBackColor = true;
             this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
-            // LogoutPanel
+            // BaseNavigationAction
             // 
-            this.LogoutPanel.Controls.Add(this.btn_Logout);
-            this.LogoutPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.LogoutPanel.Location = new System.Drawing.Point(613, 0);
-            this.LogoutPanel.Margin = new System.Windows.Forms.Padding(10);
-            this.LogoutPanel.Name = "LogoutPanel";
-            this.LogoutPanel.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            this.LogoutPanel.Size = new System.Drawing.Size(107, 66);
-            this.LogoutPanel.TabIndex = 0;
+            this.BaseNavigationAction.Controls.Add(this.lb_User);
+            this.BaseNavigationAction.Controls.Add(this.btn_Logout);
+            this.BaseNavigationAction.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BaseNavigationAction.Location = new System.Drawing.Point(0, 0);
+            this.BaseNavigationAction.Name = "BaseNavigationAction";
+            this.BaseNavigationAction.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            this.BaseNavigationAction.Size = new System.Drawing.Size(720, 66);
+            this.BaseNavigationAction.TabIndex = 0;
+            // 
+            // lb_User
+            // 
+            this.lb_User.AutoEllipsis = true;
+            this.lb_User.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lb_User.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_User.Location = new System.Drawing.Point(459, 10);
+            this.lb_User.Name = "lb_User";
+            this.lb_User.Size = new System.Drawing.Size(154, 46);
+            this.lb_User.TabIndex = 2;
+            this.lb_User.Text = "XXX(YYY)";
+            this.lb_User.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // LoggedInForm
             // 
@@ -72,7 +85,7 @@
             this.Text = "LoggedIn";
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
-            this.LogoutPanel.ResumeLayout(false);
+            this.BaseNavigationAction.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -81,6 +94,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_Logout;
-        private System.Windows.Forms.Panel LogoutPanel;
+        private System.Windows.Forms.Panel BaseNavigationAction;
+        private System.Windows.Forms.Label lb_User;
     }
 }

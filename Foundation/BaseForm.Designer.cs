@@ -120,6 +120,7 @@
             // 
             this.BaseNavigationText.ActiveLinkColor = System.Drawing.Color.MediumPurple;
             this.BaseNavigationText.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(13)))));
+            this.BaseNavigationText.Dock = System.Windows.Forms.DockStyle.Left;
             this.BaseNavigationText.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.BaseNavigationText.ForeColor = System.Drawing.Color.White;
             this.BaseNavigationText.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
@@ -128,7 +129,7 @@
             this.BaseNavigationText.Margin = new System.Windows.Forms.Padding(0);
             this.BaseNavigationText.Name = "BaseNavigationText";
             this.BaseNavigationText.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BaseNavigationText.Size = new System.Drawing.Size(400, 66);
+            this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
             this.BaseNavigationText.TabIndex = 0;
             this.BaseNavigationText.TabStop = true;
             this.BaseNavigationText.Text = "Title";

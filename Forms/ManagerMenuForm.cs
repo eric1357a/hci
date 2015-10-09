@@ -13,7 +13,6 @@ namespace HCI.Forms
 {
     public partial class ManagerMenuForm : LoggedInForm
     {
-        private Discounts data = new Discounts();
         public ManagerMenuForm()
         {
             InitializeComponent();
@@ -21,20 +20,21 @@ namespace HCI.Forms
 
         private void ManagerMenuForm_Load(object sender, EventArgs e)
         {
-            tbdiscount.Text = (data.getDiscount()).ToString();
-            discountBar.Value = data.getDiscount();
-            tbprofit.Text = (data.getProfit()).ToString();
-            profitBar.Value = data.getProfit();
-            Creditbar.Value = data.getCCDiscount();
+            tbdiscount.Text = (Discounts.getDiscount()).ToString();
+            discountBar.Value = Discounts.getDiscount();
+            tbprofit.Text = (Discounts.getProfit()).ToString();
+            profitBar.Value = Discounts.getProfit();
+            tbCCDiscount.Text = Discounts.getCCDiscount().ToString();
+            Creditbar.Value = Discounts.getCCDiscount();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (!(data.getDiscount() < 0 || (data.getDiscount()) > 99))
+            if (!(Discounts.getDiscount() < 0 || (Discounts.getDiscount()) > 99))
             {
-                data.setDiscount(data.getDiscount() + 1);
-                tbdiscount.Text = (data.getDiscount()).ToString();
-                discountBar.Value = data.getDiscount();
+                Discounts.setDiscount(Discounts.getDiscount() + 1);
+                tbdiscount.Text = (Discounts.getDiscount()).ToString();
+                discountBar.Value = Discounts.getDiscount();
             }
             else { MessageBox.Show("Reach minimum/maximum of the discount."); }
         }
@@ -43,11 +43,11 @@ namespace HCI.Forms
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (!(data.getProfit() < 1 || (data.getProfit()) > 100))
+            if (!(Discounts.getProfit() < 1 || (Discounts.getProfit()) > 100))
             {
-                data.setProfit(data.getProfit() - 1);
-                tbprofit.Text = (data.getProfit()).ToString();
-                profitBar.Value = data.getProfit();
+                Discounts.setProfit(Discounts.getProfit() - 1);
+                tbprofit.Text = (Discounts.getProfit()).ToString();
+                profitBar.Value = Discounts.getProfit();
             }
             else { MessageBox.Show("Reach minimum/maximum of the profit margin."); }
         }
@@ -55,11 +55,11 @@ namespace HCI.Forms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (!(data.getProfit() < 0 || (data.getProfit()) > 99))
+            if (!(Discounts.getProfit() < 0 || (Discounts.getProfit()) > 99))
             {
-                data.setProfit(data.getProfit() + 1);
-                tbprofit.Text = (data.getProfit()).ToString();
-                profitBar.Value = data.getProfit();
+                Discounts.setProfit(Discounts.getProfit() + 1);
+                tbprofit.Text = (Discounts.getProfit()).ToString();
+                profitBar.Value = Discounts.getProfit();
             }
             else { MessageBox.Show("Reach minimum/maximum of the profit margin."); }
         }
@@ -72,13 +72,13 @@ namespace HCI.Forms
 
         private void discountBar_MouseUp(object sender, MouseEventArgs e)
         {
-            data.setDiscount(discountBar.Value);
+            Discounts.setDiscount(discountBar.Value);
         }
 
 
         private void discountBar_KeyDown(object sender, KeyEventArgs e)
         {
-            data.setDiscount(discountBar.Value);
+            Discounts.setDiscount(discountBar.Value);
         }
 
 
@@ -91,7 +91,7 @@ namespace HCI.Forms
                     if (discount <= 100)
                     {
                         discountBar.Value = discount;
-                        data.setDiscount(discount);
+                        Discounts.setDiscount(discount);
                     }
                     else {
                         tbdiscount.Text = "100";
@@ -116,7 +116,7 @@ namespace HCI.Forms
                 if (profit <= 100)
                 {
                     profitBar.Value = profit;
-                    data.setProfit(profit);
+                    Discounts.setProfit(profit);
                 }
                 else
                 {
@@ -138,12 +138,12 @@ namespace HCI.Forms
 
         private void profitBar_KeyDown(object sender, KeyEventArgs e)
         {
-            data.setProfit(profitBar.Value);
+            Discounts.setProfit(profitBar.Value);
         }
 
         private void profitBar_MouseUp(object sender, MouseEventArgs e)
         {
-            data.setProfit(profitBar.Value);
+            Discounts.setProfit(profitBar.Value);
         }
 
         private void btn_view_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace HCI.Forms
                 if (CCdiscount <= 100)
                 {
                     Creditbar.Value = CCdiscount;
-                    data.setCCDiscount(CCdiscount);
+                    Discounts.setCCDiscount(CCdiscount);
                 }
                 else
                 {
@@ -182,22 +182,22 @@ namespace HCI.Forms
 
         private void Creditbar_MouseUp(object sender, MouseEventArgs e)
         {
-            data.setCCDiscount(Creditbar.Value);
+            Discounts.setCCDiscount(Creditbar.Value);
         }
 
         private void Creditbar_KeyDown(object sender, KeyEventArgs e)
         {
-            data.setCCDiscount(Creditbar.Value);
+            Discounts.setCCDiscount(Creditbar.Value);
         }
 
         private void memberdown_Click(object sender, EventArgs e)
         {
             {
-                if (!(data.getDiscount() < 1 || (data.getDiscount()) > 100))
+                if (!(Discounts.getDiscount() < 1 || (Discounts.getDiscount()) > 100))
                 {
-                    data.setDiscount(data.getDiscount() - 1);
-                    tbdiscount.Text = (data.getDiscount()).ToString();
-                    discountBar.Value = data.getDiscount();
+                    Discounts.setDiscount(Discounts.getDiscount() - 1);
+                    tbdiscount.Text = (Discounts.getDiscount()).ToString();
+                    discountBar.Value = Discounts.getDiscount();
                 }
                 else { MessageBox.Show("Reach minimum/maximum of the discount."); }
             }
@@ -206,11 +206,11 @@ namespace HCI.Forms
         private void CCUp_Click(object sender, EventArgs e)
         {
             {
-                if (!(data.getCCDiscount() < 0 || (data.getCCDiscount()) > 99))
+                if (!(Discounts.getCCDiscount() < 0 || (Discounts.getCCDiscount()) > 99))
                 {
-                    data.setCCDiscount(data.getCCDiscount() + 1);
-                    tbCCDiscount.Text = (data.getCCDiscount()).ToString();
-                    Creditbar.Value = data.getCCDiscount();
+                    Discounts.setCCDiscount(Discounts.getCCDiscount() + 1);
+                    tbCCDiscount.Text = (Discounts.getCCDiscount()).ToString();
+                    Creditbar.Value = Discounts.getCCDiscount();
                 }
                 else { MessageBox.Show("Reach minimum/maximum of the credit discount."); }
             }
@@ -219,11 +219,11 @@ namespace HCI.Forms
         private void CCDown_Click(object sender, EventArgs e)
         {
             {
-                if (!(data.getCCDiscount() < 1 || (data.getCCDiscount()) > 100))
+                if (!(Discounts.getCCDiscount() < 1 || (Discounts.getCCDiscount()) > 100))
                 {
-                    data.setCCDiscount(data.getCCDiscount() - 1);
-                    tbCCDiscount.Text = (data.getCCDiscount()).ToString();
-                    Creditbar.Value = data.getCCDiscount();
+                    Discounts.setCCDiscount(Discounts.getCCDiscount() - 1);
+                    tbCCDiscount.Text = (Discounts.getCCDiscount()).ToString();
+                    Creditbar.Value = Discounts.getCCDiscount();
                 }
                 else { MessageBox.Show("Reach minimum/maximum of the credit discount."); }
             }

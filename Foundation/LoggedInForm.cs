@@ -15,6 +15,10 @@ namespace HCI.Foundation
         public LoggedInForm()
         {
             InitializeComponent();
+
+            // Initialize lb_User
+            if (root != null && root.loggedIn != null)
+                lb_User.Text = root.loggedIn.User + " (" + root.loggedIn.Role + ")";
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
