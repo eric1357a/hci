@@ -35,5 +35,10 @@ namespace HCI.Forms
             new LoginForm() { Prev = null }.Show();
             this.Close();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //Wait for K
+        }
     }
 }

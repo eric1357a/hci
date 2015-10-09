@@ -7,9 +7,9 @@ namespace HCI.Model
 {
     public class Discounts
     {
-        public int Discount = 50;
-        public int Profit = 40;
-        public int CreditCardDiscount = 5;
+        public int Discount;
+        public int Profit;
+        public int CreditCardDiscount;
         public int getDiscount()
         {
             return Discount;

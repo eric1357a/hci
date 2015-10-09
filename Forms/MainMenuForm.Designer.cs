@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.MainMenuControlsWrapper = new System.Windows.Forms.Panel();
-            this.btn_view = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btn_view = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.MainMenuControlsWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             // 
             // MainMenuControlsWrapper
             // 
+            this.MainMenuControlsWrapper.Controls.Add(this.btnSearch);
             this.MainMenuControlsWrapper.Controls.Add(this.btnLogout);
             this.MainMenuControlsWrapper.Controls.Add(this.btn_view);
             this.MainMenuControlsWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -53,17 +55,6 @@
             this.MainMenuControlsWrapper.Name = "MainMenuControlsWrapper";
             this.MainMenuControlsWrapper.Size = new System.Drawing.Size(896, 249);
             this.MainMenuControlsWrapper.TabIndex = 1;
-            // 
-            // btn_view
-            // 
-            this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_view.Location = new System.Drawing.Point(228, 59);
-            this.btn_view.Name = "btn_view";
-            this.btn_view.Size = new System.Drawing.Size(448, 105);
-            this.btn_view.TabIndex = 0;
-            this.btn_view.Text = "View Course Details";
-            this.btn_view.UseVisualStyleBackColor = true;
-            this.btn_view.Click += new System.EventHandler(this.btn_viewcourse_Click);
             // 
             // btnLogout
             // 
@@ -75,6 +66,28 @@
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btn_view
+            // 
+            this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_view.Location = new System.Drawing.Point(72, 99);
+            this.btn_view.Name = "btn_view";
+            this.btn_view.Size = new System.Drawing.Size(328, 105);
+            this.btn_view.TabIndex = 0;
+            this.btn_view.Text = "View Course Details";
+            this.btn_view.UseVisualStyleBackColor = true;
+            this.btn_view.Click += new System.EventHandler(this.btn_viewcourse_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(486, 99);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(336, 105);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search Courses";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // MainMenuForm
             // 
@@ -97,5 +110,6 @@
         private System.Windows.Forms.Panel MainMenuControlsWrapper;
         private System.Windows.Forms.Button btn_view;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

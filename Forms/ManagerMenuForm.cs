@@ -166,7 +166,7 @@ namespace HCI.Forms
                 if (CCdiscount <= 100)
                 {
                     Creditbar.Value = CCdiscount;
-                    data.setDiscount(CCdiscount);
+                    data.setCCDiscount(CCdiscount);
                 }
                 else
                 {
@@ -212,7 +212,7 @@ namespace HCI.Forms
         private void CCUp_Click(object sender, EventArgs e)
         {
             {
-                if (!(data.getCCDiscount() < 1 || (data.getCCDiscount()) > 100))
+                if (!(data.getCCDiscount() < 0 || (data.getCCDiscount()) > 99))
                 {
                     data.setCCDiscount(data.getCCDiscount() + 1);
                     tbCCDiscount.Text = (data.getCCDiscount()).ToString();
@@ -233,6 +233,11 @@ namespace HCI.Forms
                 }
                 else { MessageBox.Show("Reach minimum/maximum of the credit discount."); }
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            //Wait for K
         }
     }
 }

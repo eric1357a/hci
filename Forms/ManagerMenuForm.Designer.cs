@@ -49,6 +49,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.BaseContentPanel.SuspendLayout();
             this.ManagerGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Creditbar)).BeginInit();
@@ -63,6 +64,7 @@
             // 
             // BaseContentPanel
             // 
+            this.BaseContentPanel.Controls.Add(this.btnSearch);
             this.BaseContentPanel.Controls.Add(this.btnLogout);
             this.BaseContentPanel.Controls.Add(this.ManagerGroupBox);
             this.BaseContentPanel.Controls.Add(this.btn_view);
@@ -71,9 +73,9 @@
             // btn_view
             // 
             this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_view.Location = new System.Drawing.Point(237, 53);
+            this.btn_view.Location = new System.Drawing.Point(76, 81);
             this.btn_view.Name = "btn_view";
-            this.btn_view.Size = new System.Drawing.Size(448, 105);
+            this.btn_view.Size = new System.Drawing.Size(324, 105);
             this.btn_view.TabIndex = 2;
             this.btn_view.Text = "View Course Details";
             this.btn_view.UseVisualStyleBackColor = true;
@@ -181,6 +183,7 @@
             this.Creditbar.SmallChange = 10;
             this.Creditbar.TabIndex = 59;
             this.Creditbar.TickFrequency = 10;
+            this.Creditbar.Value = 5;
             this.Creditbar.ValueChanged += new System.EventHandler(this.Creditbar_ValueChanged);
             this.Creditbar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Creditbar_KeyDown);
             this.Creditbar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Creditbar_MouseUp);
@@ -195,6 +198,7 @@
             this.profitBar.SmallChange = 10;
             this.profitBar.TabIndex = 13;
             this.profitBar.TickFrequency = 10;
+            this.profitBar.Value = 40;
             this.profitBar.ValueChanged += new System.EventHandler(this.profitBar_ValueChanged);
             this.profitBar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.profitBar_KeyDown);
             this.profitBar.MouseUp += new System.Windows.Forms.MouseEventHandler(this.profitBar_MouseUp);
@@ -318,6 +322,17 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(516, 81);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(324, 105);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Search Courses";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // ManagerMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -361,5 +376,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

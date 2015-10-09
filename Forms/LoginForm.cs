@@ -43,10 +43,8 @@ namespace HCI.Forms
             {
                 if (m.Manager)
                     new ManagerMenuForm() { Prev = null }.Show();
-                    //new CourseSelection() { Prev = null }.Show();
                 else
                     new MainMenuForm() { Prev = null }.Show();
-                    //new CourseSelection() { Prev = null }.Show();
                 this.Close();
             }
             else MessageBox.Show("Incorrect username or password");
