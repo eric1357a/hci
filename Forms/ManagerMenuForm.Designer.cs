@@ -103,7 +103,7 @@
             // btndiscountUp
             // 
             this.btndiscountUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndiscountUp.Location = new System.Drawing.Point(619, 107);
+            this.btndiscountUp.Location = new System.Drawing.Point(619, 95);
             this.btndiscountUp.Name = "btndiscountUp";
             this.btndiscountUp.Size = new System.Drawing.Size(81, 37);
             this.btndiscountUp.TabIndex = 3;
@@ -114,7 +114,7 @@
             // btnDiscountDown
             // 
             this.btnDiscountDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountDown.Location = new System.Drawing.Point(49, 107);
+            this.btnDiscountDown.Location = new System.Drawing.Point(49, 95);
             this.btnDiscountDown.Name = "btnDiscountDown";
             this.btnDiscountDown.Size = new System.Drawing.Size(68, 37);
             this.btnDiscountDown.TabIndex = 4;
