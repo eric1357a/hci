@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.btn_view = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.lbmemberdiscount = new System.Windows.Forms.Label();
+            this.btndiscountUp = new System.Windows.Forms.Button();
+            this.btnDiscountDown = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnProfitUp = new System.Windows.Forms.Button();
+            this.btnProfitDown = new System.Windows.Forms.Button();
+            this.btnCCUp = new System.Windows.Forms.Button();
             this.discountBar = new System.Windows.Forms.TrackBar();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCCDown = new System.Windows.Forms.Button();
             this.profitBar = new System.Windows.Forms.TrackBar();
             this.Creditbar = new System.Windows.Forms.TrackBar();
             this.tbdiscount = new System.Windows.Forms.TextBox();
@@ -48,6 +48,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ManagerGroupBox = new HCI.Controls.NewGroupBox();
+            this.btnNormalMember = new System.Windows.Forms.RadioButton();
+            this.btnGoldMember = new System.Windows.Forms.RadioButton();
             this.btnSearch = new System.Windows.Forms.Button();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
@@ -89,78 +91,78 @@
             this.btn_view.UseVisualStyleBackColor = true;
             this.btn_view.Click += new System.EventHandler(this.btn_view_Click);
             // 
-            // label1
+            // lbmemberdiscount
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(300, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Member Discount";
+            this.lbmemberdiscount.AutoSize = true;
+            this.lbmemberdiscount.Location = new System.Drawing.Point(285, 48);
+            this.lbmemberdiscount.Name = "lbmemberdiscount";
+            this.lbmemberdiscount.Size = new System.Drawing.Size(144, 20);
+            this.lbmemberdiscount.TabIndex = 0;
+            this.lbmemberdiscount.Text = "Member Discount";
             // 
-            // button2
+            // btndiscountUp
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(619, 107);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 37);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "+1%";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btndiscountUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btndiscountUp.Location = new System.Drawing.Point(619, 107);
+            this.btndiscountUp.Name = "btndiscountUp";
+            this.btndiscountUp.Size = new System.Drawing.Size(81, 37);
+            this.btndiscountUp.TabIndex = 3;
+            this.btndiscountUp.Text = "+1%";
+            this.btndiscountUp.UseVisualStyleBackColor = true;
+            this.btndiscountUp.Click += new System.EventHandler(this.memberup_Click);
             // 
-            // button3
+            // btnDiscountDown
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(49, 107);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 37);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "-1%";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.memberdown_Click);
+            this.btnDiscountDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDiscountDown.Location = new System.Drawing.Point(49, 107);
+            this.btnDiscountDown.Name = "btnDiscountDown";
+            this.btnDiscountDown.Size = new System.Drawing.Size(68, 37);
+            this.btnDiscountDown.TabIndex = 4;
+            this.btnDiscountDown.Text = "-1%";
+            this.btnDiscountDown.UseVisualStyleBackColor = true;
+            this.btnDiscountDown.Click += new System.EventHandler(this.memberdown_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(311, 286);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 25);
+            this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "Profit Margin";
             // 
-            // button7
+            // btnProfitUp
             // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(619, 336);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 37);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "+1%";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnProfitUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfitUp.Location = new System.Drawing.Point(619, 336);
+            this.btnProfitUp.Name = "btnProfitUp";
+            this.btnProfitUp.Size = new System.Drawing.Size(81, 37);
+            this.btnProfitUp.TabIndex = 9;
+            this.btnProfitUp.Text = "+1%";
+            this.btnProfitUp.UseVisualStyleBackColor = true;
+            this.btnProfitUp.Click += new System.EventHandler(this.btnProfitUp_Click);
             // 
-            // button6
+            // btnProfitDown
             // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(49, 336);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(68, 37);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "-1%";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnProfitDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfitDown.Location = new System.Drawing.Point(49, 336);
+            this.btnProfitDown.Name = "btnProfitDown";
+            this.btnProfitDown.Size = new System.Drawing.Size(68, 37);
+            this.btnProfitDown.TabIndex = 10;
+            this.btnProfitDown.Text = "-1%";
+            this.btnProfitDown.UseVisualStyleBackColor = true;
+            this.btnProfitDown.Click += new System.EventHandler(this.btnProfitDown_Click);
             // 
-            // button4
+            // btnCCUp
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(619, 213);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(81, 37);
-            this.button4.TabIndex = 57;
-            this.button4.Text = "+1%";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.CCUp_Click);
+            this.btnCCUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCCUp.Location = new System.Drawing.Point(619, 213);
+            this.btnCCUp.Name = "btnCCUp";
+            this.btnCCUp.Size = new System.Drawing.Size(81, 37);
+            this.btnCCUp.TabIndex = 57;
+            this.btnCCUp.Text = "+1%";
+            this.btnCCUp.UseVisualStyleBackColor = true;
+            this.btnCCUp.Click += new System.EventHandler(this.CCUp_Click);
             // 
             // discountBar
             // 
@@ -168,7 +170,7 @@
             this.discountBar.Location = new System.Drawing.Point(123, 95);
             this.discountBar.Maximum = 100;
             this.discountBar.Name = "discountBar";
-            this.discountBar.Size = new System.Drawing.Size(490, 56);
+            this.discountBar.Size = new System.Drawing.Size(490, 45);
             this.discountBar.SmallChange = 10;
             this.discountBar.TabIndex = 50;
             this.discountBar.TickFrequency = 10;
@@ -182,20 +184,20 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(285, 169);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 25);
+            this.label6.Size = new System.Drawing.Size(166, 20);
             this.label6.TabIndex = 56;
             this.label6.Text = "Credit Card Discount";
             // 
-            // button1
+            // btnCCDown
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(49, 213);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 37);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "-1%";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.CCDown_Click);
+            this.btnCCDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCCDown.Location = new System.Drawing.Point(49, 213);
+            this.btnCCDown.Name = "btnCCDown";
+            this.btnCCDown.Size = new System.Drawing.Size(68, 37);
+            this.btnCCDown.TabIndex = 58;
+            this.btnCCDown.Text = "-1%";
+            this.btnCCDown.UseVisualStyleBackColor = true;
+            this.btnCCDown.Click += new System.EventHandler(this.CCDown_Click);
             // 
             // profitBar
             // 
@@ -203,7 +205,7 @@
             this.profitBar.Location = new System.Drawing.Point(127, 335);
             this.profitBar.Maximum = 100;
             this.profitBar.Name = "profitBar";
-            this.profitBar.Size = new System.Drawing.Size(490, 56);
+            this.profitBar.Size = new System.Drawing.Size(490, 45);
             this.profitBar.SmallChange = 10;
             this.profitBar.TabIndex = 13;
             this.profitBar.TickFrequency = 10;
@@ -218,7 +220,7 @@
             this.Creditbar.Location = new System.Drawing.Point(127, 212);
             this.Creditbar.Maximum = 100;
             this.Creditbar.Name = "Creditbar";
-            this.Creditbar.Size = new System.Drawing.Size(490, 56);
+            this.Creditbar.Size = new System.Drawing.Size(490, 45);
             this.Creditbar.SmallChange = 10;
             this.Creditbar.TabIndex = 59;
             this.Creditbar.TickFrequency = 10;
@@ -235,7 +237,7 @@
             this.tbdiscount.Location = new System.Drawing.Point(500, 45);
             this.tbdiscount.MaxLength = 3;
             this.tbdiscount.Name = "tbdiscount";
-            this.tbdiscount.Size = new System.Drawing.Size(50, 34);
+            this.tbdiscount.Size = new System.Drawing.Size(50, 29);
             this.tbdiscount.TabIndex = 51;
             this.tbdiscount.Text = "100";
             this.tbdiscount.TextChanged += new System.EventHandler(this.tbdiscount_TextChanged);
@@ -248,7 +250,7 @@
             this.tbprofit.Location = new System.Drawing.Point(500, 283);
             this.tbprofit.MaxLength = 3;
             this.tbprofit.Name = "tbprofit";
-            this.tbprofit.Size = new System.Drawing.Size(50, 34);
+            this.tbprofit.Size = new System.Drawing.Size(50, 29);
             this.tbprofit.TabIndex = 54;
             this.tbprofit.Text = "100";
             this.tbprofit.TextChanged += new System.EventHandler(this.tbprofit_TextChanged);
@@ -261,17 +263,17 @@
             this.tbCCDiscount.Location = new System.Drawing.Point(500, 160);
             this.tbCCDiscount.MaxLength = 3;
             this.tbCCDiscount.Name = "tbCCDiscount";
-            this.tbCCDiscount.Size = new System.Drawing.Size(50, 34);
+            this.tbCCDiscount.Size = new System.Drawing.Size(50, 29);
             this.tbCCDiscount.TabIndex = 60;
             this.tbCCDiscount.Text = "100";
-            this.tbCCDiscount.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbCCDiscount.TextChanged += new System.EventHandler(this.tbCCD_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(555, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 25);
+            this.label4.Size = new System.Drawing.Size(23, 20);
             this.label4.TabIndex = 53;
             this.label4.Text = "%";
             // 
@@ -280,7 +282,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(555, 286);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 25);
+            this.label5.Size = new System.Drawing.Size(23, 20);
             this.label5.TabIndex = 55;
             this.label5.Text = "%";
             // 
@@ -289,13 +291,15 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(555, 163);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 25);
+            this.label3.Size = new System.Drawing.Size(23, 20);
             this.label3.TabIndex = 61;
             this.label3.Text = "%";
             // 
             // ManagerGroupBox
             // 
             this.ManagerGroupBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.ManagerGroupBox.Controls.Add(this.btnNormalMember);
+            this.ManagerGroupBox.Controls.Add(this.btnGoldMember);
             this.ManagerGroupBox.Controls.Add(this.label3);
             this.ManagerGroupBox.Controls.Add(this.label5);
             this.ManagerGroupBox.Controls.Add(this.label4);
@@ -304,16 +308,16 @@
             this.ManagerGroupBox.Controls.Add(this.tbdiscount);
             this.ManagerGroupBox.Controls.Add(this.Creditbar);
             this.ManagerGroupBox.Controls.Add(this.profitBar);
-            this.ManagerGroupBox.Controls.Add(this.button1);
+            this.ManagerGroupBox.Controls.Add(this.btnCCDown);
             this.ManagerGroupBox.Controls.Add(this.label6);
             this.ManagerGroupBox.Controls.Add(this.discountBar);
-            this.ManagerGroupBox.Controls.Add(this.button4);
-            this.ManagerGroupBox.Controls.Add(this.button6);
-            this.ManagerGroupBox.Controls.Add(this.button7);
+            this.ManagerGroupBox.Controls.Add(this.btnCCUp);
+            this.ManagerGroupBox.Controls.Add(this.btnProfitDown);
+            this.ManagerGroupBox.Controls.Add(this.btnProfitUp);
             this.ManagerGroupBox.Controls.Add(this.label2);
-            this.ManagerGroupBox.Controls.Add(this.button3);
-            this.ManagerGroupBox.Controls.Add(this.button2);
-            this.ManagerGroupBox.Controls.Add(this.label1);
+            this.ManagerGroupBox.Controls.Add(this.btnDiscountDown);
+            this.ManagerGroupBox.Controls.Add(this.btndiscountUp);
+            this.ManagerGroupBox.Controls.Add(this.lbmemberdiscount);
             this.ManagerGroupBox.LegendPosition = HCI.Controls.Lposition.Center;
             this.ManagerGroupBox.Location = new System.Drawing.Point(44, 151);
             this.ManagerGroupBox.Name = "ManagerGroupBox";
@@ -321,6 +325,31 @@
             this.ManagerGroupBox.TabIndex = 3;
             this.ManagerGroupBox.TabStop = false;
             this.ManagerGroupBox.Text = "Manager Area";
+            // 
+            // btnNormalMember
+            // 
+            this.btnNormalMember.AutoSize = true;
+            this.btnNormalMember.Location = new System.Drawing.Point(49, 60);
+            this.btnNormalMember.Name = "btnNormalMember";
+            this.btnNormalMember.Size = new System.Drawing.Size(84, 24);
+            this.btnNormalMember.TabIndex = 63;
+            this.btnNormalMember.TabStop = true;
+            this.btnNormalMember.Text = "Normal";
+            this.btnNormalMember.UseVisualStyleBackColor = true;
+            this.btnNormalMember.Click += new System.EventHandler(this.btnNormalMember_Click);
+            // 
+            // btnGoldMember
+            // 
+            this.btnGoldMember.AutoSize = true;
+            this.btnGoldMember.ForeColor = System.Drawing.Color.Yellow;
+            this.btnGoldMember.Location = new System.Drawing.Point(49, 29);
+            this.btnGoldMember.Name = "btnGoldMember";
+            this.btnGoldMember.Size = new System.Drawing.Size(63, 24);
+            this.btnGoldMember.TabIndex = 62;
+            this.btnGoldMember.TabStop = true;
+            this.btnGoldMember.Text = "Gold";
+            this.btnGoldMember.UseVisualStyleBackColor = true;
+            this.btnGoldMember.Click += new System.EventHandler(this.btnGoldMember_Click);
             // 
             // btnSearch
             // 
@@ -366,16 +395,18 @@
         private System.Windows.Forms.TextBox tbdiscount;
         private System.Windows.Forms.TrackBar Creditbar;
         private System.Windows.Forms.TrackBar profitBar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCCDown;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TrackBar discountBar;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnCCUp;
+        private System.Windows.Forms.Button btnProfitDown;
+        private System.Windows.Forms.Button btnProfitUp;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDiscountDown;
+        private System.Windows.Forms.Button btndiscountUp;
+        private System.Windows.Forms.Label lbmemberdiscount;
         private System.Windows.Forms.Button btn_view;
+        private System.Windows.Forms.RadioButton btnNormalMember;
+        private System.Windows.Forms.RadioButton btnGoldMember;
     }
 }
