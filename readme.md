@@ -6,9 +6,6 @@
 
 ## Progress
 
-E remain
-- [ ] Promotions
-
 K remain
 - [ ] Administrative 分唇
 - [ ] Search 分唇
@@ -22,3 +19,4 @@ K remain
 - [x] Membership System
 - [x] Login
 - [x] Main & Staff Menu
+- [x] Promotions
