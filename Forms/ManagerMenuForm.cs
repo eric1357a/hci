@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
 using HCI.Foundation;
 using HCI.Model;
 
@@ -129,8 +130,6 @@ namespace HCI.Forms
             new CourseSelection() { Prev = this }.Show();
         }
 
-     
-
         private void Creditbar_ValueChanged(object sender, EventArgs e)
         {
             tbCCDiscount.Text = (Creditbar.Value).ToString();
@@ -252,17 +251,16 @@ namespace HCI.Forms
             discountBar.Value = Discounts.getGoldDiscount();
             tbdiscount.Text = (Discounts.getGoldDiscount()).ToString();
             lbmemberdiscount.Text = "Gold Member Discount";
-            lbmemberdiscount.ForeColor = Color.FromArgb(255, 215, 0);
+            lbmemberdiscount.ForeColor = Color.DarkGoldenrod;
 
         }
-
 
         private void btnNormalMember_Click(object sender, EventArgs e)
         {
             discountBar.Value = Discounts.getDiscount();
             tbdiscount.Text = (Discounts.getDiscount()).ToString();
             lbmemberdiscount.Text = "Normal Member Discount";
-            lbmemberdiscount.ForeColor = Color.FromArgb(182, 155, 242);
+            lbmemberdiscount.ForeColor = Color.FromArgb(8, 127, 183);
         }
 
         private void tbCCD_TextChanged(object sender, EventArgs e)

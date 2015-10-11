@@ -97,34 +97,39 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImageC1)).BeginInit();
             this.SuspendLayout();
             // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Size = new System.Drawing.Size(971, 54);
+            // 
             // BaseNavigationText
             // 
             this.BaseNavigationText.Text = "Course Selection";
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Size = new System.Drawing.Size(971, 542);
+            this.BaseContentPanel.Size = new System.Drawing.Size(971, 552);
             // 
             // BaseNavigation
             // 
-            this.BaseNavigation.Size = new System.Drawing.Size(971, 66);
+            this.BaseNavigation.Size = new System.Drawing.Size(971, 54);
             // 
             // BaseContentWrapper
             // 
             this.BaseContentWrapper.Controls.Add(this.GroupTable);
             this.BaseContentWrapper.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BaseContentWrapper.Location = new System.Drawing.Point(0, 76);
             this.BaseContentWrapper.Size = new System.Drawing.Size(971, 476);
             // 
             // GroupCourseAA
             // 
-            this.GroupCourseAA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            this.GroupCourseAA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.GroupCourseAA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.GroupCourseAA.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.GroupCourseAA.Controls.Add(this.TableCourseA3);
             this.GroupCourseAA.Controls.Add(this.TableCourseA2);
             this.GroupCourseAA.Controls.Add(this.TableCourseA1);
             this.GroupCourseAA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GroupCourseAA.Font = new System.Drawing.Font("Microsoft JhengHei", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.GroupCourseAA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.GroupCourseAA.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.GroupCourseAA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.GroupCourseAA.LegendPosition = HCI.Controls.Lposition.Center;
             this.GroupCourseAA.Location = new System.Drawing.Point(28, 13);
             this.GroupCourseAA.Margin = new System.Windows.Forms.Padding(0);
@@ -137,7 +142,7 @@
             // 
             // TableCourseA3
             // 
-            this.TableCourseA3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseA3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseA3.ColumnCount = 2;
             this.TableCourseA3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseA3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -146,7 +151,7 @@
             this.TableCourseA3.Controls.Add(this.LabelA3, 1, 0);
             this.TableCourseA3.Controls.Add(this.HolderA3, 0, 0);
             this.TableCourseA3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseA3.Location = new System.Drawing.Point(1, 292);
+            this.TableCourseA3.Location = new System.Drawing.Point(1, 288);
             this.TableCourseA3.Name = "TableCourseA3";
             this.TableCourseA3.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseA3.RowCount = 1;
@@ -160,7 +165,7 @@
             // 
             this.LabelA3.BackColor = System.Drawing.Color.Transparent;
             this.LabelA3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelA3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelA3.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelA3.Location = new System.Drawing.Point(142, 10);
             this.LabelA3.Margin = new System.Windows.Forms.Padding(0);
             this.LabelA3.Name = "LabelA3";
@@ -202,7 +207,7 @@
             // 
             // TableCourseA2
             // 
-            this.TableCourseA2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseA2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseA2.ColumnCount = 2;
             this.TableCourseA2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseA2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -211,7 +216,7 @@
             this.TableCourseA2.Controls.Add(this.LabelA2, 1, 0);
             this.TableCourseA2.Controls.Add(this.HolderA2, 0, 0);
             this.TableCourseA2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseA2.Location = new System.Drawing.Point(1, 160);
+            this.TableCourseA2.Location = new System.Drawing.Point(1, 156);
             this.TableCourseA2.Name = "TableCourseA2";
             this.TableCourseA2.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseA2.RowCount = 1;
@@ -225,7 +230,7 @@
             // 
             this.LabelA2.BackColor = System.Drawing.Color.Transparent;
             this.LabelA2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelA2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelA2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelA2.Location = new System.Drawing.Point(142, 10);
             this.LabelA2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelA2.Name = "LabelA2";
@@ -267,7 +272,7 @@
             // 
             // TableCourseA1
             // 
-            this.TableCourseA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseA1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseA1.ColumnCount = 2;
             this.TableCourseA1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseA1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -276,7 +281,7 @@
             this.TableCourseA1.Controls.Add(this.LabelA1, 1, 0);
             this.TableCourseA1.Controls.Add(this.HolderA1, 0, 0);
             this.TableCourseA1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseA1.Location = new System.Drawing.Point(1, 28);
+            this.TableCourseA1.Location = new System.Drawing.Point(1, 24);
             this.TableCourseA1.Name = "TableCourseA1";
             this.TableCourseA1.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseA1.RowCount = 1;
@@ -290,7 +295,7 @@
             // 
             this.LabelA1.BackColor = System.Drawing.Color.Transparent;
             this.LabelA1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelA1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelA1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelA1.Location = new System.Drawing.Point(142, 10);
             this.LabelA1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelA1.Name = "LabelA1";
@@ -332,14 +337,14 @@
             // 
             // GroupCourseBB
             // 
-            this.GroupCourseBB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            this.GroupCourseBB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.GroupCourseBB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.GroupCourseBB.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.GroupCourseBB.Controls.Add(this.TableCourseB3);
             this.GroupCourseBB.Controls.Add(this.TableCourseB2);
             this.GroupCourseBB.Controls.Add(this.TableCourseB1);
             this.GroupCourseBB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GroupCourseBB.Font = new System.Drawing.Font("Microsoft JhengHei", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
-            this.GroupCourseBB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.GroupCourseBB.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.GroupCourseBB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.GroupCourseBB.LegendPosition = HCI.Controls.Lposition.Center;
             this.GroupCourseBB.Location = new System.Drawing.Point(342, 13);
             this.GroupCourseBB.Margin = new System.Windows.Forms.Padding(0);
@@ -352,7 +357,7 @@
             // 
             // TableCourseB3
             // 
-            this.TableCourseB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseB3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseB3.ColumnCount = 2;
             this.TableCourseB3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseB3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -361,7 +366,7 @@
             this.TableCourseB3.Controls.Add(this.LabelB3, 1, 0);
             this.TableCourseB3.Controls.Add(this.HolderB3, 0, 0);
             this.TableCourseB3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseB3.Location = new System.Drawing.Point(1, 292);
+            this.TableCourseB3.Location = new System.Drawing.Point(1, 288);
             this.TableCourseB3.Name = "TableCourseB3";
             this.TableCourseB3.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseB3.RowCount = 1;
@@ -375,7 +380,7 @@
             // 
             this.LabelB3.BackColor = System.Drawing.Color.Transparent;
             this.LabelB3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelB3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelB3.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelB3.Location = new System.Drawing.Point(142, 10);
             this.LabelB3.Margin = new System.Windows.Forms.Padding(0);
             this.LabelB3.Name = "LabelB3";
@@ -417,7 +422,7 @@
             // 
             // TableCourseB2
             // 
-            this.TableCourseB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseB2.ColumnCount = 2;
             this.TableCourseB2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseB2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -426,7 +431,7 @@
             this.TableCourseB2.Controls.Add(this.LabelB2, 1, 0);
             this.TableCourseB2.Controls.Add(this.HolderB2, 0, 0);
             this.TableCourseB2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseB2.Location = new System.Drawing.Point(1, 160);
+            this.TableCourseB2.Location = new System.Drawing.Point(1, 156);
             this.TableCourseB2.Name = "TableCourseB2";
             this.TableCourseB2.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseB2.RowCount = 1;
@@ -440,7 +445,7 @@
             // 
             this.LabelB2.BackColor = System.Drawing.Color.Transparent;
             this.LabelB2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelB2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelB2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelB2.Location = new System.Drawing.Point(142, 10);
             this.LabelB2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelB2.Name = "LabelB2";
@@ -482,7 +487,7 @@
             // 
             // TableCourseB1
             // 
-            this.TableCourseB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseB1.ColumnCount = 2;
             this.TableCourseB1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseB1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -491,7 +496,7 @@
             this.TableCourseB1.Controls.Add(this.LabelB1, 1, 0);
             this.TableCourseB1.Controls.Add(this.HolderB1, 0, 0);
             this.TableCourseB1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseB1.Location = new System.Drawing.Point(1, 28);
+            this.TableCourseB1.Location = new System.Drawing.Point(1, 24);
             this.TableCourseB1.Name = "TableCourseB1";
             this.TableCourseB1.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseB1.RowCount = 1;
@@ -505,7 +510,7 @@
             // 
             this.LabelB1.BackColor = System.Drawing.Color.Transparent;
             this.LabelB1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelB1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelB1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelB1.Location = new System.Drawing.Point(142, 10);
             this.LabelB1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelB1.Name = "LabelB1";
@@ -561,6 +566,7 @@
             this.GroupTable.Controls.Add(this.GroupCourseBB, 3, 1);
             this.GroupTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GroupTable.Location = new System.Drawing.Point(0, 0);
+            this.GroupTable.Margin = new System.Windows.Forms.Padding(0);
             this.GroupTable.Name = "GroupTable";
             this.GroupTable.RowCount = 3;
             this.GroupTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.888094F));
@@ -571,13 +577,13 @@
             // 
             // GroupCourseCC
             // 
-            this.GroupCourseCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            this.GroupCourseCC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.GroupCourseCC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.GroupCourseCC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.GroupCourseCC.Controls.Add(this.TableCourseC2);
             this.GroupCourseCC.Controls.Add(this.TableCourseC1);
             this.GroupCourseCC.Dock = System.Windows.Forms.DockStyle.Top;
-            this.GroupCourseCC.Font = new System.Drawing.Font("Microsoft JhengHei", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(136)));
-            this.GroupCourseCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.GroupCourseCC.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.GroupCourseCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.GroupCourseCC.LegendPosition = HCI.Controls.Lposition.Center;
             this.GroupCourseCC.Location = new System.Drawing.Point(656, 13);
             this.GroupCourseCC.Margin = new System.Windows.Forms.Padding(0);
@@ -590,7 +596,7 @@
             // 
             // TableCourseC2
             // 
-            this.TableCourseC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseC2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseC2.ColumnCount = 2;
             this.TableCourseC2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseC2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -599,7 +605,7 @@
             this.TableCourseC2.Controls.Add(this.LabelC2, 1, 0);
             this.TableCourseC2.Controls.Add(this.HolderC2, 0, 0);
             this.TableCourseC2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseC2.Location = new System.Drawing.Point(1, 160);
+            this.TableCourseC2.Location = new System.Drawing.Point(1, 156);
             this.TableCourseC2.Name = "TableCourseC2";
             this.TableCourseC2.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseC2.RowCount = 1;
@@ -613,7 +619,7 @@
             // 
             this.LabelC2.BackColor = System.Drawing.Color.Transparent;
             this.LabelC2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelC2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelC2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelC2.Location = new System.Drawing.Point(142, 10);
             this.LabelC2.Margin = new System.Windows.Forms.Padding(0);
             this.LabelC2.Name = "LabelC2";
@@ -655,7 +661,7 @@
             // 
             // TableCourseC1
             // 
-            this.TableCourseC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.TableCourseC1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.TableCourseC1.ColumnCount = 2;
             this.TableCourseC1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TableCourseC1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -664,7 +670,7 @@
             this.TableCourseC1.Controls.Add(this.LabelC1, 1, 0);
             this.TableCourseC1.Controls.Add(this.HolderC1, 0, 0);
             this.TableCourseC1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseC1.Location = new System.Drawing.Point(1, 28);
+            this.TableCourseC1.Location = new System.Drawing.Point(1, 24);
             this.TableCourseC1.Name = "TableCourseC1";
             this.TableCourseC1.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseC1.RowCount = 1;
@@ -678,7 +684,7 @@
             // 
             this.LabelC1.BackColor = System.Drawing.Color.Transparent;
             this.LabelC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelC1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelC1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.LabelC1.Location = new System.Drawing.Point(142, 10);
             this.LabelC1.Margin = new System.Windows.Forms.Padding(0);
             this.LabelC1.Name = "LabelC1";

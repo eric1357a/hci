@@ -6,11 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Printing;
+using System.Threading;
+
 using HCI.Foundation;
 using HCI.Model;
 using Microsoft.Reporting.WinForms;
-using System.Drawing.Printing;
-using System.Threading;
 
 namespace HCI.Forms
 {

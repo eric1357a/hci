@@ -71,9 +71,9 @@ namespace HCI.Forms
         private void TableItem_MouseEnter(object sender, EventArgs e)
         {
             toRootControl((Control)sender).BackColor = Color.FromArgb(
-                orgBorderColor.R + 15,
-                orgBorderColor.G + 15,
-                orgBorderColor.B + 15
+                orgBorderColor.R - 15,
+                orgBorderColor.G - 15,
+                orgBorderColor.B - 15
             );
         }
 

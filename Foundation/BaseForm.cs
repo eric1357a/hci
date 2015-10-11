@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
 using HCI.Forms;
+using Transitions;
 
 namespace HCI.Foundation
 {
@@ -30,9 +31,22 @@ namespace HCI.Foundation
         private BaseForm _prev;
         private DropShadow Shadow;
 
+        // http://stackoverflow.com/questions/10674228
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect, // x-coordinate of upper-left corner
+            int nTopRect, // y-coordinate of upper-left corner
+            int nRightRect, // x-coordinate of lower-right corner
+            int nBottomRect, // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+         );
+
         public BaseForm()
         {
             InitializeComponent();
+            this.Activated += FormActivated;
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -72,18 +86,77 @@ namespace HCI.Foundation
                 ShadowColor = Color.FromArgb(80, 0, 0, 0)
             };
             Shadow.RefreshShadow();
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 10, 10));
         }
 
         // window control
 
+        delegate void CloseProgramCallback();
+
+        private void CloseProgram()
+        {
+            if (Program.Root.InvokeRequired)
+            {
+                CloseProgramCallback d = new CloseProgramCallback(CloseProgram);
+                this.Invoke(d, new object[] {});
+            }
+            else Program.Root.Close();
+        }
+
+
         private void BaseButtonCloseWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Program.Root.Close();
+            AnimateClose((sndr, evnt) =>
+            {
+                CloseProgram();
+            });
         }
 
         private void BaseButtonHideWindow_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            AnimateClose((sndr, evnt) =>
+            {
+                this.WindowState = FormWindowState.Minimized;
+            });
+        }
+
+        private void FormActivated(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            AnimateShow();
+        }
+
+        /* @Override */
+
+        public void Show()
+        {
+            this.CenterToScreen();
+            this.Opacity = 0;
+            this.Top += 48;
+            base.Show();
+            AnimateShow();
+        }
+
+        /* animation */
+        private void AnimateShow()
+        {
+            Transition t = new Transition(new TransitionType_EaseInEaseOut(100));
+            int tempY = this.Location.Y;
+            this.CenterToScreen();
+            int centerY = this.Location.Y;
+            this.Top = tempY;
+            t.add(this, "Top", centerY);
+            t.add(this, "Opacity", 1.0);
+            t.run();
+        }
+
+        private void AnimateClose(EventHandler<Transition.Args> handler)
+        {
+            Transition t = new Transition(new TransitionType_EaseInEaseOut(100));
+            t.add(this, "Top", this.Location.Y + 48);
+            t.add(this, "Opacity", 0.0);
+            t.TransitionCompletedEvent += handler;
+            t.run();
         }
 
         private void Initialize()
@@ -105,8 +178,5 @@ namespace HCI.Foundation
             }
         }
 
-        /* * * * * * * * * * * * *\
-         *     public methods    *
-        \* * * * * * * * * * * * */
     }
 }

@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using HCI.Foundation;
 
 namespace HCI.Forms
-//TODO List: Logout function
 {
     public partial class MainMenuForm : LoggedInForm
     {

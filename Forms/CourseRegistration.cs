@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+
 using HCI.Foundation;
 using HCI.Model;
 
@@ -18,8 +19,8 @@ namespace HCI.Forms
         private const String MONTH_ERR = "No month selected";
         private const String NAME_ERR = "No student name entered";
 
-        private readonly Color DARK_RED = Color.FromArgb(40, 32, 32);
-        private readonly Color DARK_PURPLE = Color.FromArgb(34, 36, 39);
+        private readonly Color DARK_RED = Color.FromArgb(224, 224, 224);
+        private readonly Color DARK_PURPLE = Color.FromArgb(243, 244, 248);
 
         private Course course;
         private Programme programme;
@@ -136,8 +137,8 @@ namespace HCI.Forms
                     rect
                 );
             });
-            hint.BackColor = Color.FromArgb(40, 32, 32);
-            hint.ForeColor = Color.LightPink;
+            hint.BackColor = Color.FromArgb(255, 255, 255);
+            hint.ForeColor = Color.FromArgb(8, 127, 183);
             hint.Show(string.Empty, ((Control)sender), 0, 0, 3000);
             hint.Show(" " + message + " ", ((Control)sender));
         }

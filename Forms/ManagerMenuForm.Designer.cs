@@ -67,25 +67,24 @@
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Size = new System.Drawing.Size(896, 695);
-            // 
-            // BaseNavigation
-            // 
-            this.BaseNavigation.Size = new System.Drawing.Size(896, 66);
+            this.BaseContentPanel.Size = new System.Drawing.Size(720, 456);
             // 
             // BaseContentWrapper
             // 
             this.BaseContentWrapper.Controls.Add(this.btn_view);
             this.BaseContentWrapper.Controls.Add(this.ManagerGroupBox);
             this.BaseContentWrapper.Controls.Add(this.btnSearch);
-            this.BaseContentWrapper.Size = new System.Drawing.Size(896, 629);
+            this.BaseContentWrapper.Size = new System.Drawing.Size(720, 402);
             // 
             // btn_view
             // 
             this.btn_view.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_view.Location = new System.Drawing.Point(44, 27);
+            this.btn_view.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btn_view.ForeColor = System.Drawing.Color.Black;
+            this.btn_view.Location = new System.Drawing.Point(40, 14);
+            this.btn_view.Margin = new System.Windows.Forms.Padding(0);
             this.btn_view.Name = "btn_view";
-            this.btn_view.Size = new System.Drawing.Size(324, 105);
+            this.btn_view.Size = new System.Drawing.Size(296, 36);
             this.btn_view.TabIndex = 2;
             this.btn_view.Text = "View Course Details";
             this.btn_view.UseVisualStyleBackColor = true;
@@ -93,19 +92,24 @@
             // 
             // lbmemberdiscount
             // 
-            this.lbmemberdiscount.AutoSize = true;
-            this.lbmemberdiscount.Location = new System.Drawing.Point(285, 48);
+            this.lbmemberdiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.lbmemberdiscount.Location = new System.Drawing.Point(369, 31);
+            this.lbmemberdiscount.Margin = new System.Windows.Forms.Padding(0);
             this.lbmemberdiscount.Name = "lbmemberdiscount";
-            this.lbmemberdiscount.Size = new System.Drawing.Size(144, 20);
+            this.lbmemberdiscount.Size = new System.Drawing.Size(228, 21);
             this.lbmemberdiscount.TabIndex = 0;
             this.lbmemberdiscount.Text = "Member Discount";
+            this.lbmemberdiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btndiscountUp
             // 
             this.btndiscountUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btndiscountUp.Location = new System.Drawing.Point(619, 95);
+            this.btndiscountUp.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btndiscountUp.ForeColor = System.Drawing.Color.Black;
+            this.btndiscountUp.Location = new System.Drawing.Point(603, 69);
+            this.btndiscountUp.Margin = new System.Windows.Forms.Padding(0);
             this.btndiscountUp.Name = "btndiscountUp";
-            this.btndiscountUp.Size = new System.Drawing.Size(81, 37);
+            this.btndiscountUp.Size = new System.Drawing.Size(68, 31);
             this.btndiscountUp.TabIndex = 3;
             this.btndiscountUp.Text = "+1%";
             this.btndiscountUp.UseVisualStyleBackColor = true;
@@ -114,9 +118,12 @@
             // btnDiscountDown
             // 
             this.btnDiscountDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiscountDown.Location = new System.Drawing.Point(49, 95);
+            this.btnDiscountDown.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnDiscountDown.ForeColor = System.Drawing.Color.Black;
+            this.btnDiscountDown.Location = new System.Drawing.Point(13, 69);
+            this.btnDiscountDown.Margin = new System.Windows.Forms.Padding(0);
             this.btnDiscountDown.Name = "btnDiscountDown";
-            this.btnDiscountDown.Size = new System.Drawing.Size(68, 37);
+            this.btnDiscountDown.Size = new System.Drawing.Size(68, 30);
             this.btnDiscountDown.TabIndex = 4;
             this.btnDiscountDown.Text = "-1%";
             this.btnDiscountDown.UseVisualStyleBackColor = true;
@@ -124,19 +131,21 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(311, 286);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.label2.Location = new System.Drawing.Point(369, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 20);
+            this.label2.Size = new System.Drawing.Size(228, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "Profit Margin";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnProfitUp
             // 
             this.btnProfitUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfitUp.Location = new System.Drawing.Point(619, 336);
+            this.btnProfitUp.ForeColor = System.Drawing.Color.Black;
+            this.btnProfitUp.Location = new System.Drawing.Point(603, 253);
             this.btnProfitUp.Name = "btnProfitUp";
-            this.btnProfitUp.Size = new System.Drawing.Size(81, 37);
+            this.btnProfitUp.Size = new System.Drawing.Size(68, 30);
             this.btnProfitUp.TabIndex = 9;
             this.btnProfitUp.Text = "+1%";
             this.btnProfitUp.UseVisualStyleBackColor = true;
@@ -145,9 +154,10 @@
             // btnProfitDown
             // 
             this.btnProfitDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfitDown.Location = new System.Drawing.Point(49, 336);
+            this.btnProfitDown.ForeColor = System.Drawing.Color.Black;
+            this.btnProfitDown.Location = new System.Drawing.Point(13, 253);
             this.btnProfitDown.Name = "btnProfitDown";
-            this.btnProfitDown.Size = new System.Drawing.Size(68, 37);
+            this.btnProfitDown.Size = new System.Drawing.Size(68, 30);
             this.btnProfitDown.TabIndex = 10;
             this.btnProfitDown.Text = "-1%";
             this.btnProfitDown.UseVisualStyleBackColor = true;
@@ -156,9 +166,12 @@
             // btnCCUp
             // 
             this.btnCCUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCCUp.Location = new System.Drawing.Point(619, 213);
+            this.btnCCUp.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnCCUp.ForeColor = System.Drawing.Color.Black;
+            this.btnCCUp.Location = new System.Drawing.Point(603, 162);
+            this.btnCCUp.Margin = new System.Windows.Forms.Padding(0);
             this.btnCCUp.Name = "btnCCUp";
-            this.btnCCUp.Size = new System.Drawing.Size(81, 37);
+            this.btnCCUp.Size = new System.Drawing.Size(68, 31);
             this.btnCCUp.TabIndex = 57;
             this.btnCCUp.Text = "+1%";
             this.btnCCUp.UseVisualStyleBackColor = true;
@@ -167,10 +180,10 @@
             // discountBar
             // 
             this.discountBar.LargeChange = 10;
-            this.discountBar.Location = new System.Drawing.Point(123, 95);
+            this.discountBar.Location = new System.Drawing.Point(114, 69);
             this.discountBar.Maximum = 100;
             this.discountBar.Name = "discountBar";
-            this.discountBar.Size = new System.Drawing.Size(490, 45);
+            this.discountBar.Size = new System.Drawing.Size(462, 45);
             this.discountBar.SmallChange = 10;
             this.discountBar.TabIndex = 50;
             this.discountBar.TickFrequency = 10;
@@ -181,19 +194,23 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(285, 169);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.label6.Location = new System.Drawing.Point(369, 124);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 20);
+            this.label6.Size = new System.Drawing.Size(228, 21);
             this.label6.TabIndex = 56;
             this.label6.Text = "Credit Card Discount";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnCCDown
             // 
             this.btnCCDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCCDown.Location = new System.Drawing.Point(49, 213);
+            this.btnCCDown.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnCCDown.ForeColor = System.Drawing.Color.Black;
+            this.btnCCDown.Location = new System.Drawing.Point(13, 162);
+            this.btnCCDown.Margin = new System.Windows.Forms.Padding(0);
             this.btnCCDown.Name = "btnCCDown";
-            this.btnCCDown.Size = new System.Drawing.Size(68, 37);
+            this.btnCCDown.Size = new System.Drawing.Size(68, 30);
             this.btnCCDown.TabIndex = 58;
             this.btnCCDown.Text = "-1%";
             this.btnCCDown.UseVisualStyleBackColor = true;
@@ -202,10 +219,10 @@
             // profitBar
             // 
             this.profitBar.LargeChange = 10;
-            this.profitBar.Location = new System.Drawing.Point(127, 335);
+            this.profitBar.Location = new System.Drawing.Point(115, 253);
             this.profitBar.Maximum = 100;
             this.profitBar.Name = "profitBar";
-            this.profitBar.Size = new System.Drawing.Size(490, 45);
+            this.profitBar.Size = new System.Drawing.Size(461, 45);
             this.profitBar.SmallChange = 10;
             this.profitBar.TabIndex = 13;
             this.profitBar.TickFrequency = 10;
@@ -217,10 +234,10 @@
             // Creditbar
             // 
             this.Creditbar.LargeChange = 10;
-            this.Creditbar.Location = new System.Drawing.Point(127, 212);
+            this.Creditbar.Location = new System.Drawing.Point(114, 162);
             this.Creditbar.Maximum = 100;
             this.Creditbar.Name = "Creditbar";
-            this.Creditbar.Size = new System.Drawing.Size(490, 45);
+            this.Creditbar.Size = new System.Drawing.Size(462, 45);
             this.Creditbar.SmallChange = 10;
             this.Creditbar.TabIndex = 59;
             this.Creditbar.TickFrequency = 10;
@@ -231,73 +248,79 @@
             // 
             // tbdiscount
             // 
-            this.tbdiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tbdiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.tbdiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbdiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.tbdiscount.Location = new System.Drawing.Point(500, 45);
+            this.tbdiscount.ForeColor = System.Drawing.Color.Black;
+            this.tbdiscount.Location = new System.Drawing.Point(603, 29);
             this.tbdiscount.MaxLength = 3;
             this.tbdiscount.Name = "tbdiscount";
-            this.tbdiscount.Size = new System.Drawing.Size(50, 29);
+            this.tbdiscount.Size = new System.Drawing.Size(50, 27);
             this.tbdiscount.TabIndex = 51;
             this.tbdiscount.Text = "100";
+            this.tbdiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbdiscount.TextChanged += new System.EventHandler(this.tbdiscount_TextChanged);
             // 
             // tbprofit
             // 
-            this.tbprofit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tbprofit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.tbprofit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbprofit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.tbprofit.Location = new System.Drawing.Point(500, 283);
+            this.tbprofit.ForeColor = System.Drawing.Color.Black;
+            this.tbprofit.Location = new System.Drawing.Point(603, 210);
             this.tbprofit.MaxLength = 3;
             this.tbprofit.Name = "tbprofit";
-            this.tbprofit.Size = new System.Drawing.Size(50, 29);
+            this.tbprofit.Size = new System.Drawing.Size(50, 27);
             this.tbprofit.TabIndex = 54;
             this.tbprofit.Text = "100";
+            this.tbprofit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbprofit.TextChanged += new System.EventHandler(this.tbprofit_TextChanged);
             // 
             // tbCCDiscount
             // 
-            this.tbCCDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.tbCCDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.tbCCDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbCCDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.tbCCDiscount.Location = new System.Drawing.Point(500, 160);
+            this.tbCCDiscount.ForeColor = System.Drawing.Color.Black;
+            this.tbCCDiscount.Location = new System.Drawing.Point(603, 122);
             this.tbCCDiscount.MaxLength = 3;
             this.tbCCDiscount.Name = "tbCCDiscount";
-            this.tbCCDiscount.Size = new System.Drawing.Size(50, 29);
+            this.tbCCDiscount.Size = new System.Drawing.Size(50, 27);
             this.tbCCDiscount.TabIndex = 60;
             this.tbCCDiscount.Text = "100";
+            this.tbCCDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbCCDiscount.TextChanged += new System.EventHandler(this.tbCCD_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(555, 48);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.label4.Location = new System.Drawing.Point(658, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 20);
+            this.label4.Size = new System.Drawing.Size(22, 21);
             this.label4.TabIndex = 53;
             this.label4.Text = "%";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(555, 286);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.label5.Location = new System.Drawing.Point(658, 212);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 20);
+            this.label5.Size = new System.Drawing.Size(22, 21);
             this.label5.TabIndex = 55;
             this.label5.Text = "%";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(555, 163);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.label3.Location = new System.Drawing.Point(658, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 20);
+            this.label3.Size = new System.Drawing.Size(22, 21);
             this.label3.TabIndex = 61;
             this.label3.Text = "%";
             // 
             // ManagerGroupBox
             // 
-            this.ManagerGroupBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.ManagerGroupBox.BorderColor = System.Drawing.Color.Transparent;
             this.ManagerGroupBox.Controls.Add(this.btnNormalMember);
             this.ManagerGroupBox.Controls.Add(this.btnGoldMember);
             this.ManagerGroupBox.Controls.Add(this.label3);
@@ -318,10 +341,11 @@
             this.ManagerGroupBox.Controls.Add(this.btnDiscountDown);
             this.ManagerGroupBox.Controls.Add(this.btndiscountUp);
             this.ManagerGroupBox.Controls.Add(this.lbmemberdiscount);
+            this.ManagerGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.ManagerGroupBox.LegendPosition = HCI.Controls.Lposition.Center;
-            this.ManagerGroupBox.Location = new System.Drawing.Point(44, 151);
+            this.ManagerGroupBox.Location = new System.Drawing.Point(18, 68);
             this.ManagerGroupBox.Name = "ManagerGroupBox";
-            this.ManagerGroupBox.Size = new System.Drawing.Size(807, 409);
+            this.ManagerGroupBox.Size = new System.Drawing.Size(686, 313);
             this.ManagerGroupBox.TabIndex = 3;
             this.ManagerGroupBox.TabStop = false;
             this.ManagerGroupBox.Text = "Manager Area";
@@ -329,9 +353,10 @@
             // btnNormalMember
             // 
             this.btnNormalMember.AutoSize = true;
-            this.btnNormalMember.Location = new System.Drawing.Point(49, 60);
+            this.btnNormalMember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.btnNormalMember.Location = new System.Drawing.Point(87, 29);
             this.btnNormalMember.Name = "btnNormalMember";
-            this.btnNormalMember.Size = new System.Drawing.Size(84, 24);
+            this.btnNormalMember.Size = new System.Drawing.Size(84, 25);
             this.btnNormalMember.TabIndex = 63;
             this.btnNormalMember.TabStop = true;
             this.btnNormalMember.Text = "Normal";
@@ -341,10 +366,10 @@
             // btnGoldMember
             // 
             this.btnGoldMember.AutoSize = true;
-            this.btnGoldMember.ForeColor = System.Drawing.Color.Yellow;
-            this.btnGoldMember.Location = new System.Drawing.Point(49, 29);
+            this.btnGoldMember.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnGoldMember.Location = new System.Drawing.Point(15, 29);
             this.btnGoldMember.Name = "btnGoldMember";
-            this.btnGoldMember.Size = new System.Drawing.Size(63, 24);
+            this.btnGoldMember.Size = new System.Drawing.Size(66, 25);
             this.btnGoldMember.TabIndex = 62;
             this.btnGoldMember.TabStop = true;
             this.btnGoldMember.Text = "Gold";
@@ -354,9 +379,12 @@
             // btnSearch
             // 
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Location = new System.Drawing.Point(527, 27);
+            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Location = new System.Drawing.Point(384, 14);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(0);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(324, 105);
+            this.btnSearch.Size = new System.Drawing.Size(296, 36);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.Text = "Search Courses";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -365,7 +393,7 @@
             // ManagerMenuForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(896, 749);
+            this.ClientSize = new System.Drawing.Size(720, 500);
             this.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.Name = "ManagerMenuForm";
             this.Text = "SMainMenu";

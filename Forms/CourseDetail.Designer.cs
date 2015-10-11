@@ -37,13 +37,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.CourseImage)).BeginInit();
             this.SuspendLayout();
             // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Size = new System.Drawing.Size(592, 66);
+            // 
             // BaseNavigationText
             // 
+            this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
             this.BaseNavigationText.Text = "Course Detail";
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Size = new System.Drawing.Size(592, 393);
+            this.BaseContentPanel.Size = new System.Drawing.Size(592, 403);
             // 
             // BaseNavigation
             // 
@@ -54,12 +59,14 @@
             this.BaseContentWrapper.Controls.Add(this.CourseDetails);
             this.BaseContentWrapper.Controls.Add(this.CourseImage);
             this.BaseContentWrapper.Controls.Add(this.CourseRegButton);
-            this.BaseContentWrapper.Size = new System.Drawing.Size(592, 327);
+            this.BaseContentWrapper.Location = new System.Drawing.Point(0, 66);
+            this.BaseContentWrapper.Size = new System.Drawing.Size(592, 337);
             // 
             // CourseRegButton
             // 
             this.CourseRegButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CourseRegButton.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.CourseRegButton.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.CourseRegButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.CourseRegButton.Location = new System.Drawing.Point(420, 254);
             this.CourseRegButton.Margin = new System.Windows.Forms.Padding(0);
             this.CourseRegButton.Name = "CourseRegButton";
@@ -72,7 +79,7 @@
             // CourseDetails
             // 
             this.CourseDetails.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CourseDetails.Location = new System.Drawing.Point(159, 27);
+            this.CourseDetails.Location = new System.Drawing.Point(159, 32);
             this.CourseDetails.Margin = new System.Windows.Forms.Padding(0);
             this.CourseDetails.Name = "CourseDetails";
             this.CourseDetails.Size = new System.Drawing.Size(398, 208);

@@ -53,14 +53,12 @@
             this.BaseTable.Margin = new System.Windows.Forms.Padding(0);
             this.BaseTable.Name = "BaseTable";
             this.BaseTable.RowCount = 1;
-            this.BaseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.BaseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.BaseTable.Size = new System.Drawing.Size(720, 54);
+            this.BaseTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.BaseTable.Size = new System.Drawing.Size(720, 44);
             this.BaseTable.TabIndex = 0;
             // 
             // BaseWindowBar
             // 
-            this.BaseWindowBar.AutoSize = true;
             this.BaseWindowBar.BackColor = System.Drawing.Color.Transparent;
             this.BaseWindowBar.Controls.Add(this.BaseButtonHideWindow);
             this.BaseWindowBar.Controls.Add(this.BaseButtonCloseWindow);
@@ -68,21 +66,21 @@
             this.BaseWindowBar.Location = new System.Drawing.Point(0, 0);
             this.BaseWindowBar.Margin = new System.Windows.Forms.Padding(0);
             this.BaseWindowBar.Name = "BaseWindowBar";
-            this.BaseWindowBar.Size = new System.Drawing.Size(720, 54);
+            this.BaseWindowBar.Size = new System.Drawing.Size(720, 44);
             this.BaseWindowBar.TabIndex = 0;
             this.BaseWindowBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BaseWindowActions_MouseDown);
             // 
             // BaseButtonHideWindow
             // 
-            this.BaseButtonHideWindow.ActiveLinkColor = System.Drawing.Color.MediumPurple;
+            this.BaseButtonHideWindow.ActiveLinkColor = System.Drawing.Color.Black;
             this.BaseButtonHideWindow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BaseButtonHideWindow.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.BaseButtonHideWindow.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.BaseButtonHideWindow.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.BaseButtonHideWindow.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.BaseButtonHideWindow.Location = new System.Drawing.Point(608, 0);
+            this.BaseButtonHideWindow.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.BaseButtonHideWindow.Location = new System.Drawing.Point(640, 0);
             this.BaseButtonHideWindow.Margin = new System.Windows.Forms.Padding(0);
             this.BaseButtonHideWindow.Name = "BaseButtonHideWindow";
-            this.BaseButtonHideWindow.Size = new System.Drawing.Size(56, 54);
+            this.BaseButtonHideWindow.Size = new System.Drawing.Size(40, 44);
             this.BaseButtonHideWindow.TabIndex = 2;
             this.BaseButtonHideWindow.TabStop = true;
             this.BaseButtonHideWindow.Text = "_";
@@ -91,15 +89,15 @@
             // 
             // BaseButtonCloseWindow
             // 
-            this.BaseButtonCloseWindow.ActiveLinkColor = System.Drawing.Color.MediumPurple;
+            this.BaseButtonCloseWindow.ActiveLinkColor = System.Drawing.Color.Black;
             this.BaseButtonCloseWindow.Dock = System.Windows.Forms.DockStyle.Right;
-            this.BaseButtonCloseWindow.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.BaseButtonCloseWindow.Font = new System.Drawing.Font("Century Gothic", 16F);
             this.BaseButtonCloseWindow.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.BaseButtonCloseWindow.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
-            this.BaseButtonCloseWindow.Location = new System.Drawing.Point(664, 0);
+            this.BaseButtonCloseWindow.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.BaseButtonCloseWindow.Location = new System.Drawing.Point(680, 0);
             this.BaseButtonCloseWindow.Margin = new System.Windows.Forms.Padding(0);
             this.BaseButtonCloseWindow.Name = "BaseButtonCloseWindow";
-            this.BaseButtonCloseWindow.Size = new System.Drawing.Size(56, 54);
+            this.BaseButtonCloseWindow.Size = new System.Drawing.Size(40, 44);
             this.BaseButtonCloseWindow.TabIndex = 1;
             this.BaseButtonCloseWindow.TabStop = true;
             this.BaseButtonCloseWindow.Text = "×";
@@ -113,23 +111,23 @@
             this.BaseNavigation.Location = new System.Drawing.Point(0, 0);
             this.BaseNavigation.Margin = new System.Windows.Forms.Padding(0);
             this.BaseNavigation.Name = "BaseNavigation";
-            this.BaseNavigation.Size = new System.Drawing.Size(720, 66);
+            this.BaseNavigation.Size = new System.Drawing.Size(720, 54);
             this.BaseNavigation.TabIndex = 1;
             // 
             // BaseNavigationText
             // 
-            this.BaseNavigationText.ActiveLinkColor = System.Drawing.Color.MediumPurple;
+            this.BaseNavigationText.ActiveLinkColor = System.Drawing.Color.Black;
             this.BaseNavigationText.DisabledLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(12)))), ((int)(((byte)(13)))));
             this.BaseNavigationText.Dock = System.Windows.Forms.DockStyle.Left;
-            this.BaseNavigationText.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.BaseNavigationText.ForeColor = System.Drawing.Color.White;
+            this.BaseNavigationText.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.BaseNavigationText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.BaseNavigationText.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.BaseNavigationText.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.BaseNavigationText.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.BaseNavigationText.Location = new System.Drawing.Point(0, 0);
             this.BaseNavigationText.Margin = new System.Windows.Forms.Padding(0);
             this.BaseNavigationText.Name = "BaseNavigationText";
             this.BaseNavigationText.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
+            this.BaseNavigationText.Size = new System.Drawing.Size(336, 54);
             this.BaseNavigationText.TabIndex = 0;
             this.BaseNavigationText.TabStop = true;
             this.BaseNavigationText.Text = "Title";
@@ -140,30 +138,30 @@
             this.BaseContentPanel.Controls.Add(this.BaseContentWrapper);
             this.BaseContentPanel.Controls.Add(this.BaseNavigation);
             this.BaseContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BaseContentPanel.Location = new System.Drawing.Point(0, 54);
+            this.BaseContentPanel.Location = new System.Drawing.Point(0, 44);
             this.BaseContentPanel.Margin = new System.Windows.Forms.Padding(0);
             this.BaseContentPanel.Name = "BaseContentPanel";
-            this.BaseContentPanel.Size = new System.Drawing.Size(720, 426);
+            this.BaseContentPanel.Size = new System.Drawing.Size(720, 436);
             this.BaseContentPanel.TabIndex = 1;
             // 
             // BaseContentWrapper
             // 
             this.BaseContentWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BaseContentWrapper.Location = new System.Drawing.Point(0, 66);
+            this.BaseContentWrapper.Location = new System.Drawing.Point(0, 54);
             this.BaseContentWrapper.Margin = new System.Windows.Forms.Padding(0);
             this.BaseContentWrapper.Name = "BaseContentWrapper";
-            this.BaseContentWrapper.Size = new System.Drawing.Size(720, 360);
+            this.BaseContentWrapper.Size = new System.Drawing.Size(720, 382);
             this.BaseContentWrapper.TabIndex = 2;
             // 
             // BaseForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(720, 480);
             this.Controls.Add(this.BaseContentPanel);
             this.Controls.Add(this.BaseTable);
-            this.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
+            this.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "BaseForm";
@@ -171,7 +169,6 @@
             this.Text = "BaseForm";
             this.Load += new System.EventHandler(this.BaseForm_Load);
             this.BaseTable.ResumeLayout(false);
-            this.BaseTable.PerformLayout();
             this.BaseWindowBar.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentPanel.ResumeLayout(false);
