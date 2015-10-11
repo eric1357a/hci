@@ -17,7 +17,6 @@ namespace HCI.Forms
         public LoginForm()
         {
             InitializeComponent();
-
             LoginUsername.Text = "Ada";
             Timer timer = new Timer();
             timer.Interval = 1000;

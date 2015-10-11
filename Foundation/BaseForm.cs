@@ -41,7 +41,7 @@ namespace HCI.Foundation
             int nBottomRect, // y-coordinate of lower-right corner
             int nWidthEllipse, // height of ellipse
             int nHeightEllipse // width of ellipse
-         );
+        );
 
         public BaseForm()
         {

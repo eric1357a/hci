@@ -28,39 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LabelHolder = new System.Windows.Forms.Panel();
             this.lb_Loading = new System.Windows.Forms.Label();
-            this.LabelHolder.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // LabelHolder
-            // 
-            this.LabelHolder.Controls.Add(this.lb_Loading);
-            this.LabelHolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelHolder.Location = new System.Drawing.Point(0, 0);
-            this.LabelHolder.Name = "LabelHolder";
-            this.LabelHolder.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.LabelHolder.Size = new System.Drawing.Size(191, 71);
-            this.LabelHolder.TabIndex = 0;
             // 
             // lb_Loading
             // 
-            this.lb_Loading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lb_Loading.Font = new System.Drawing.Font("Microsoft JhengHei", 17F);
-            this.lb_Loading.Location = new System.Drawing.Point(25, 0);
-            this.lb_Loading.Margin = new System.Windows.Forms.Padding(10);
+            this.lb_Loading.Font = new System.Drawing.Font("Consolas", 17F);
+            this.lb_Loading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.lb_Loading.Location = new System.Drawing.Point(9, 9);
+            this.lb_Loading.Margin = new System.Windows.Forms.Padding(0);
             this.lb_Loading.Name = "lb_Loading";
-            this.lb_Loading.Size = new System.Drawing.Size(166, 71);
-            this.lb_Loading.TabIndex = 2;
-            this.lb_Loading.Text = "Loading /";
-            this.lb_Loading.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lb_Loading.Size = new System.Drawing.Size(46, 46);
+            this.lb_Loading.TabIndex = 3;
+            this.lb_Loading.Text = "/";
+            this.lb_Loading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Loading
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(191, 71);
-            this.Controls.Add(this.LabelHolder);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.ClientSize = new System.Drawing.Size(64, 64);
+            this.Controls.Add(this.lb_Loading);
             this.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(155)))), ((int)(((byte)(242)))));
@@ -68,14 +56,13 @@
             this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.Name = "Loading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.LabelHolder.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel LabelHolder;
         private System.Windows.Forms.Label lb_Loading;
+
     }
 }

@@ -59,11 +59,11 @@
             // 
             this.lb_User.AutoEllipsis = true;
             this.lb_User.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lb_User.Font = new System.Drawing.Font("Microsoft JhengHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lb_User.Font = new System.Drawing.Font("Century Gothic", 11F);
             this.lb_User.Location = new System.Drawing.Point(447, 0);
             this.lb_User.Margin = new System.Windows.Forms.Padding(0);
             this.lb_User.Name = "lb_User";
-            this.lb_User.Padding = new System.Windows.Forms.Padding(0, 0, 16, 0);
+            this.lb_User.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.lb_User.Size = new System.Drawing.Size(172, 54);
             this.lb_User.TabIndex = 6;
             this.lb_User.Text = "XXX(YYY)";
