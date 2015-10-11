@@ -12,16 +12,12 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class AdminForm : LoggedInForm
+    public partial class SearchCourse : BaseForm
     {
-        public AdminForm()
+        public SearchCourse()
         {
             InitializeComponent();
         }
 
-        private void btn_add_Click(object sender, EventArgs e)
-        {
-            new AddDetails() { Prev = this }.Show();
-        }
     }
 }

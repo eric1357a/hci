@@ -197,7 +197,7 @@ namespace HCI.Forms
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            //Wait for K
+            new SearchCourse() { Prev = this }.Show();
         }
 
         private void btnProfitDown_Click(object sender, EventArgs e)
