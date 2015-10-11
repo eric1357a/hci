@@ -4,22 +4,21 @@
 
 @Venue B01
 
-## Work撈 distribu純
+## Progress
 
-> S
-- [x] Build template
-- [x] View Course Detail
-- [x] Membership System
-- [x] Login 分唇
-
-> E
-- [ ] Main & Staff Menu
+E remain
 - [ ] Promotions
 
-> K
+K remain
 - [ ] Administrative 分唇
 - [ ] Search 分唇
 
-> C
+
+> Completed
 - [x] Course registration
-- [x] 入聲
+- [x] Invoice
+- [x] Build template + refine UI
+- [x] View Course Detail
+- [x] Membership System
+- [x] Login
+- [x] Main & Staff Menu
