@@ -38,9 +38,9 @@ namespace HCI.Forms
 
         private void tb_ContactNo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control) sender).Text.Length == 8)
+            if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control)sender).Text.Length == 8)
                 if (e.KeyChar != 13 && e.KeyChar != 8 && e.KeyChar != 9)
-                        e.Handled = true;
+                    e.Handled = true;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -57,14 +57,35 @@ namespace HCI.Forms
                 checkName(tb_Name))
             {
                 // If all validation pass
-                if (new Random().Next(4) == 0)
-                    // Random course collision for student
+
+                Membership m = Membership.None;
+                if (clb_Member.CheckedItems.Count != 0)
+                    switch (clb_Member.CheckedItems[0].ToString())
+                    {
+                        case "Normal":
+                            m = Membership.Normal;
+                            break;
+                        case "Gold":
+                            m = Membership.Gold;
+                            break;
+                    }
+
+                // If StudentCollection doesn't contain current student
+                if (StudentCollection.ElementAt(tb_Name.Text, m) == null)
+                    StudentCollection.Add(tb_Name.Text, tb_ContactNo.Text, tb_Email.Text, m);
+
+                bool[] checkedTable = new bool[clb_Month.Items.Count];
+                for (int i = 0; i < checkedTable.Length; i++)
+                    checkedTable[i] = clb_Month.GetItemCheckState(i).ToString() == "Checked";
+
+                // Check course collision for student
+                if (StudentCollection.ElementAt(tb_Name.Text, m).checkOccupation(lb_WeekDay.Text, checkedTable))
                     MessageBox.Show("This timeslot has been registered with another course");
                 else
                 {
                     this.Hide();
 
-                    String membership = "N/A";
+                    String membership = "None";
                     if (clb_Member.CheckedItems.Count != 0)
                         membership = clb_Member.CheckedItems[0].ToString();
 
@@ -100,7 +121,8 @@ namespace HCI.Forms
                             lessonMaterial = programme.materialFee
                             // Payment assignment in PaymentMethod form
                         }
-                    ) { Prev = this }.Show();
+                    )
+                    { Prev = this }.Show();
                 }
             }
         }

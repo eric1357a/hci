@@ -153,6 +153,7 @@
     <Compile Include="Model\Discounts.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\StaffCollection.cs" />
+    <Compile Include="Model\StudentCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminForm.resx">
