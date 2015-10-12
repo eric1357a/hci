@@ -11,7 +11,7 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class AddDetails : BaseForm
+    public partial class AddDetails : LoggedInForm
     {
         private const String Cost_ERR = "No cost entered";
         private const String Day_ERR = "No day entered";

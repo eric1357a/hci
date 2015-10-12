@@ -19,8 +19,8 @@ namespace HCI.Forms
         private const String MONTH_ERR = "No month selected";
         private const String NAME_ERR = "No student name entered";
 
-        private readonly Color DARK_RED = Color.FromArgb(224, 224, 224);
-        private readonly Color DARK_PURPLE = Color.FromArgb(243, 244, 248);
+        private readonly Color INCORRECT = Color.FromArgb(224, 224, 224);
+        private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
 
         private Course course;
         private Programme programme;
@@ -62,7 +62,6 @@ namespace HCI.Forms
                     MessageBox.Show("This timeslot has been registered with another course");
                 else
                 {
-                    MessageBox.Show("Registered Successfully!");
                     this.Hide();
 
                     String membership = "N/A";
@@ -80,7 +79,7 @@ namespace HCI.Forms
                             break;
                     }
 
-                    new InvoiceContainer(
+                    new PaymentMethod(
                         // Parameter passing to rdlc via Invoice object
                         new Invoice()
                         {
@@ -98,10 +97,10 @@ namespace HCI.Forms
                             subTotal = course.Cost,
 
                             discount = discount,
-                            lessonMaterial = programme.materialFee,
-                            payment = 1000
+                            lessonMaterial = programme.materialFee
+                            // Payment assignment in PaymentMethod form
                         }
-                    ) { Prev = this.Prev.Prev }.Show();
+                    ) { Prev = this }.Show();
                 }
             }
         }
@@ -169,10 +168,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for invalid email type
                 showToolTip(sender, NAME_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -182,10 +181,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for invalid email type
                 showToolTip(sender, EMAIL_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -195,10 +194,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for empty phone
                 showToolTip(sender, PHONE_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -208,10 +207,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for no month selected
                 showToolTip(sender, MONTH_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 

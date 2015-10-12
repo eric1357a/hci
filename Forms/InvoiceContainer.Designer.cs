@@ -32,15 +32,17 @@
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseContentWrapper.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationText
             // 
+            this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
             this.BaseNavigationText.Text = "Invoice";
             // 
             // BaseContentPanel
             // 
-            this.BaseContentPanel.Size = new System.Drawing.Size(900, 846);
+            this.BaseContentPanel.Size = new System.Drawing.Size(900, 856);
             // 
             // BaseNavigation
             // 
@@ -49,19 +51,24 @@
             // BaseContentWrapper
             // 
             this.BaseContentWrapper.Controls.Add(this.rv_Invoice);
-            this.BaseContentWrapper.Size = new System.Drawing.Size(900, 780);
+            this.BaseContentWrapper.Location = new System.Drawing.Point(0, 66);
+            this.BaseContentWrapper.Size = new System.Drawing.Size(900, 790);
+            // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Location = new System.Drawing.Point(540, 0);
+            this.BaseNavigationAction.Size = new System.Drawing.Size(360, 66);
             // 
             // rv_Invoice
             // 
-            this.rv_Invoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(39)))));
             this.rv_Invoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rv_Invoice.DocumentMapWidth = 394;
             this.rv_Invoice.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.rv_Invoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(80)))), ((int)(((byte)(233)))));
+            this.rv_Invoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
             this.rv_Invoice.LocalReport.ReportEmbeddedResource = "HCI.Invoice.rdlc";
             this.rv_Invoice.Location = new System.Drawing.Point(0, 0);
             this.rv_Invoice.Name = "rv_Invoice";
-            this.rv_Invoice.Size = new System.Drawing.Size(900, 780);
+            this.rv_Invoice.Size = new System.Drawing.Size(900, 790);
             this.rv_Invoice.TabIndex = 0;
             // 
             // InvoiceContainer
@@ -75,6 +82,7 @@
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentWrapper.ResumeLayout(false);
+            this.BaseNavigationAction.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

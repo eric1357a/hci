@@ -117,36 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="A1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\A1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="B3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\B3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="A3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\A3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="B1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\B1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="B2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\B2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="A2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\A2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="C2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\C2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="C1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\C1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bank Cards-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Bank Cards-100.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Banknotes-100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Banknotes-100.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btn_CreditCard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAi5JREFUeF7t
+        3UFOwkAYxXGO4BE8gjfQG+iN9AgegRtAUtCl3kD3raktJi7hBjpfmYUp00KnLbzg/5e8lU1J3ktow2Kc
+        AAAAAAAAAAAAAEB3z/n35VO+uia7sW58TeNK0tVNkpWzJCvWi6z8Ic2xjqquXGe+vuHM8vWF3Tz0wWR/
+        rDvr0NfZj91okRZvoQ8iHeI6HGQUxhgwrktfa5wkLR6CNybRsU59vd1snxs8vIeOdeor7sY9iO5CN7Qk
+        afluf/eXosa6sY5C3Vmiukuy1WPoZous2Az2xnDGqpch11Wow6ivLbfwa+hmLlN/CfawrmrdVbFu/SWH
+        axok+qH0DzW9FDHIiTCIGAYRwyBiGETM0Qex3/2XH6t7Eo7r66Xen2W0Qey3/tA1pD0MIhYGEQuDiIVB
+        xDLaIMv868quI+EssuIz3OFIg6CddRXukEFOgkHEMIgYBhHDIGIYRAyDiGEQMQwihkHEMIgYBhHDIGIY
+        RAyDiGEQMQwihkHEMIgYBhHDIGIYRAyDiGEQMQwihkHEMIgYBhHDIGIYRMxRBnHh8JkDWVe17qpEDtKw
+        blasOZ5pv7YD4KK+ZdoOMLOzA5dpeesvRY1103ZWZdQBZm0HcJE+KTa+4u6avrZIfHq/FLkHUOPZgaRb
+        rEtfa7zq4cQovWMdDvYytH2elPP6h5CDMx9sjL/8QQFuGB72+1N1NLXOfH3jsqOZ7MPIbo727yoAAAAA
+        AAAAAAAAnJXJ5Be+f7ylea/bhgAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

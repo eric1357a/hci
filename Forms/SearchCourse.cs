@@ -12,7 +12,7 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-    public partial class SearchCourse : BaseForm
+    public partial class SearchCourse : LoggedInForm
     {
         public SearchCourse()
         {

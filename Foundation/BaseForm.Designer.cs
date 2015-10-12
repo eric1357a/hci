@@ -36,6 +36,7 @@
             this.BaseNavigationText = new System.Windows.Forms.LinkLabel();
             this.BaseContentPanel = new System.Windows.Forms.Panel();
             this.BaseContentWrapper = new System.Windows.Forms.Panel();
+            this.BaseNavigationAction = new System.Windows.Forms.Panel();
             this.BaseTable.SuspendLayout();
             this.BaseWindowBar.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
@@ -106,6 +107,7 @@
             // 
             // BaseNavigation
             // 
+            this.BaseNavigation.Controls.Add(this.BaseNavigationAction);
             this.BaseNavigation.Controls.Add(this.BaseNavigationText);
             this.BaseNavigation.Dock = System.Windows.Forms.DockStyle.Top;
             this.BaseNavigation.Location = new System.Drawing.Point(0, 0);
@@ -153,6 +155,14 @@
             this.BaseContentWrapper.Size = new System.Drawing.Size(720, 382);
             this.BaseContentWrapper.TabIndex = 2;
             // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BaseNavigationAction.Location = new System.Drawing.Point(443, 0);
+            this.BaseNavigationAction.Name = "BaseNavigationAction";
+            this.BaseNavigationAction.Size = new System.Drawing.Size(277, 54);
+            this.BaseNavigationAction.TabIndex = 1;
+            // 
             // BaseForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -187,5 +197,6 @@
         public System.Windows.Forms.Panel BaseContentPanel;
         public System.Windows.Forms.Panel BaseNavigation;
         public System.Windows.Forms.Panel BaseContentWrapper;
+        public System.Windows.Forms.Panel BaseNavigationAction;
     }
 }

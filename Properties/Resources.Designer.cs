@@ -123,6 +123,26 @@ namespace HCI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bank_Cards_100 {
+            get {
+                object obj = ResourceManager.GetObject("Bank Cards-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Banknotes_100 {
+            get {
+                object obj = ResourceManager.GetObject("Banknotes-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap C1 {
             get {
                 object obj = ResourceManager.GetObject("C1", resourceCulture);

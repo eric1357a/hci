@@ -26,31 +26,38 @@ namespace HCI.Forms
 
         public Loading()
         {
-            InitializeComponent();
-
-            Timer animation = new Timer();
-            animation.Interval = 60;
-            animation.Tick += (sender, e) =>
+            try
             {
-                if (lb_Loading.Text.Length > 0)
-                    switch (lb_Loading.Text[lb_Loading.Text.Length - 1])
-                    {
-                        case '/':
-                            changeLastChar(lb_Loading, '—');
-                            break;
-                        case '—':
-                            changeLastChar(lb_Loading, '\\');
-                            break;
-                        case '\\':
-                            changeLastChar(lb_Loading, '|');
-                            break;
-                        case '|':
-                            changeLastChar(lb_Loading, '/');
-                            break;
-                    }
-            };
-            animation.Start();
-            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 16, 16));
+                InitializeComponent();
+
+                Timer animation = new Timer();
+                animation.Interval = 60;
+                animation.Tick += (sender, e) =>
+                {
+                    if (lb_Loading.Text.Length > 0)
+                        switch (lb_Loading.Text[lb_Loading.Text.Length - 1])
+                        {
+                            case '/':
+                                changeLastChar(lb_Loading, '—');
+                                break;
+                            case '—':
+                                changeLastChar(lb_Loading, '\\');
+                                break;
+                            case '\\':
+                                changeLastChar(lb_Loading, '|');
+                                break;
+                            case '|':
+                                changeLastChar(lb_Loading, '/');
+                                break;
+                        }
+                };
+                animation.Start();
+                this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 16, 16));
+            }
+            catch (Exception e)
+            {
+                // Try-catch used for avoiding thread abort exception
+            }
         }
 
         private void changeLastChar(Control control, char c)

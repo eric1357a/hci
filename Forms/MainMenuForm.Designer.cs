@@ -33,12 +33,17 @@
             this.MainMenuControlsWrapper = new System.Windows.Forms.Panel();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             this.MainMenuControlsWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BaseNavigationAction
+            // lb_User
             // 
-            this.BaseNavigationAction.Size = new System.Drawing.Size(540, 66);
+            this.lb_User.Location = new System.Drawing.Point(54, 18);
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Location = new System.Drawing.Point(302, 10);
             // 
             // BaseNavigationText
             // 
@@ -62,6 +67,11 @@
             // 
             this.BaseContentWrapper.Location = new System.Drawing.Point(0, 0);
             this.BaseContentWrapper.Size = new System.Drawing.Size(540, 316);
+            // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Location = new System.Drawing.Point(141, 0);
+            this.BaseNavigationAction.Size = new System.Drawing.Size(399, 66);
             // 
             // btn_view
             // 
@@ -108,6 +118,7 @@
             this.Text = "MainMenuForm";
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
+            this.BaseNavigationAction.ResumeLayout(false);
             this.MainMenuControlsWrapper.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -37,10 +37,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.CourseImage)).BeginInit();
             this.SuspendLayout();
             // 
-            // BaseNavigationAction
-            // 
-            this.BaseNavigationAction.Size = new System.Drawing.Size(592, 66);
-            // 
             // BaseNavigationText
             // 
             this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
@@ -61,6 +57,11 @@
             this.BaseContentWrapper.Controls.Add(this.CourseRegButton);
             this.BaseContentWrapper.Location = new System.Drawing.Point(0, 66);
             this.BaseContentWrapper.Size = new System.Drawing.Size(592, 337);
+            // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Location = new System.Drawing.Point(225, 0);
+            this.BaseNavigationAction.Size = new System.Drawing.Size(367, 66);
             // 
             // CourseRegButton
             // 

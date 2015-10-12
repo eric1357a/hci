@@ -67,6 +67,7 @@
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseContentWrapper.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             this.GroupCourseAA.SuspendLayout();
             this.TableCourseA3.SuspendLayout();
             this.HolderA3.SuspendLayout();
@@ -97,9 +98,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImageC1)).BeginInit();
             this.SuspendLayout();
             // 
-            // BaseNavigationAction
+            // lb_User
             // 
-            this.BaseNavigationAction.Size = new System.Drawing.Size(971, 54);
+            this.lb_User.Location = new System.Drawing.Point(191, 18);
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Location = new System.Drawing.Point(439, 10);
             // 
             // BaseNavigationText
             // 
@@ -119,6 +124,11 @@
             this.BaseContentWrapper.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BaseContentWrapper.Location = new System.Drawing.Point(0, 76);
             this.BaseContentWrapper.Size = new System.Drawing.Size(971, 476);
+            // 
+            // BaseNavigationAction
+            // 
+            this.BaseNavigationAction.Location = new System.Drawing.Point(435, 0);
+            this.BaseNavigationAction.Size = new System.Drawing.Size(536, 54);
             // 
             // GroupCourseAA
             // 
@@ -151,7 +161,7 @@
             this.TableCourseA3.Controls.Add(this.LabelA3, 1, 0);
             this.TableCourseA3.Controls.Add(this.HolderA3, 0, 0);
             this.TableCourseA3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseA3.Location = new System.Drawing.Point(1, 288);
+            this.TableCourseA3.Location = new System.Drawing.Point(1, 294);
             this.TableCourseA3.Name = "TableCourseA3";
             this.TableCourseA3.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseA3.RowCount = 1;
@@ -216,7 +226,7 @@
             this.TableCourseA2.Controls.Add(this.LabelA2, 1, 0);
             this.TableCourseA2.Controls.Add(this.HolderA2, 0, 0);
             this.TableCourseA2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseA2.Location = new System.Drawing.Point(1, 156);
+            this.TableCourseA2.Location = new System.Drawing.Point(1, 162);
             this.TableCourseA2.Name = "TableCourseA2";
             this.TableCourseA2.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseA2.RowCount = 1;
@@ -281,7 +291,7 @@
             this.TableCourseA1.Controls.Add(this.LabelA1, 1, 0);
             this.TableCourseA1.Controls.Add(this.HolderA1, 0, 0);
             this.TableCourseA1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseA1.Location = new System.Drawing.Point(1, 24);
+            this.TableCourseA1.Location = new System.Drawing.Point(1, 30);
             this.TableCourseA1.Name = "TableCourseA1";
             this.TableCourseA1.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseA1.RowCount = 1;
@@ -366,7 +376,7 @@
             this.TableCourseB3.Controls.Add(this.LabelB3, 1, 0);
             this.TableCourseB3.Controls.Add(this.HolderB3, 0, 0);
             this.TableCourseB3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseB3.Location = new System.Drawing.Point(1, 288);
+            this.TableCourseB3.Location = new System.Drawing.Point(1, 294);
             this.TableCourseB3.Name = "TableCourseB3";
             this.TableCourseB3.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseB3.RowCount = 1;
@@ -431,7 +441,7 @@
             this.TableCourseB2.Controls.Add(this.LabelB2, 1, 0);
             this.TableCourseB2.Controls.Add(this.HolderB2, 0, 0);
             this.TableCourseB2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseB2.Location = new System.Drawing.Point(1, 156);
+            this.TableCourseB2.Location = new System.Drawing.Point(1, 162);
             this.TableCourseB2.Name = "TableCourseB2";
             this.TableCourseB2.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseB2.RowCount = 1;
@@ -496,7 +506,7 @@
             this.TableCourseB1.Controls.Add(this.LabelB1, 1, 0);
             this.TableCourseB1.Controls.Add(this.HolderB1, 0, 0);
             this.TableCourseB1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseB1.Location = new System.Drawing.Point(1, 24);
+            this.TableCourseB1.Location = new System.Drawing.Point(1, 30);
             this.TableCourseB1.Name = "TableCourseB1";
             this.TableCourseB1.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseB1.RowCount = 1;
@@ -605,7 +615,7 @@
             this.TableCourseC2.Controls.Add(this.LabelC2, 1, 0);
             this.TableCourseC2.Controls.Add(this.HolderC2, 0, 0);
             this.TableCourseC2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseC2.Location = new System.Drawing.Point(1, 156);
+            this.TableCourseC2.Location = new System.Drawing.Point(1, 162);
             this.TableCourseC2.Name = "TableCourseC2";
             this.TableCourseC2.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseC2.RowCount = 1;
@@ -670,7 +680,7 @@
             this.TableCourseC1.Controls.Add(this.LabelC1, 1, 0);
             this.TableCourseC1.Controls.Add(this.HolderC1, 0, 0);
             this.TableCourseC1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TableCourseC1.Location = new System.Drawing.Point(1, 24);
+            this.TableCourseC1.Location = new System.Drawing.Point(1, 30);
             this.TableCourseC1.Name = "TableCourseC1";
             this.TableCourseC1.Padding = new System.Windows.Forms.Padding(10);
             this.TableCourseC1.RowCount = 1;
@@ -733,6 +743,7 @@
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentWrapper.ResumeLayout(false);
+            this.BaseNavigationAction.ResumeLayout(false);
             this.GroupCourseAA.ResumeLayout(false);
             this.TableCourseA3.ResumeLayout(false);
             this.HolderA3.ResumeLayout(false);
