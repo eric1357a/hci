@@ -17,23 +17,8 @@ namespace HCI.Forms
 {
     public partial class InvoiceContainer : LoggedInForm
     {
-        Thread loadingThread;
-
         public InvoiceContainer(Invoice invoice)
         {
-            loadingThread = new Thread(() =>
-            {
-                try
-                {
-                    new Loading().ShowDialog();
-                }
-                catch (ThreadAbortException e)
-                {
-                    // Ignored
-                }
-            });
-            loadingThread.Start();
-
             InitializeComponent();
 
             rv_Invoice.LocalReport.DataSources.Add(
@@ -46,11 +31,6 @@ namespace HCI.Forms
             // Pre-enter print layout for ignoring normal layout collpse
             rv_Invoice.SetDisplayMode(DisplayMode.PrintLayout);
             rv_Invoice.ZoomMode = ZoomMode.PageWidth;
-        }
-
-        private void InvoiceContainer_Shown(object sender, EventArgs e)
-        {
-            loadingThread.Abort();
         }
     }
 }

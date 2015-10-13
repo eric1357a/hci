@@ -18,7 +18,7 @@ namespace HCI.Controls
         // https://social.msdn.microsoft.com/Forums/windows/en-US/60767912-6ea4-4ff6-acb5-44002bd94e82/how-to-change-border-color-of-groupbox-in-cnet
 
         // Default light medium purple
-        private Color _borderColor = Color.FromArgb(182, 155, 242);
+        private Color _borderColor = Color.FromArgb(8, 127, 183), _legendBackColor = DefaultBackColor;
 
         // Default legend centering
         private Lposition _legendPosition = Lposition.Center;
@@ -32,6 +32,12 @@ namespace HCI.Controls
         {
             get { return this._borderColor; }
             set { this._borderColor = value; }
+        }
+
+        public Color LegendBackColor
+        {
+            get { return this._legendBackColor; }
+            set { this._legendBackColor = value; }
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -64,7 +70,7 @@ namespace HCI.Controls
             stringFormat.Alignment = StringAlignment.Center;
             stringFormat.LineAlignment = StringAlignment.Center;
 
-            e.Graphics.FillRectangle(new SolidBrush(this.BackColor), textRect);
+            e.Graphics.FillRectangle(new SolidBrush(_legendBackColor), textRect);
             e.Graphics.DrawString(this.Text, this.Font, new SolidBrush(this.ForeColor), textRect, stringFormat);
         }
     }
