@@ -39,31 +39,34 @@
             this.rB_3to5 = new System.Windows.Forms.RadioButton();
             this.rB_More5 = new System.Windows.Forms.RadioButton();
             this.BaseContentPanel.SuspendLayout();
+            this.BaseNavigation.SuspendLayout();
+            this.BaseContentWrapper.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationText
             // 
             this.BaseNavigationText.Text = "Search Course";
             // 
-            // BaseContentPanel
+            // BaseContentWrapper
             // 
-            this.BaseContentPanel.Controls.Add(this.rB_More5);
-            this.BaseContentPanel.Controls.Add(this.rB_3to5);
-            this.BaseContentPanel.Controls.Add(this.rB_1to2);
-            this.BaseContentPanel.Controls.Add(this.lb_nofavailplace);
-            this.BaseContentPanel.Controls.Add(this.rBmore900);
-            this.BaseContentPanel.Controls.Add(this.rB601to900);
-            this.BaseContentPanel.Controls.Add(this.btn_Search);
-            this.BaseContentPanel.Controls.Add(this.label1);
-            this.BaseContentPanel.Controls.Add(this.rB401to600);
-            this.BaseContentPanel.Controls.Add(this.rB0to400);
+            this.BaseContentWrapper.Controls.Add(this.rB_More5);
+            this.BaseContentWrapper.Controls.Add(this.rB_3to5);
+            this.BaseContentWrapper.Controls.Add(this.rB_1to2);
+            this.BaseContentWrapper.Controls.Add(this.lb_nofavailplace);
+            this.BaseContentWrapper.Controls.Add(this.rBmore900);
+            this.BaseContentWrapper.Controls.Add(this.rB601to900);
+            this.BaseContentWrapper.Controls.Add(this.btn_Search);
+            this.BaseContentWrapper.Controls.Add(this.label1);
+            this.BaseContentWrapper.Controls.Add(this.rB401to600);
+            this.BaseContentWrapper.Controls.Add(this.rB0to400);
             // 
             // rB0to400
             // 
             this.rB0to400.AutoSize = true;
             this.rB0to400.Location = new System.Drawing.Point(158, 64);
             this.rB0to400.Name = "rB0to400";
-            this.rB0to400.Size = new System.Drawing.Size(75, 24);
+            this.rB0to400.Size = new System.Drawing.Size(74, 25);
             this.rB0to400.TabIndex = 1;
             this.rB0to400.TabStop = true;
             this.rB0to400.Text = "0>400";
@@ -74,7 +77,7 @@
             this.rB401to600.AutoSize = true;
             this.rB401to600.Location = new System.Drawing.Point(261, 64);
             this.rB401to600.Name = "rB401to600";
-            this.rB401to600.Size = new System.Drawing.Size(93, 24);
+            this.rB401to600.Size = new System.Drawing.Size(92, 25);
             this.rB401to600.TabIndex = 2;
             this.rB401to600.TabStop = true;
             this.rB401to600.Text = "401>600";
@@ -85,15 +88,15 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.Size = new System.Drawing.Size(126, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "Price(Monthly):";
             // 
             // btn_Search
             // 
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btn_Search.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_Search.ForeColor = System.Drawing.Color.Black;
             this.btn_Search.Location = new System.Drawing.Point(544, 265);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(108, 44);
@@ -106,7 +109,7 @@
             this.rB601to900.AutoSize = true;
             this.rB601to900.Location = new System.Drawing.Point(377, 64);
             this.rB601to900.Name = "rB601to900";
-            this.rB601to900.Size = new System.Drawing.Size(93, 24);
+            this.rB601to900.Size = new System.Drawing.Size(92, 25);
             this.rB601to900.TabIndex = 6;
             this.rB601to900.TabStop = true;
             this.rB601to900.Text = "601>900";
@@ -117,7 +120,7 @@
             this.rBmore900.AutoSize = true;
             this.rBmore900.Location = new System.Drawing.Point(493, 64);
             this.rBmore900.Name = "rBmore900";
-            this.rBmore900.Size = new System.Drawing.Size(66, 24);
+            this.rBmore900.Size = new System.Drawing.Size(65, 25);
             this.rBmore900.TabIndex = 7;
             this.rBmore900.TabStop = true;
             this.rBmore900.Text = ">900";
@@ -128,7 +131,7 @@
             this.lb_nofavailplace.AutoSize = true;
             this.lb_nofavailplace.Location = new System.Drawing.Point(29, 129);
             this.lb_nofavailplace.Name = "lb_nofavailplace";
-            this.lb_nofavailplace.Size = new System.Drawing.Size(216, 20);
+            this.lb_nofavailplace.Size = new System.Drawing.Size(228, 21);
             this.lb_nofavailplace.TabIndex = 8;
             this.lb_nofavailplace.Text = "Number of available places:";
             // 
@@ -137,7 +140,7 @@
             this.rB_1to2.AutoSize = true;
             this.rB_1to2.Location = new System.Drawing.Point(261, 127);
             this.rB_1to2.Name = "rB_1to2";
-            this.rB_1to2.Size = new System.Drawing.Size(52, 24);
+            this.rB_1to2.Size = new System.Drawing.Size(51, 25);
             this.rB_1to2.TabIndex = 9;
             this.rB_1to2.TabStop = true;
             this.rB_1to2.Text = "1-2";
@@ -148,7 +151,7 @@
             this.rB_3to5.AutoSize = true;
             this.rB_3to5.Location = new System.Drawing.Point(334, 127);
             this.rB_3to5.Name = "rB_3to5";
-            this.rB_3to5.Size = new System.Drawing.Size(52, 24);
+            this.rB_3to5.Size = new System.Drawing.Size(51, 25);
             this.rB_3to5.TabIndex = 10;
             this.rB_3to5.TabStop = true;
             this.rB_3to5.Text = "3-5";
@@ -159,7 +162,7 @@
             this.rB_More5.AutoSize = true;
             this.rB_More5.Location = new System.Drawing.Point(400, 127);
             this.rB_More5.Name = "rB_More5";
-            this.rB_More5.Size = new System.Drawing.Size(48, 24);
+            this.rB_More5.Size = new System.Drawing.Size(47, 25);
             this.rB_More5.TabIndex = 11;
             this.rB_More5.TabStop = true;
             this.rB_More5.Text = ">5";
@@ -167,13 +170,16 @@
             // 
             // SearchCourse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 480);
             this.Name = "SearchCourse";
             this.Text = "SearchCourse";
             this.BaseContentPanel.ResumeLayout(false);
-            this.BaseContentPanel.PerformLayout();
+            this.BaseNavigation.ResumeLayout(false);
+            this.BaseContentWrapper.ResumeLayout(false);
+            this.BaseContentWrapper.PerformLayout();
+            this.BaseNavigationAction.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

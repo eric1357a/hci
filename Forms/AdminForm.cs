@@ -23,5 +23,20 @@ namespace HCI.Forms
         {
             new AddDetails() { Prev = this }.Show();
         }
+
+        private void btn_view_Click(object sender, EventArgs e)
+        {
+            new CourseSelection() { Prev = this }.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            new SearchCourse() { Prev = this }.Show();
+        }
+
+        private void btn_modify_Click(object sender, EventArgs e)
+        {
+            new ModifyDetails() { Prev = this }.Show();
+        }
     }
 }

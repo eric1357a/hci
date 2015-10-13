@@ -43,6 +43,11 @@ namespace HCI.Model
                 "1234",
                 JobPosition.Admin
             ));
+            members.AddLast(new Staff(
+                "Cedric",
+                "1234",
+                JobPosition.Staff
+            ));
             return members;
         }
 

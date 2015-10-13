@@ -18,8 +18,8 @@ namespace HCI.Forms
         private const String Desc_ERR = "No description entered";
         private const String Course_ERR = "No course name entered";
 
-        private readonly Color DARK_RED = Color.FromArgb(40, 32, 32);
-        private readonly Color DARK_PURPLE = Color.FromArgb(34, 36, 39);
+        private readonly Color INCORRECT = Color.FromArgb(224, 224, 224);
+        private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
 
         public AddDetails()
         {
@@ -35,8 +35,12 @@ namespace HCI.Forms
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            Prev.Show();
-            this.Hide();
+            new AdminForm() { Prev = this }.Show();
+        }
+
+        private void btn_Member_Click(object sender, EventArgs e)
+        {
+            new AddMemberDetails() { Prev = this }.Show();
         }
 
         private void showToolTip(object sender, String message)
@@ -62,8 +66,8 @@ namespace HCI.Forms
                     rect
                 );
             });
-            hint.BackColor = Color.FromArgb(40, 32, 32);
-            hint.ForeColor = Color.LightPink;
+            hint.BackColor = Color.FromArgb(255, 255, 255);
+            hint.ForeColor = Color.FromArgb(8, 127, 183);
             hint.Show(string.Empty, ((Control)sender), 0, 0, 3000);
             hint.Show(" " + message + " ", ((Control)sender));
         }
@@ -94,10 +98,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for invalid email type
                 showToolTip(sender, Course_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -107,10 +111,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for invalid email type
                 showToolTip(sender, Desc_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -120,10 +124,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for invalid email type
                 showToolTip(sender, Cost_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -133,10 +137,10 @@ namespace HCI.Forms
             {
                 // Show tooltip for invalid email type
                 showToolTip(sender, Desc_ERR);
-                sender.BackColor = DARK_RED;
+                sender.BackColor = INCORRECT;
                 return false;
             }
-            sender.BackColor = DARK_PURPLE;
+            sender.BackColor = CORRECT;
             return true;
         }
 
@@ -147,9 +151,15 @@ namespace HCI.Forms
                 checkDay(tb_Day) &
                 checkCost(tb_Cost))
             {
+                string StrCost = tb_Cost.Text;
+                int Cost = int.Parse(StrCost);
+                new Course(tb_Course.Text,
+                    tb_Desc.Text,
+                    tb_Day.Text,
+                    Cost);
                 MessageBox.Show("Registered Successfully!");
-                this.Hide();
-            }
+                new AddDetails() { Prev = this }.Show();
+            } 
         }
     }
 }
