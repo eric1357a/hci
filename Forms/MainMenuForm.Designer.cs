@@ -39,16 +39,11 @@
             // 
             // lb_User
             // 
-            this.lb_User.Location = new System.Drawing.Point(54, 18);
-            // 
-            // btn_Logout
-            // 
-            this.btn_Logout.Location = new System.Drawing.Point(302, 10);
+            this.lb_User.Size = new System.Drawing.Size(291, 54);
             // 
             // BaseNavigationText
             // 
             this.BaseNavigationText.Padding = new System.Windows.Forms.Padding(28, 0, 0, 0);
-            this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
             this.BaseNavigationText.Text = "Menu";
             // 
             // BaseContentPanel
@@ -61,7 +56,7 @@
             // 
             // BaseNavigation
             // 
-            this.BaseNavigation.Size = new System.Drawing.Size(540, 66);
+            this.BaseNavigation.Size = new System.Drawing.Size(540, 54);
             // 
             // BaseContentWrapper
             // 
@@ -71,7 +66,7 @@
             // BaseNavigationAction
             // 
             this.BaseNavigationAction.Location = new System.Drawing.Point(141, 0);
-            this.BaseNavigationAction.Size = new System.Drawing.Size(399, 66);
+            this.BaseNavigationAction.Size = new System.Drawing.Size(399, 54);
             // 
             // btn_view
             // 
@@ -104,10 +99,10 @@
             this.MainMenuControlsWrapper.Controls.Add(this.btnSearch);
             this.MainMenuControlsWrapper.Controls.Add(this.btn_view);
             this.MainMenuControlsWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainMenuControlsWrapper.Location = new System.Drawing.Point(0, 66);
+            this.MainMenuControlsWrapper.Location = new System.Drawing.Point(0, 54);
             this.MainMenuControlsWrapper.Margin = new System.Windows.Forms.Padding(0);
             this.MainMenuControlsWrapper.Name = "MainMenuControlsWrapper";
-            this.MainMenuControlsWrapper.Size = new System.Drawing.Size(540, 250);
+            this.MainMenuControlsWrapper.Size = new System.Drawing.Size(540, 262);
             this.MainMenuControlsWrapper.TabIndex = 1;
             // 
             // MainMenuForm

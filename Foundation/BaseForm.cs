@@ -86,7 +86,7 @@ namespace HCI.Foundation
                 ShadowColor = Color.FromArgb(80, 0, 0, 0)
             };
             Shadow.RefreshShadow();
-            // this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 10, 10));
+            this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 2, 2));
         }
 
         // window control
