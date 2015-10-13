@@ -26,15 +26,16 @@ namespace HCI.Forms
             BaseNavigationText.Text = course.Name;
             CourseDetails.Text =
                 course.Desc + "\n\nCost: HK$" + course.Cost + " monthly\n" +
-                "Day: " + course.Day + " every week";
+                "Day: " + course.Day + " every week\n\n" +
+                course.Seats + " seat(s) left";
             CourseImage.Image = (Bitmap) Properties.Resources.ResourceManager.GetObject(key, null);
         }
 
         private void CourseRegButton_Click(object sender, EventArgs e)
         {
             string weekday = course.Day;
-            if (new Random().Next(4) == 0)
-                // If course is not available by random
+            if (course.Seats == 0)
+                // If course is not available
                 MessageBox.Show("Course \"" + course.Name + "\" is full right now");
             else
                 new CourseRegistration(key, weekday) { Prev = this }.Show();

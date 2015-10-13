@@ -24,12 +24,28 @@ namespace HCI.Forms
 
         private void pay(double extra)
         {
+            // Update discount of invoice with extra 5%(default) from credit card payment
             if (invoice.discount != 0)
                 invoice.discount = (int)(100 - (100 - invoice.discount) * extra);
             else if (extra != 1)
                 invoice.discount = Discounts.getCCDiscount();
 
+            // Update payment to fit with total price
+            // Making change to zero
             invoice.payment = invoice.subTotal * (100 - invoice.discount) / 100 + invoice.lessonMaterial;
+
+            // Update number of seat left for registered course
+            CourseCollection.FindProgramme(invoice.key).Find(invoice.key).Seats--;
+
+            // Student course actual registration
+            bool[] monthTable =
+            {
+                invoice.months.Contains("Jun"),
+                invoice.months.Contains("Jul"),
+                invoice.months.Contains("Aug")
+            };
+            Membership m = StudentCollection.ToMembership(invoice.membership);
+            StudentCollection.ElementAt(invoice.studentName, m).register(invoice.weekDay, monthTable);
 
             this.Close();
             new InvoiceContainer(invoice) { Prev = this.Prev.Prev.Prev }.Show();

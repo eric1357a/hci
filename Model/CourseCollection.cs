@@ -100,7 +100,7 @@ namespace HCI.Model
         public string Category;
         public Course[] Courses;
         public string Key;
-        public int materialFee;
+        public int MaterialFee;
 
         public int Count
         {
@@ -109,10 +109,10 @@ namespace HCI.Model
 
         public Programme(string key, string category, int materialFee, Course[] courses)
         {
-            this.Category = category;
-            this.Courses = courses;
-            this.Key = key;
-            this.materialFee = materialFee;
+            Category = category;
+            Courses = courses;
+            Key = key;
+            MaterialFee = materialFee;
         }
 
         public Course Find(string key)
@@ -133,13 +133,15 @@ namespace HCI.Model
         public string Desc;
         public string Day;
         public int Cost;
+        public int Seats;
 
-        public Course(string name, string desc, string day, int cost)
+        public Course(string name, string desc, string day, int cost, int seats = 10)
         {
             Name = name;
             Desc = desc;
             Day = day;
             Cost = cost;
+            Seats = seats;
         }
     }
 }

@@ -24,11 +24,13 @@ namespace HCI.Forms
 
         private Course course;
         private Programme programme;
+        private string key;
 
-        public CourseRegistration(String key, String weekDay)
+        public CourseRegistration(string key, String weekDay)
         {
             programme = CourseCollection.FindProgramme(key);
             course = CourseCollection.FindProgramme(key).Find(key);
+            this.key = key;
 
             InitializeComponent();
 
@@ -57,18 +59,9 @@ namespace HCI.Forms
                 checkName(tb_Name))
             {
                 // If all validation pass
-
-                Membership m = Membership.None;
-                if (clb_Member.CheckedItems.Count != 0)
-                    switch (clb_Member.CheckedItems[0].ToString())
-                    {
-                        case "Normal":
-                            m = Membership.Normal;
-                            break;
-                        case "Gold":
-                            m = Membership.Gold;
-                            break;
-                    }
+                Membership m = StudentCollection.ToMembership(
+                    clb_Member.CheckedItems.Count > 0 ? clb_Member.CheckedItems[0].ToString() : "None"
+                );
 
                 // If StudentCollection doesn't contain current student
                 if (StudentCollection.ElementAt(tb_Name.Text, m) == null)
@@ -80,7 +73,7 @@ namespace HCI.Forms
 
                 // Check course collision for student
                 if (StudentCollection.ElementAt(tb_Name.Text, m).checkOccupation(lb_WeekDay.Text, checkedTable))
-                    MessageBox.Show("This timeslot has been registered with another course");
+                    MessageBox.Show("Student has registered another course with same timeslot(s)");
                 else
                 {
                     this.Hide();
@@ -104,6 +97,7 @@ namespace HCI.Forms
                         // Parameter passing to rdlc via Invoice object
                         new Invoice()
                         {
+                            key = key,
                             staffName = root.loggedIn.User,
 
                             studentName = tb_Name.Text,
@@ -118,7 +112,7 @@ namespace HCI.Forms
                             subTotal = course.Cost,
 
                             discount = discount,
-                            lessonMaterial = programme.materialFee
+                            lessonMaterial = programme.MaterialFee
                             // Payment assignment in PaymentMethod form
                         }
                     )

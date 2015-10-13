@@ -15,6 +15,19 @@ namespace HCI.Model
     {
         private static LinkedList<Student> students = _initStudents();
 
+        public static Membership ToMembership(String membership)
+        {
+            switch (membership)
+            {
+                case "Normal":
+                    return Membership.Normal;
+                case "Gold":
+                    return Membership.Gold;
+                default:
+                    return Membership.None;
+            }
+        }
+
         public static Student ElementAt(string name, Membership membership)
         {
             for (int i = 0; i < students.Count; i++)
@@ -56,11 +69,18 @@ namespace HCI.Model
             this.membership = membership;
         }
 
-        public void register(string dayOfWeek, int JuneJulyAugust)
+        public void register(string dayOfWeek, bool[] JuneJulyAugust)
         {
-            if (JuneJulyAugust < juneJulyAugust.Count && JuneJulyAugust >= 0)
-                if (juneJulyAugust.ElementAt(JuneJulyAugust).ContainsKey(dayOfWeek))
-                    juneJulyAugust.ElementAt(JuneJulyAugust)[dayOfWeek] = true;
+            try
+            {
+                for (int i = 0; i < juneJulyAugust.Count; i++)
+                    if (JuneJulyAugust[i])
+                        juneJulyAugust.ElementAt(i)[dayOfWeek] = true;
+            }
+            catch (Exception e)
+            {
+                return;
+            }
         }
 
         public bool checkOccupation(string dayOfWeek, bool[] JuneJulyAugust)
@@ -83,13 +103,13 @@ namespace HCI.Model
         {
             Dictionary<string, bool> month = new Dictionary<string, bool>();
 
-            month.Add("Sunday", false);
-            month.Add("Monday", false);
-            month.Add("Tuesday", false);
-            month.Add("Wednesday", false);
-            month.Add("Thursday", false);
-            month.Add("Friday", false);
-            month.Add("Saturday", false);
+            month.Add("Sun", false);
+            month.Add("Mon", false);
+            month.Add("Tue", false);
+            month.Add("Wed", false);
+            month.Add("Thu", false);
+            month.Add("Fri", false);
+            month.Add("Sat", false);
 
             return month;
         }

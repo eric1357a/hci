@@ -21,7 +21,17 @@ namespace HCI.Forms
 
         public InvoiceContainer(Invoice invoice)
         {
-            loadingThread = new Thread(() => { new Loading().ShowDialog(); });
+            loadingThread = new Thread(() =>
+            {
+                try
+                {
+                    new Loading().ShowDialog();
+                }
+                catch (ThreadAbortException e)
+                {
+                    // Ignored
+                }
+            });
             loadingThread.Start();
 
             InitializeComponent();
