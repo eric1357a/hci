@@ -78,7 +78,6 @@
             this.Name = "InvoiceContainer";
             this.Text = "InvoiceContainer";
             this.Load += new System.EventHandler(this.InvoiceContainer_Load);
-            this.Shown += new System.EventHandler(this.InvoiceContainer_Shown);
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentWrapper.ResumeLayout(false);
