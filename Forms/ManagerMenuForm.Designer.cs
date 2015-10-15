@@ -54,6 +54,7 @@
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseContentWrapper.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.discountBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profitBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Creditbar)).BeginInit();
@@ -342,6 +343,7 @@
             this.ManagerGroupBox.Controls.Add(this.btndiscountUp);
             this.ManagerGroupBox.Controls.Add(this.lbmemberdiscount);
             this.ManagerGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(127)))), ((int)(((byte)(183)))));
+            this.ManagerGroupBox.LegendBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
             this.ManagerGroupBox.LegendPosition = HCI.Controls.Lposition.Center;
             this.ManagerGroupBox.Location = new System.Drawing.Point(18, 68);
             this.ManagerGroupBox.Name = "ManagerGroupBox";
@@ -401,6 +403,7 @@
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentWrapper.ResumeLayout(false);
+            this.BaseNavigationAction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.discountBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profitBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Creditbar)).EndInit();
