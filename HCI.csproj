@@ -190,6 +190,7 @@
     <Compile Include="Model\ListItem.cs" />
     <Compile Include="Model\StaffCollection.cs" />
     <Compile Include="Model\StudentCollection.cs" />
+    <Compile Include="Model\TeacherCollection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AdminForm.resx">
