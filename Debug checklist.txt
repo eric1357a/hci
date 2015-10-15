@@ -1,0 +1,45 @@
+1. Login
+ - Login as Alan ( Manager )
+ - Login as Ada ( Admin )
+ - Login as Peter ( Peter )
+
+2. Manager Menu
+ - Change the discounts
+ - Set Profit Margin
+ - Registration Function
+
+3. Staff Menu
+ - Registration Function
+
+4. Admin Menu
+ - Add courses, staff, teachers and students, etc 
+ - Delete courses, staff, teachers and students, etc
+ - Maintain courses, staff, teachers and students, etc
+
+5. View Course Detail
+ - Course description
+ - Number of places remain
+ - class time (date)
+ - monthly fee (with or without discount)
+
+6. Course Registration
+ - Membership status
+ - contact phone number
+ - email address
+ - the course to be registered
+ - number of months the student intend to enroll
+ - Full check
+ - Not allow to register for two courses run on the same week day check
+
+7. Search Function
+ - Price (ranges)
+ - Number of available places
+
+8. Membership System
+ - Normal members and gold members
+
+9. Promotions
+ - Credit card specials 
+
+10. Invoice
+ - discount check
