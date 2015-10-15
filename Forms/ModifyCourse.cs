@@ -132,9 +132,9 @@ namespace HCI.Forms
                 checkDesc(tb_Desc))
             {
                 CourseCollection.ElementAt(programme.Category, orgCourse).Name = tb_Course.Text;
-                CourseCollection.ElementAt(programme.Category, orgCourse).Desc = tb_Desc.Text;
-                CourseCollection.ElementAt(programme.Category, orgCourse).Day = cb_Day.Text;
-                CourseCollection.ElementAt(programme.Category, orgCourse).Cost = Int32.Parse(tb_Cost.Text);
+                CourseCollection.ElementAt(programme.Category, tb_Course.Text).Desc = tb_Desc.Text;
+                CourseCollection.ElementAt(programme.Category, tb_Course.Text).Day = cb_Day.Text;
+                CourseCollection.ElementAt(programme.Category, tb_Course.Text).Cost = Int32.Parse(tb_Cost.Text);
                 MessageBox.Show("Changed!");
                 new CourseDetail(key) { Prev = this }.Show();
             }

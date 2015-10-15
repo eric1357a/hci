@@ -13,7 +13,7 @@ namespace HCI.Model
 
     class StudentCollection
     {
-        private static LinkedList<Student> Students = _initStudents();
+        private static LinkedList<Student> Students = _InitStudents();
         public static LinkedList<string> Deleted = new LinkedList<string>();
 
         public static Membership ToMembership(String membership)
@@ -38,6 +38,35 @@ namespace HCI.Model
             return stus;
         }
 
+        public static void Add(Student s)
+        {
+            Students.AddLast(s);
+        }
+
+        private static LinkedList<Student> _InitStudents()
+        {
+            LinkedList<Student> studs = new LinkedList<Student>();
+            studs.AddLast(new Student(
+                "Tom",
+                "90315689",
+                "Tom@vtc.edu.hk",
+                Membership.Normal
+            ));
+            studs.AddLast(new Student(
+                "Jimmy",
+                "96511234",
+                "Jimmy@vtc.edu.hk",
+                Membership.Gold
+            ));
+            studs.AddLast(new Student(
+                "Mary",
+                "62358777",
+                "Mary@vtc.edu.hk",
+                Membership.None
+            ));
+           
+            return studs;
+        }
         public static Student ElementAt(string name, Membership membership)
         {
             for (int i = 0; i < Students.Count; i++)

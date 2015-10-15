@@ -27,9 +27,10 @@ namespace HCI.Forms
 
         private readonly Color INCORRECT = Color.FromArgb(224, 224, 224);
         private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
-
+      
         public Maintain()
         {
+            
             InitializeComponent();
             // add course records
             SetupList(lb_Course, CourseCollection.GetCourses());
@@ -160,6 +161,11 @@ namespace HCI.Forms
         private void tb_email_Leave(object sender, EventArgs e)
         {
             checkEmail((Control)sender);
+        }
+
+        private void tb_Desc_TextChanged(object sender, EventArgs e)
+        {
+            tb_Desc.ScrollBars = ScrollBars.Both;
         }
 
         private void clb_Position_Leave(object sender, EventArgs e)
@@ -299,23 +305,43 @@ namespace HCI.Forms
                         ((CheckedListBox)sender).SetItemChecked(i, false);
         }
 
+        private void lb_Course_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lb_Course.SelectedIndex >= 0)
+            {
+                btn_add.Text = "Change";
+            }
+            else
+            {
+                btn_add.Text = "Add";
+            }
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (checkCourse(tb_Course) &
                 checkDesc(tb_Desc) &
                 checkCost(tb_Cost))
             {
-                int Cost = int.Parse(tb_Cost.Text);
-                Course c = new Course(tb_Course.Text,
-                    tb_Desc.Text,
-                    cb_Day.Text,
-                    Cost);
-                CourseCollection.Add(tb_CourseNo.Text, c);
-                MessageBox.Show("Registered Successfully!");
-                new AdminForm() { Prev = this }.Show();
+                if (btn_add.Text == "Add")
+                {
+                    int Cost = int.Parse(tb_Cost.Text);
+                    Course c = new Course(tb_Course.Text,
+                        tb_Desc.Text,
+                        cb_Day.Text,
+                        Cost);
+                    CourseCollection.Add(tb_CourseNo.Text, c);
+                    MessageBox.Show("Registered Successfully!");
+                    new AdminForm() { Prev = this }.Show();
+                }
+                else if (btn_add.Text == "Change")
+                {
+                   
+                    MessageBox.Show("Changed!");
+                    
+                }
             }
         }
-
+       
         private void btn_add2_Click(object sender, EventArgs e)
         {
             if (checkStudent(tb_studentName) &

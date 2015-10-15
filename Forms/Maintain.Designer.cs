@@ -57,13 +57,13 @@
             this.lb_email = new System.Windows.Forms.Label();
             this.lb_ConNo = new System.Windows.Forms.Label();
             this.lb_studentName = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btc_add2 = new System.Windows.Forms.Button();
             this.lb_Student = new System.Windows.Forms.ListBox();
             this.tbp_Staff = new System.Windows.Forms.TabPage();
             this.divider3 = new System.Windows.Forms.Panel();
             this.btn_Staff_Delete = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_add3 = new System.Windows.Forms.Button();
             this.clb_Position = new System.Windows.Forms.CheckedListBox();
             this.tb_Pw = new System.Windows.Forms.TextBox();
             this.tb_staffName = new System.Windows.Forms.TextBox();
@@ -176,11 +176,12 @@
             // 
             this.tb_CourseNo.Location = new System.Drawing.Point(136, 29);
             this.tb_CourseNo.Name = "tb_CourseNo";
-            this.tb_CourseNo.Size = new System.Drawing.Size(214, 27);
+            this.tb_CourseNo.Size = new System.Drawing.Size(57, 27);
             this.tb_CourseNo.TabIndex = 20;
             // 
             // cb_Day
             // 
+            this.cb_Day.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Day.FormattingEnabled = true;
             this.cb_Day.Items.AddRange(new object[] {
             "Sun",
@@ -214,13 +215,14 @@
             this.tb_Desc.Name = "tb_Desc";
             this.tb_Desc.Size = new System.Drawing.Size(214, 64);
             this.tb_Desc.TabIndex = 17;
+            this.tb_Desc.TextChanged += new System.EventHandler(this.tb_Desc_TextChanged);
             this.tb_Desc.Leave += new System.EventHandler(this.tb_Desc_Leave);
             // 
             // tb_Cost
             // 
             this.tb_Cost.Location = new System.Drawing.Point(136, 109);
             this.tb_Cost.Name = "tb_Cost";
-            this.tb_Cost.Size = new System.Drawing.Size(214, 27);
+            this.tb_Cost.Size = new System.Drawing.Size(103, 27);
             this.tb_Cost.TabIndex = 15;
             this.tb_Cost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Cost_KeyPress);
             this.tb_Cost.Leave += new System.EventHandler(this.tb_Cost_Leave);
@@ -279,6 +281,7 @@
             this.lb_Course.Name = "lb_Course";
             this.lb_Course.Size = new System.Drawing.Size(333, 252);
             this.lb_Course.TabIndex = 1;
+            this.lb_Course.SelectedIndexChanged += new System.EventHandler(this.lb_Course_SelectedIndexChanged);
             // 
             // tbp_Student
             // 
@@ -326,7 +329,7 @@
             this.panel3.Controls.Add(this.lb_email);
             this.panel3.Controls.Add(this.lb_ConNo);
             this.panel3.Controls.Add(this.lb_studentName);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.btc_add2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(336, 3);
             this.panel3.Name = "panel3";
@@ -411,17 +414,17 @@
             this.lb_studentName.TabIndex = 20;
             this.lb_studentName.Text = "Student Name:";
             // 
-            // button4
+            // btc_add2
             // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(153, 279);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 36);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.btn_add2_Click);
+            this.btc_add2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btc_add2.ForeColor = System.Drawing.Color.Black;
+            this.btc_add2.Location = new System.Drawing.Point(153, 279);
+            this.btc_add2.Name = "btc_add2";
+            this.btc_add2.Size = new System.Drawing.Size(86, 36);
+            this.btc_add2.TabIndex = 19;
+            this.btc_add2.Text = "Add";
+            this.btc_add2.UseVisualStyleBackColor = true;
+            this.btc_add2.Click += new System.EventHandler(this.btn_add2_Click);
             // 
             // lb_Student
             // 
@@ -472,7 +475,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.btn_add3);
             this.panel4.Controls.Add(this.clb_Position);
             this.panel4.Controls.Add(this.tb_Pw);
             this.panel4.Controls.Add(this.tb_staffName);
@@ -485,17 +488,17 @@
             this.panel4.Size = new System.Drawing.Size(373, 333);
             this.panel4.TabIndex = 1;
             // 
-            // button1
+            // btn_add3
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(153, 279);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 36);
-            this.button1.TabIndex = 47;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btn_add3_Click);
+            this.btn_add3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add3.ForeColor = System.Drawing.Color.Black;
+            this.btn_add3.Location = new System.Drawing.Point(153, 279);
+            this.btn_add3.Name = "btn_add3";
+            this.btn_add3.Size = new System.Drawing.Size(86, 36);
+            this.btn_add3.TabIndex = 47;
+            this.btn_add3.Text = "Add";
+            this.btn_add3.UseVisualStyleBackColor = true;
+            this.btn_add3.Click += new System.EventHandler(this.btn_add3_Click);
             // 
             // clb_Position
             // 
@@ -616,7 +619,7 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.ComboBox cb_Day;
         private System.Windows.Forms.Button btn_Student_Delete;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btc_add2;
         private System.Windows.Forms.Label lb_studentName;
         private System.Windows.Forms.Label lb_ConNo;
         private System.Windows.Forms.Label lb_email;
@@ -632,7 +635,7 @@
         private System.Windows.Forms.TextBox tb_staffName;
         private System.Windows.Forms.CheckedListBox clb_Position;
         private System.Windows.Forms.Button btn_Staff_Delete;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_add3;
         private System.Windows.Forms.Panel divider1;
         private System.Windows.Forms.Panel divider2;
         private System.Windows.Forms.Panel divider3;
