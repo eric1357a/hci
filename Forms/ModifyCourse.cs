@@ -35,6 +35,10 @@ namespace HCI.Forms
             tb_Cost.Text = course.Cost.ToString();
         }
 
+        private void tb_Desc_TextChanged(object sender, EventArgs e)
+        {
+            tb_Desc.ScrollBars = ScrollBars.Both;
+        }
         private void tb_Cost_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control)sender).Text.Length == 8)

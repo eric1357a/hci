@@ -57,7 +57,7 @@
             this.lb_email = new System.Windows.Forms.Label();
             this.lb_ConNo = new System.Windows.Forms.Label();
             this.lb_studentName = new System.Windows.Forms.Label();
-            this.btc_add2 = new System.Windows.Forms.Button();
+            this.btn_add2 = new System.Windows.Forms.Button();
             this.lb_Student = new System.Windows.Forms.ListBox();
             this.tbp_Staff = new System.Windows.Forms.TabPage();
             this.divider3 = new System.Windows.Forms.Panel();
@@ -71,6 +71,8 @@
             this.lb_pw = new System.Windows.Forms.Label();
             this.lb_staffName = new System.Windows.Forms.Label();
             this.lb_Staff = new System.Windows.Forms.ListBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseContentWrapper.SuspendLayout();
@@ -82,6 +84,7 @@
             this.panel3.SuspendLayout();
             this.tbp_Staff.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationText
@@ -102,11 +105,13 @@
             this.tabControl.Controls.Add(this.tbp_Course);
             this.tabControl.Controls.Add(this.tbp_Student);
             this.tabControl.Controls.Add(this.tbp_Staff);
+            this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Location = new System.Drawing.Point(0, 3);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(720, 373);
             this.tabControl.TabIndex = 0;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.lb_Staff_SelectedIndexChanged);
             // 
             // tbp_Course
             // 
@@ -329,7 +334,7 @@
             this.panel3.Controls.Add(this.lb_email);
             this.panel3.Controls.Add(this.lb_ConNo);
             this.panel3.Controls.Add(this.lb_studentName);
-            this.panel3.Controls.Add(this.btc_add2);
+            this.panel3.Controls.Add(this.btn_add2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(336, 3);
             this.panel3.Name = "panel3";
@@ -414,17 +419,17 @@
             this.lb_studentName.TabIndex = 20;
             this.lb_studentName.Text = "Student Name:";
             // 
-            // btc_add2
+            // btn_add2
             // 
-            this.btc_add2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btc_add2.ForeColor = System.Drawing.Color.Black;
-            this.btc_add2.Location = new System.Drawing.Point(153, 279);
-            this.btc_add2.Name = "btc_add2";
-            this.btc_add2.Size = new System.Drawing.Size(86, 36);
-            this.btc_add2.TabIndex = 19;
-            this.btc_add2.Text = "Add";
-            this.btc_add2.UseVisualStyleBackColor = true;
-            this.btc_add2.Click += new System.EventHandler(this.btn_add2_Click);
+            this.btn_add2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_add2.ForeColor = System.Drawing.Color.Black;
+            this.btn_add2.Location = new System.Drawing.Point(153, 279);
+            this.btn_add2.Name = "btn_add2";
+            this.btn_add2.Size = new System.Drawing.Size(86, 36);
+            this.btn_add2.TabIndex = 19;
+            this.btn_add2.Text = "Add";
+            this.btn_add2.UseVisualStyleBackColor = true;
+            this.btn_add2.Click += new System.EventHandler(this.btn_add2_Click);
             // 
             // lb_Student
             // 
@@ -436,6 +441,7 @@
             this.lb_Student.Name = "lb_Student";
             this.lb_Student.Size = new System.Drawing.Size(333, 252);
             this.lb_Student.TabIndex = 0;
+            this.lb_Student.SelectedIndexChanged += new System.EventHandler(this.lb_Student_SelectedIndexChanged);
             // 
             // tbp_Staff
             // 
@@ -571,6 +577,27 @@
             this.lb_Staff.Size = new System.Drawing.Size(333, 252);
             this.lb_Staff.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(712, 339);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Teacher";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(5, 0);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(333, 252);
+            this.listBox1.TabIndex = 2;
+            // 
             // Maintain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -592,6 +619,7 @@
             this.tbp_Staff.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -619,7 +647,7 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.ComboBox cb_Day;
         private System.Windows.Forms.Button btn_Student_Delete;
-        private System.Windows.Forms.Button btc_add2;
+        private System.Windows.Forms.Button btn_add2;
         private System.Windows.Forms.Label lb_studentName;
         private System.Windows.Forms.Label lb_ConNo;
         private System.Windows.Forms.Label lb_email;
@@ -642,5 +670,7 @@
         private System.Windows.Forms.ListBox lb_Student;
         private System.Windows.Forms.Label lb_ProgramNo;
         private System.Windows.Forms.TextBox tb_CourseNo;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

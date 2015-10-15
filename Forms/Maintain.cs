@@ -316,6 +316,30 @@ namespace HCI.Forms
                 btn_add.Text = "Add";
             }
         }
+
+        private void lb_Student_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lb_Student.SelectedIndex >= 0)
+            {
+                btn_add2.Text = "Change";
+            }
+            else
+            {
+                btn_add2.Text = "Add";
+            }
+        }
+
+        private void lb_Staff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lb_Staff.SelectedIndex >= 0)
+            {
+                btn_add3.Text = "Change";
+            }
+            else
+            {
+                btn_add3.Text = "Add";
+            }
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (checkCourse(tb_Course) &

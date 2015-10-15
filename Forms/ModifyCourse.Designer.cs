@@ -103,6 +103,7 @@
             this.tb_Desc.Name = "tb_Desc";
             this.tb_Desc.Size = new System.Drawing.Size(214, 88);
             this.tb_Desc.TabIndex = 21;
+            this.tb_Desc.TextChanged += new System.EventHandler(this.tb_Desc_TextChanged);
             // 
             // lb_Courses
             // 
