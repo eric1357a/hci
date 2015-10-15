@@ -24,18 +24,29 @@ namespace HCI.Forms
         private const String email_ERR = "No email address entered";
         private const String member_ERR = "No member selected";
         private const String position_ERR = "No position selected";
+        private const String teachName_ERR = "No teacher name entered";
+        private const String tel_ERR = "No tell entered";
+        private const String title_ERR = "No title name entered";
 
         private readonly Color INCORRECT = Color.FromArgb(224, 224, 224);
         private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
-
+       
+        private Student Students;
+        
+        private String  orgCourse = "",orgStud="";
         public Maintain()
         {
-
             InitializeComponent();
+            /*tb_studentName.Text = Students.name;
+            orgStud = Students.name;
+            tb_ContactNo.Text = Students.contactNo;
+            tb_email.Text = Students.email;*/
+          
             // add course records
             SetupList(lb_Course, CourseCollection.GetCourses());
             SetupList(lb_Student, StudentCollection.GetStudents());
             SetupList(lb_Staff, StaffCollection.GetStaffs());
+            SetupList(lb_Teacher, TeacherCollection.GetTeachers());
         }
 
         private void SetupList<T>(ListBox lb, LinkedList<T> list)
@@ -82,7 +93,19 @@ namespace HCI.Forms
             BindDelete(lb_Staff, StaffCollection.Deleted);
         }
 
+        private void btn_Teacher_Delete_Click(object sender, EventArgs e)
+        {
+            //BindDelete(lb_Teacher, TeacherCollection.Deleted);
+        }
+
         private void tb_ContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control)sender).Text.Length == 8)
+                if (e.KeyChar != 13 && e.KeyChar != 8 && e.KeyChar != 9)
+                    e.Handled = true;
+        }
+
+        private void tb_Tel_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control)sender).Text.Length == 8)
                 if (e.KeyChar != 13 && e.KeyChar != 8 && e.KeyChar != 9)
@@ -175,6 +198,22 @@ namespace HCI.Forms
             checkPosition((Control)sender);
         }
 
+        private void tb_teachername_Leave(object sender, EventArgs e)
+        {
+            checkTeacherName((Control)sender);
+        }
+
+        private void clb_Title_Leave(object sender, EventArgs e)
+        {
+            checkTitle((Control)sender);
+        }
+
+        private void tb_Tel_Leave(object sender, EventArgs e)
+        {
+            checkTel((Control)sender);
+        }
+
+
         private bool checkCourse(Control sender)
         {
             if (sender.Text.Length == 0)
@@ -266,6 +305,45 @@ namespace HCI.Forms
             return true;
         }
 
+        private bool checkTeacherName(Control sender)
+        {
+            if (sender.Text.Length == 0)
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, teachName_ERR);
+                sender.BackColor = INCORRECT;
+                return false;
+            }
+            sender.BackColor = CORRECT;
+            return true;
+        }
+
+        private bool checkTel(Control sender)
+        {
+            if (sender.Text.Length == 0)
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, tel_ERR);
+                sender.BackColor = INCORRECT;
+                return false;
+            }
+            sender.BackColor = CORRECT;
+            return true;
+        }
+
+        private bool checkTitle(Control sender)
+        {
+            if (((CheckedListBox)sender).CheckedItems.Count == 0)
+            {
+                // Show tooltip for no month selected
+                showToolTip(sender, title_ERR);
+                sender.BackColor = INCORRECT;
+                return false;
+            }
+            sender.BackColor = CORRECT;
+            return true;
+        }
+
         private bool checkEmail(Control sender)
         {
             if (!sender.Text.Contains("@"))
@@ -279,6 +357,14 @@ namespace HCI.Forms
             return true;
         }
         private void clb_Member_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (e.NewValue == CheckState.Checked)
+                for (int i = 0; i < ((CheckedListBox)sender).Items.Count; i++)
+                    if (e.Index != i)
+                        ((CheckedListBox)sender).SetItemChecked(i, false);
+        }
+
+        private void clb_Title_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (e.NewValue == CheckState.Checked)
                 for (int i = 0; i < ((CheckedListBox)sender).Items.Count; i++)
@@ -356,6 +442,19 @@ namespace HCI.Forms
                 btn_add3.Text = "Add";
             }
         }
+
+        private void lb_Teacher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lb_Teacher.SelectedIndex > 0)
+            {
+                btn_add3.Text = "Change";
+            }
+            else
+            {
+                resetAllControls(panel_Teacher);
+                btn_add3.Text = "Add";
+            }
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
             if (checkCourse(tb_Course) &
@@ -375,7 +474,7 @@ namespace HCI.Forms
                 }
                 else if (btn_add.Text == "Change")
                 {
-
+                    
                     MessageBox.Show("Changed!");
 
                 }
@@ -388,15 +487,18 @@ namespace HCI.Forms
                 checkConNo(tb_ContactNo) &
                 checkEmail(tb_email))
             {
-                Membership m = StudentCollection.ToMembership(
-                    clb_Member.CheckedItems.Count > 0 ? clb_Member.CheckedItems[0].ToString() : "None");
+                if (btn_add.Text == "Add")
+                {
+                    Membership m = StudentCollection.ToMembership(
+                        clb_Member.CheckedItems.Count > 0 ? clb_Member.CheckedItems[0].ToString() : "None");
 
-                StudentCollection.Add(tb_studentName.Text,
-                     tb_ContactNo.Text,
-                     tb_email.Text,
-                     m);
-                MessageBox.Show("Registered Successfully!");
-                new AdminForm() { Prev = this }.Show();
+                    StudentCollection.Add(tb_studentName.Text,
+                         tb_ContactNo.Text,
+                         tb_email.Text,
+                         m);
+                    MessageBox.Show("Registered Successfully!");
+                    new AdminForm() { Prev = this }.Show();
+                }
             }
         }
 
@@ -412,6 +514,21 @@ namespace HCI.Forms
                     tb_Pw.Text,
                     m);
                 StaffCollection.Add(s);
+                MessageBox.Show("Registered Successfully!");
+                new AdminForm() { Prev = this }.Show();
+            }
+        }
+
+        private void btn_add4_Click(object sender, EventArgs e)
+        {
+            if (checkTeacherName(tb_TeacherName) &
+                       checkTel(tb_Tel) &
+                       checkTitle(clb_Title))
+            {
+                Teacher t = new Teacher(tb_TeacherName.Text,
+                    tb_Tel.Text,
+                    clb_Title.Text);
+                TeacherCollection.Add(t);
                 MessageBox.Show("Registered Successfully!");
                 new AdminForm() { Prev = this }.Show();
             }
