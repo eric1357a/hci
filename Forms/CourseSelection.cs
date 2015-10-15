@@ -170,7 +170,7 @@ namespace HCI.Forms
         {
             TableLayoutPanel tlp = (TableLayoutPanel)toRootControl((Control)sender);
             Control label = tlp.GetControlFromPosition(1, 0);
-            string key = label.Name;
+            string key = label.Name;          
             new CourseDetail(key) { Prev = this }.Show();
         }
     }

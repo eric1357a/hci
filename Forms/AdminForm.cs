@@ -21,7 +21,7 @@ namespace HCI.Forms
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            new AddDetails() { Prev = this }.Show();
+            new Maintain() { Prev = this }.Show();
         }
 
         private void btn_view_Click(object sender, EventArgs e)
@@ -32,11 +32,6 @@ namespace HCI.Forms
         private void btnSearch_Click(object sender, EventArgs e)
         {
             new SearchCourse() { Prev = this }.Show();
-        }
-
-        private void btn_modify_Click(object sender, EventArgs e)
-        {
-            new ModifyDetails() { Prev = this }.Show();
         }
     }
 }

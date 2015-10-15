@@ -11,9 +11,12 @@ using HCI.Model;
 
 namespace HCI.Forms
 {
-  
-    public partial class AddMemberDetails : LoggedInForm
+    public partial class Maintain : LoggedInForm
     {
+        private const String Cost_ERR = "No cost entered";
+        private const String Day_ERR = "No day selected";
+        private const String Desc_ERR = "No description entered";
+        private const String Course_ERR = "No course name entered";
         private const String staff_ERR = "No staff name entered";
         private const String student_ERR = "No student name entered";
         private const String pw_ERR = "No password entered";
@@ -21,22 +24,28 @@ namespace HCI.Forms
         private const String email_ERR = "No email address entered";
         private const String member_ERR = "No member selected";
         private const String position_ERR = "No position selected";
+
         private readonly Color INCORRECT = Color.FromArgb(224, 224, 224);
         private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
 
-        public AddMemberDetails()
+        public Maintain()
         {
             InitializeComponent();
+
         }
 
-        private void btn_Course_Click(object sender, EventArgs e)
+        private void tb_ContactNo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            new AddDetails() { Prev = this }.Show();
+            if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control)sender).Text.Length == 8)
+                if (e.KeyChar != 13 && e.KeyChar != 8 && e.KeyChar != 9)
+                    e.Handled = true;
         }
 
-        private void btn_Cancel_Click(object sender, EventArgs e)
+        private void tb_Cost_KeyPress(object sender, KeyPressEventArgs e)
         {
-            new AdminForm() { Prev = this }.Show();
+            if (e.KeyChar < '0' || e.KeyChar > '9' || ((Control)sender).Text.Length == 8)
+                if (e.KeyChar != 13 && e.KeyChar != 8 && e.KeyChar != 9)
+                    e.Handled = true;
         }
 
         private void showToolTip(object sender, String message)
@@ -66,6 +75,21 @@ namespace HCI.Forms
             hint.ForeColor = Color.FromArgb(8, 127, 183);
             hint.Show(string.Empty, ((Control)sender), 0, 0, 3000);
             hint.Show(" " + message + " ", ((Control)sender));
+        }
+
+        private void tb_Course_Leave(object sender, EventArgs e)
+        {
+            checkCourse((Control)sender);
+        }
+
+        private void tb_Desc_Leave(object sender, EventArgs e)
+        {
+            checkDesc((Control)sender);
+        }
+
+        private void tb_Cost_Leave(object sender, EventArgs e)
+        {
+            checkCost((Control)sender);
         }
 
         private void tb_staffName_Leave(object sender, EventArgs e)
@@ -98,9 +122,43 @@ namespace HCI.Forms
             checkPosition((Control)sender);
         }
 
-        private void clb_Member_Leave(object sender, EventArgs e)
+        private bool checkCourse(Control sender)
         {
-            checkMember((Control)sender);
+            if (sender.Text.Length == 0)
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, Course_ERR);
+                sender.BackColor = INCORRECT;
+                return false;
+            }
+            sender.BackColor = CORRECT;
+            return true;
+        }
+
+        private bool checkDesc(Control sender)
+        {
+            if (sender.Text.Length == 0)
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, Desc_ERR);
+                sender.BackColor = INCORRECT;
+                return false;
+            }
+            sender.BackColor = CORRECT;
+            return true;
+        }
+
+        private bool checkCost(Control sender)
+        {
+            if (sender.Text.Length == 0)
+            {
+                // Show tooltip for invalid email type
+                showToolTip(sender, Cost_ERR);
+                sender.BackColor = INCORRECT;
+                return false;
+            }
+            sender.BackColor = CORRECT;
+            return true;
         }
 
         private bool checkStaff(Control sender)
@@ -169,7 +227,6 @@ namespace HCI.Forms
         }
         private void clb_Member_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            // One tick only
             if (e.NewValue == CheckState.Checked)
                 for (int i = 0; i < ((CheckedListBox)sender).Items.Count; i++)
                     if (e.Index != i)
@@ -189,58 +246,64 @@ namespace HCI.Forms
             return true;
         }
 
-        private bool checkMember(Control sender)
-        {
-            if (((CheckedListBox)sender).CheckedItems.Count == 0)
-            {
-                // Show tooltip for no month selected
-                showToolTip(sender, member_ERR);
-                sender.BackColor = INCORRECT;
-                return false;
-            }
-            sender.BackColor = CORRECT;
-            return true;
-        }
-
         private void clb_Position_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            // One tick only
             if (e.NewValue == CheckState.Checked)
                 for (int i = 0; i < ((CheckedListBox)sender).Items.Count; i++)
                     if (e.Index != i)
                         ((CheckedListBox)sender).SetItemChecked(i, false);
         }
 
-        private void btn_Submit_Click(object sender, EventArgs e)
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            if (checkCourse(tb_Course) &
+                checkDesc(tb_Desc) &
+                checkCost(tb_Cost))
+            {
+                string StrCost = tb_Cost.Text;
+                int Cost = int.Parse(StrCost);
+                new Course(tb_Course.Text,
+                    tb_Desc.Text,
+                    cb_Day.Text,
+                    Cost);
+                MessageBox.Show("Registered Successfully!");
+                new AdminForm() { Prev = this }.Show();
+            }
+        }
+
+        private void btn_add2_Click(object sender, EventArgs e)
         {
             if (checkStudent(tb_studentName) &
                 checkConNo(tb_ContactNo) &
-                checkEmail(tb_email) &
-                checkMember(clb_Member)){
+                checkEmail(tb_email))
+            {
                 Membership m = StudentCollection.ToMembership(
-                    clb_Member.CheckedItems.Count > 0 ? clb_Member.CheckedItems[0].ToString() : "None"
-                );
-              
-               StudentCollection.Add(tb_studentName.Text,
-                    tb_ContactNo.Text,
-                    tb_email.Text,
-                    m);
+                    clb_Member.CheckedItems.Count > 0 ? clb_Member.CheckedItems[0].ToString() : "None");
+
+                StudentCollection.Add(tb_studentName.Text,
+                     tb_ContactNo.Text,
+                     tb_email.Text,
+                     m);
                 MessageBox.Show("Registered Successfully!");
-                new AddDetails() { Prev = this }.Show();
-               }else if(checkStaff(tb_staffName)&
-                       checkPw(tb_Pw)&
-                       checkPosition(clb_Position)){
-                           JobPosition m = StaffCollection.ToJobPosition(
-                    clb_Position.CheckedItems.Count > 0 ? clb_Position.CheckedItems[0].ToString() : "None");
-                   new Staff(tb_staffName.Text,
-                       tb_Pw.Text,
-                       m);
-                       MessageBox.Show("Registered Successfully!");
-                       new AddDetails() { Prev = this }.Show();
+                new AdminForm() { Prev = this }.Show();
             }
         }
-            
-        }
 
+        private void btn_add3_Click(object sender, EventArgs e)
+        {
+            if (checkStaff(tb_staffName) &
+                       checkPw(tb_Pw) &
+                       checkPosition(clb_Position))
+            {
+                JobPosition m = StaffCollection.ToJobPosition(
+                     clb_Position.CheckedItems.Count > 0 ? clb_Position.CheckedItems[0].ToString() : "None");
+                new Staff(tb_staffName.Text,
+                    tb_Pw.Text,
+                    m);
+                MessageBox.Show("Registered Successfully!");
+                new AdminForm() { Prev = this }.Show();
+            }
+        }
     }
+}
 

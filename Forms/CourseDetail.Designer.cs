@@ -31,11 +31,21 @@
             this.CourseRegButton = new System.Windows.Forms.Button();
             this.CourseDetails = new System.Windows.Forms.Label();
             this.CourseImage = new System.Windows.Forms.PictureBox();
+            this.btn_Change = new System.Windows.Forms.Button();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseContentWrapper.SuspendLayout();
+            this.BaseNavigationAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CourseImage)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Size = new System.Drawing.Size(76, 42);
+            // 
+            // lb_User
+            // 
+            this.lb_User.Size = new System.Drawing.Size(259, 66);
             // 
             // BaseNavigationText
             // 
@@ -52,6 +62,7 @@
             // 
             // BaseContentWrapper
             // 
+            this.BaseContentWrapper.Controls.Add(this.btn_Change);
             this.BaseContentWrapper.Controls.Add(this.CourseDetails);
             this.BaseContentWrapper.Controls.Add(this.CourseImage);
             this.BaseContentWrapper.Controls.Add(this.CourseRegButton);
@@ -96,6 +107,20 @@
             this.CourseImage.TabIndex = 7;
             this.CourseImage.TabStop = false;
             // 
+            // btn_Change
+            // 
+            this.btn_Change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Change.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btn_Change.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_Change.Location = new System.Drawing.Point(255, 254);
+            this.btn_Change.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Change.Name = "btn_Change";
+            this.btn_Change.Size = new System.Drawing.Size(116, 36);
+            this.btn_Change.TabIndex = 8;
+            this.btn_Change.Text = "Change";
+            this.btn_Change.UseVisualStyleBackColor = true;
+            this.btn_Change.Click += new System.EventHandler(this.btn_Change_Click);
+            // 
             // CourseDetail
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -105,6 +130,7 @@
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseContentWrapper.ResumeLayout(false);
+            this.BaseNavigationAction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CourseImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,5 +142,6 @@
         private System.Windows.Forms.Button CourseRegButton;
         private System.Windows.Forms.Label CourseDetails;
         private System.Windows.Forms.PictureBox CourseImage;
+        private System.Windows.Forms.Button btn_Change;
     }
 }

@@ -20,7 +20,14 @@ namespace HCI.Forms
         public CourseDetail(string key)
         {
             InitializeComponent();
-
+            if (root.loggedIn.Role == JobPosition.Admin)
+            {
+                btn_Change.Show();
+            }
+            else
+            {
+                btn_Change.Hide();
+            }
             this.key = key;
             course = CourseCollection.FindProgramme(key).Find(key);
             BaseNavigationText.Text = course.Name;
@@ -29,6 +36,10 @@ namespace HCI.Forms
                 "Day: " + course.Day + " every week\n\n" +
                 course.Seats + " seat(s) left";
             CourseImage.Image = (Bitmap) Properties.Resources.ResourceManager.GetObject(key, null);
+        }
+        private void btn_Change_Click(object sender, EventArgs e)
+        {
+            new ModifyCourse(key) { Prev = this }.Show();
         }
 
         private void CourseRegButton_Click(object sender, EventArgs e)

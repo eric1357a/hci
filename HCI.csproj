@@ -113,11 +113,17 @@
     <Compile Include="Forms\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ModifyDetails.cs">
+    <Compile Include="Forms\Maintain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ModifyDetails.Designer.cs">
-      <DependentUpon>ModifyDetails.cs</DependentUpon>
+    <Compile Include="Forms\Maintain.Designer.cs">
+      <DependentUpon>Maintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ModifyCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModifyCourse.Designer.cs">
+      <DependentUpon>ModifyCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PaymentMethod.cs">
       <SubType>Form</SubType>
@@ -198,8 +204,11 @@
     <EmbeddedResource Include="Forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ModifyDetails.resx">
-      <DependentUpon>ModifyDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Maintain.resx">
+      <DependentUpon>Maintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModifyCourse.resx">
+      <DependentUpon>ModifyCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PaymentMethod.resx">
       <DependentUpon>PaymentMethod.cs</DependentUpon>

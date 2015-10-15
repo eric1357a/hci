@@ -25,6 +25,19 @@ namespace HCI.Model
             return null;
         }
 
+        public static JobPosition ToJobPosition(String jobPosition)
+        {
+            switch (jobPosition)
+            {
+                case "Manager":
+                    return JobPosition.Manager;
+                case "Admin":
+                    return JobPosition.Admin;
+                default:
+                    return JobPosition.Staff;
+            }
+        } 
+
         private static LinkedList<Staff> _InitStaffs()
         {
             LinkedList<Staff> members = new LinkedList<Staff>();

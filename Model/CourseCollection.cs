@@ -8,6 +8,7 @@ namespace HCI.Model
     class CourseCollection
     {
         public static LinkedList<Programme> Programmes = _InitProgrammes();
+        private Programme item;
 
         public static int Count
         {
@@ -22,7 +23,7 @@ namespace HCI.Model
                         return c;
             return null;
         }
-
+        
         private static LinkedList<Programme> _InitProgrammes()
         {
             LinkedList<Programme> programmes = new LinkedList<Programme>();
@@ -125,6 +126,8 @@ namespace HCI.Model
             }
             return null;
         }
+  
+
     }
 
     class Course
