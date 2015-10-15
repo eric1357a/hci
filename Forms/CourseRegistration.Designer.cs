@@ -51,6 +51,14 @@
             this.BaseNavigationAction.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btn_Logout
+            // 
+            this.btn_Logout.Size = new System.Drawing.Size(76, 42);
+            // 
+            // lb_User
+            // 
+            this.lb_User.Size = new System.Drawing.Size(262, 66);
+            // 
             // BaseNavigationText
             // 
             this.BaseNavigationText.Size = new System.Drawing.Size(336, 66);
@@ -104,7 +112,7 @@
             this.clb_Member.Location = new System.Drawing.Point(461, 282);
             this.clb_Member.Margin = new System.Windows.Forms.Padding(0);
             this.clb_Member.Name = "clb_Member";
-            this.clb_Member.Size = new System.Drawing.Size(137, 54);
+            this.clb_Member.Size = new System.Drawing.Size(137, 44);
             this.clb_Member.TabIndex = 6;
             this.clb_Member.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_Member_ItemCheck);
             // 
@@ -113,7 +121,7 @@
             this.lb_Member.AutoSize = true;
             this.lb_Member.Location = new System.Drawing.Point(361, 282);
             this.lb_Member.Name = "lb_Member";
-            this.lb_Member.Size = new System.Drawing.Size(97, 23);
+            this.lb_Member.Size = new System.Drawing.Size(80, 21);
             this.lb_Member.TabIndex = 35;
             this.lb_Member.Text = "Member:";
             // 
@@ -126,7 +134,7 @@
             this.tb_Email.Location = new System.Drawing.Point(318, 220);
             this.tb_Email.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(288, 38);
+            this.tb_Email.Size = new System.Drawing.Size(288, 32);
             this.tb_Email.TabIndex = 4;
             this.tb_Email.Leave += new System.EventHandler(this.tb_Email_Leave);
             // 
@@ -172,7 +180,7 @@
             this.clb_Month.Location = new System.Drawing.Point(245, 282);
             this.clb_Month.Margin = new System.Windows.Forms.Padding(0);
             this.clb_Month.Name = "clb_Month";
-            this.clb_Month.Size = new System.Drawing.Size(113, 81);
+            this.clb_Month.Size = new System.Drawing.Size(113, 66);
             this.clb_Month.TabIndex = 5;
             this.clb_Month.Leave += new System.EventHandler(this.clb_Month_Leave);
             // 
@@ -181,7 +189,7 @@
             this.lb_Month.AutoSize = true;
             this.lb_Month.Location = new System.Drawing.Point(158, 282);
             this.lb_Month.Name = "lb_Month";
-            this.lb_Month.Size = new System.Drawing.Size(84, 23);
+            this.lb_Month.Size = new System.Drawing.Size(72, 21);
             this.lb_Month.TabIndex = 30;
             this.lb_Month.Text = "Months:";
             this.lb_Month.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,7 +199,7 @@
             this.lb_Email.AutoSize = true;
             this.lb_Email.Location = new System.Drawing.Point(158, 226);
             this.lb_Email.Name = "lb_Email";
-            this.lb_Email.Size = new System.Drawing.Size(151, 23);
+            this.lb_Email.Size = new System.Drawing.Size(121, 21);
             this.lb_Email.TabIndex = 29;
             this.lb_Email.Text = "Email Address:";
             this.lb_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,7 +213,7 @@
             this.tb_ContactNo.Location = new System.Drawing.Point(375, 161);
             this.tb_ContactNo.Margin = new System.Windows.Forms.Padding(0);
             this.tb_ContactNo.Name = "tb_ContactNo";
-            this.tb_ContactNo.Size = new System.Drawing.Size(240, 38);
+            this.tb_ContactNo.Size = new System.Drawing.Size(231, 32);
             this.tb_ContactNo.TabIndex = 3;
             this.tb_ContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ContactNo_KeyPress);
             this.tb_ContactNo.Leave += new System.EventHandler(this.tb_ContactNo_Leave);
@@ -215,7 +223,7 @@
             this.lb_852.AutoSize = true;
             this.lb_852.Location = new System.Drawing.Point(318, 167);
             this.lb_852.Name = "lb_852";
-            this.lb_852.Size = new System.Drawing.Size(54, 23);
+            this.lb_852.Size = new System.Drawing.Size(46, 21);
             this.lb_852.TabIndex = 27;
             this.lb_852.Text = "+852";
             // 
@@ -224,7 +232,7 @@
             this.lb_ContactNo.AutoSize = true;
             this.lb_ContactNo.Location = new System.Drawing.Point(133, 167);
             this.lb_ContactNo.Name = "lb_ContactNo";
-            this.lb_ContactNo.Size = new System.Drawing.Size(182, 23);
+            this.lb_ContactNo.Size = new System.Drawing.Size(149, 21);
             this.lb_ContactNo.TabIndex = 26;
             this.lb_ContactNo.Text = "Contact Number:";
             this.lb_ContactNo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,7 +242,7 @@
             this.lb_WeekDay.AutoSize = true;
             this.lb_WeekDay.Location = new System.Drawing.Point(318, 29);
             this.lb_WeekDay.Name = "lb_WeekDay";
-            this.lb_WeekDay.Size = new System.Drawing.Size(46, 23);
+            this.lb_WeekDay.Size = new System.Drawing.Size(37, 21);
             this.lb_WeekDay.TabIndex = 0;
             this.lb_WeekDay.Text = "XXX";
             // 
@@ -243,7 +251,7 @@
             this.lb_WeekDayTag.AutoSize = true;
             this.lb_WeekDayTag.Location = new System.Drawing.Point(201, 29);
             this.lb_WeekDayTag.Name = "lb_WeekDayTag";
-            this.lb_WeekDayTag.Size = new System.Drawing.Size(114, 23);
+            this.lb_WeekDayTag.Size = new System.Drawing.Size(92, 21);
             this.lb_WeekDayTag.TabIndex = 24;
             this.lb_WeekDayTag.Text = "Week Day:";
             // 
@@ -253,7 +261,7 @@
             this.lb_Course.Location = new System.Drawing.Point(318, 69);
             this.lb_Course.Margin = new System.Windows.Forms.Padding(0);
             this.lb_Course.Name = "lb_Course";
-            this.lb_Course.Size = new System.Drawing.Size(46, 23);
+            this.lb_Course.Size = new System.Drawing.Size(37, 21);
             this.lb_Course.TabIndex = 1;
             this.lb_Course.Text = "XXX";
             // 
@@ -262,7 +270,7 @@
             this.lb_CourseTag.AutoSize = true;
             this.lb_CourseTag.Location = new System.Drawing.Point(232, 69);
             this.lb_CourseTag.Name = "lb_CourseTag";
-            this.lb_CourseTag.Size = new System.Drawing.Size(83, 23);
+            this.lb_CourseTag.Size = new System.Drawing.Size(68, 21);
             this.lb_CourseTag.TabIndex = 22;
             this.lb_CourseTag.Text = "Course:";
             this.lb_CourseTag.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -272,7 +280,7 @@
             this.lb_Name.AutoSize = true;
             this.lb_Name.Location = new System.Drawing.Point(158, 112);
             this.lb_Name.Name = "lb_Name";
-            this.lb_Name.Size = new System.Drawing.Size(157, 23);
+            this.lb_Name.Size = new System.Drawing.Size(129, 21);
             this.lb_Name.TabIndex = 36;
             this.lb_Name.Text = "Student Name:";
             this.lb_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,7 +294,7 @@
             this.tb_Name.Location = new System.Drawing.Point(318, 106);
             this.tb_Name.Margin = new System.Windows.Forms.Padding(0);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(288, 38);
+            this.tb_Name.Size = new System.Drawing.Size(288, 32);
             this.tb_Name.TabIndex = 2;
             this.tb_Name.Leave += new System.EventHandler(this.tb_Name_Leave);
             // 

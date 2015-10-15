@@ -6,11 +6,6 @@
 
 ## Progress
 
-K remain
-- [ ] Administrative 分唇
-- [ ] Search 分唇
-
-
 > Completed
 - [x] Course registration
 - [x] Invoice
@@ -20,3 +15,5 @@ K remain
 - [x] Login
 - [x] Main & Staff Menu
 - [x] Promotions
+- [x] Administrative
+- [x] Search

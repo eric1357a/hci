@@ -13,7 +13,8 @@ namespace HCI.Model
 
     class StudentCollection
     {
-        private static LinkedList<Student> students = _initStudents();
+        private static LinkedList<Student> Students = _initStudents();
+        public static LinkedList<string> Deleted = new LinkedList<string>();
 
         public static Membership ToMembership(String membership)
         {
@@ -28,18 +29,27 @@ namespace HCI.Model
             }
         }
 
+        public static LinkedList<Student> GetStudents()
+        {
+            LinkedList<Student> stus = new LinkedList<Student>();
+            foreach (Student s in Students)
+                if (!Deleted.Contains(s.GetName()))
+                    stus.AddLast(s);
+            return stus;
+        }
+
         public static Student ElementAt(string name, Membership membership)
         {
-            for (int i = 0; i < students.Count; i++)
-                if (students.ElementAt(i).name == name)
-                    if (students.ElementAt(i).membership == membership)
-                        return students.ElementAt(i);
+            for (int i = 0; i < Students.Count; i++)
+                if (Students.ElementAt(i).name == name)
+                    if (Students.ElementAt(i).membership == membership)
+                        return Students.ElementAt(i);
             return null;
         }
 
         public static void Add(string name, string contactNo, string email, Membership membership)
         {
-            students.AddLast(new Student(name, contactNo, email, membership));
+            Students.AddLast(new Student(name, contactNo, email, membership));
         }
 
         private static LinkedList<Student> _initStudents()
@@ -49,7 +59,7 @@ namespace HCI.Model
         }
     }
 
-    class Student
+    class Student : ICommonAttr
     {
         private LinkedList<Dictionary<string, bool>> juneJulyAugust;
         public string name;
@@ -67,6 +77,11 @@ namespace HCI.Model
             this.contactNo = contactNo;
             this.email = email;
             this.membership = membership;
+        }
+
+        public string GetName()
+        {
+            return name;
         }
 
         public void register(string dayOfWeek, bool[] JuneJulyAugust)

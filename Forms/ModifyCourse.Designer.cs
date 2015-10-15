@@ -92,7 +92,7 @@
             "Sat"});
             this.cb_Day.Location = new System.Drawing.Point(341, 153);
             this.cb_Day.Name = "cb_Day";
-            this.cb_Day.Size = new System.Drawing.Size(121, 29);
+            this.cb_Day.Size = new System.Drawing.Size(214, 29);
             this.cb_Day.TabIndex = 20;
             // 
             // tb_Desc
@@ -151,6 +151,7 @@
             this.btn_Submit.TabIndex = 26;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // btn_Cancel
             // 
@@ -163,6 +164,7 @@
             this.btn_Cancel.TabIndex = 27;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // ModifyCourse
             // 

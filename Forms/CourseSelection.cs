@@ -52,12 +52,20 @@ namespace HCI.Forms
                 tlp.Dock = DockStyle.Fill;
                 tlp.Padding = new Padding(2);
                 prepareTable(tlp, 0, max);
-
+                int deleted = 0;
                 for (int j = 0; j < CourseCollection.Programmes.ElementAt(i).Count; j++)
                 {
+                    if (CourseCollection.Deleted.Contains(CourseCollection
+                        .Programmes
+                        .ElementAt(i)
+                        .Courses[j].Name))
+                    {
+                        deleted++;
+                        continue;
+                    }
                     // Initialize inner tableLayoutPanel
                     TableLayoutPanel inner = new TableLayoutPanel();
-                    tlp.Controls.Add(inner, 0, j);
+                    tlp.Controls.Add(inner, 0, j - deleted);
                     inner.Dock = DockStyle.Fill;
                     inner.BackColor = Color.Transparent;
                     prepareTable(inner, 2, 1);
@@ -83,7 +91,7 @@ namespace HCI.Forms
                         .Programmes
                         .ElementAt(i)
                         .Key[0]
-                        .ToString() + (j + 1);
+                        .ToString() + (j - deleted + 1);
                     l.Text = CourseCollection
                         .Programmes
                         .ElementAt(i)
@@ -170,8 +178,7 @@ namespace HCI.Forms
         {
             TableLayoutPanel tlp = (TableLayoutPanel)toRootControl((Control)sender);
             Control label = tlp.GetControlFromPosition(1, 0);
-            string key = label.Name;          
-            new CourseDetail(key) { Prev = this }.Show();
+            new CourseDetail(label.Name) { Prev = this }.Show();
         }
     }
 }

@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel_searchBox = new System.Windows.Forms.Panel();
+            this.tb_searchText = new System.Windows.Forms.TextBox();
+            this.cb_searchWhat = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.lb_nofavailplace = new System.Windows.Forms.Label();
-            this.tb_price = new System.Windows.Forms.TextBox();
-            this.tb_place = new System.Windows.Forms.TextBox();
+            this.lb_searchDesc = new System.Windows.Forms.Label();
+            this.lb_searchResult = new System.Windows.Forms.ListBox();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseContentWrapper.SuspendLayout();
             this.BaseNavigationAction.SuspendLayout();
+            this.panel_searchBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationText
@@ -45,65 +47,74 @@
             // 
             // BaseContentWrapper
             // 
-            this.BaseContentWrapper.Controls.Add(this.tb_place);
-            this.BaseContentWrapper.Controls.Add(this.tb_price);
-            this.BaseContentWrapper.Controls.Add(this.lb_nofavailplace);
-            this.BaseContentWrapper.Controls.Add(this.btn_Search);
-            this.BaseContentWrapper.Controls.Add(this.label1);
+            this.BaseContentWrapper.Controls.Add(this.lb_searchResult);
+            this.BaseContentWrapper.Controls.Add(this.lb_searchDesc);
+            this.BaseContentWrapper.Controls.Add(this.panel_searchBox);
+            // 
+            // panel_searchBox
+            // 
+            this.panel_searchBox.Controls.Add(this.tb_searchText);
+            this.panel_searchBox.Controls.Add(this.cb_searchWhat);
+            this.panel_searchBox.Controls.Add(this.label1);
+            this.panel_searchBox.Location = new System.Drawing.Point(54, 166);
+            this.panel_searchBox.Name = "panel_searchBox";
+            this.panel_searchBox.Size = new System.Drawing.Size(626, 70);
+            this.panel_searchBox.TabIndex = 14;
+            // 
+            // tb_searchText
+            // 
+            this.tb_searchText.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.tb_searchText.Location = new System.Drawing.Point(230, 20);
+            this.tb_searchText.Multiline = true;
+            this.tb_searchText.Name = "tb_searchText";
+            this.tb_searchText.ShortcutsEnabled = false;
+            this.tb_searchText.Size = new System.Drawing.Size(355, 29);
+            this.tb_searchText.TabIndex = 21;
+            this.tb_searchText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_searchText_KeyUp);
+            // 
+            // cb_searchWhat
+            // 
+            this.cb_searchWhat.BackColor = System.Drawing.SystemColors.Window;
+            this.cb_searchWhat.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cb_searchWhat.FormattingEnabled = true;
+            this.cb_searchWhat.Items.AddRange(new object[] {
+            "Price (Monthly)",
+            "Available Places"});
+            this.cb_searchWhat.Location = new System.Drawing.Point(41, 20);
+            this.cb_searchWhat.Name = "cb_searchWhat";
+            this.cb_searchWhat.Size = new System.Drawing.Size(183, 29);
+            this.cb_searchWhat.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(210, 85);
+            this.label1.Location = new System.Drawing.Point(37, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Price(Monthly):";
+            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.TabIndex = 5;
             // 
-            // btn_Search
+            // lb_searchDesc
             // 
-            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Search.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.btn_Search.ForeColor = System.Drawing.Color.Black;
-            this.btn_Search.Location = new System.Drawing.Point(544, 265);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(108, 44);
-            this.btn_Search.TabIndex = 5;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
+            this.lb_searchDesc.AutoSize = true;
+            this.lb_searchDesc.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.lb_searchDesc.Location = new System.Drawing.Point(269, 108);
+            this.lb_searchDesc.Name = "lb_searchDesc";
+            this.lb_searchDesc.Size = new System.Drawing.Size(171, 22);
+            this.lb_searchDesc.TabIndex = 23;
+            this.lb_searchDesc.Text = "Enter search term";
             // 
-            // lb_nofavailplace
+            // lb_searchResult
             // 
-            this.lb_nofavailplace.AutoSize = true;
-            this.lb_nofavailplace.Location = new System.Drawing.Point(108, 154);
-            this.lb_nofavailplace.Name = "lb_nofavailplace";
-            this.lb_nofavailplace.Size = new System.Drawing.Size(228, 21);
-            this.lb_nofavailplace.TabIndex = 8;
-            this.lb_nofavailplace.Text = "Number of available places:";
-            // 
-            // tb_price
-            // 
-            this.tb_price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.tb_price.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_price.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tb_price.Location = new System.Drawing.Point(364, 82);
-            this.tb_price.Margin = new System.Windows.Forms.Padding(0);
-            this.tb_price.Name = "tb_price";
-            this.tb_price.Size = new System.Drawing.Size(151, 32);
-            this.tb_price.TabIndex = 12;
-            // 
-            // tb_place
-            // 
-            this.tb_place.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.tb_place.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tb_place.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tb_place.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tb_place.Location = new System.Drawing.Point(364, 154);
-            this.tb_place.Margin = new System.Windows.Forms.Padding(0);
-            this.tb_place.Name = "tb_place";
-            this.tb_place.Size = new System.Drawing.Size(151, 32);
-            this.tb_place.TabIndex = 13;
+            this.lb_searchResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.lb_searchResult.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lb_searchResult.FormattingEnabled = true;
+            this.lb_searchResult.ItemHeight = 21;
+            this.lb_searchResult.Location = new System.Drawing.Point(54, 361);
+            this.lb_searchResult.Margin = new System.Windows.Forms.Padding(0);
+            this.lb_searchResult.Name = "lb_searchResult";
+            this.lb_searchResult.Size = new System.Drawing.Size(626, 21);
+            this.lb_searchResult.TabIndex = 24;
+            this.lb_searchResult.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lb_searchResult_MouseDoubleClick);
             // 
             // SearchCourse
             // 
@@ -117,6 +128,8 @@
             this.BaseContentWrapper.ResumeLayout(false);
             this.BaseContentWrapper.PerformLayout();
             this.BaseNavigationAction.ResumeLayout(false);
+            this.panel_searchBox.ResumeLayout(false);
+            this.panel_searchBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,10 +137,12 @@
 
         #endregion
 
+        private System.Windows.Forms.Panel panel_searchBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.Label lb_nofavailplace;
-        private System.Windows.Forms.TextBox tb_place;
-        private System.Windows.Forms.TextBox tb_price;
+        private System.Windows.Forms.ComboBox cb_searchWhat;
+        private System.Windows.Forms.TextBox tb_searchText;
+        private System.Windows.Forms.Label lb_searchDesc;
+        private System.Windows.Forms.ListBox lb_searchResult;
+
     }
 }

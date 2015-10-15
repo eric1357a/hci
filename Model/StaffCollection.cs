@@ -12,7 +12,8 @@ namespace HCI.Model
 
     class StaffCollection
     {
-        public static LinkedList<Staff> Staffs = _InitStaffs();
+        private static LinkedList<Staff> Staffs = _InitStaffs();
+        public static LinkedList<string> Deleted = new LinkedList<string>();
 
 
         public static Staff Login(string user, string pass)
@@ -23,6 +24,15 @@ namespace HCI.Model
                     return s;
             }
             return null;
+        }
+
+        public static LinkedList<Staff> GetStaffs()
+        {
+            LinkedList<Staff> stfs = new LinkedList<Staff>();
+            foreach (Staff s in Staffs)
+                if (!Deleted.Contains(s.GetName()))
+                    stfs.AddLast(s);
+            return stfs;
         }
 
         public static JobPosition ToJobPosition(String jobPosition)
@@ -36,7 +46,12 @@ namespace HCI.Model
                 default:
                     return JobPosition.Staff;
             }
-        } 
+        }
+
+        public static void Add(Staff s)
+        {
+            Staffs.AddLast(s);
+        }
 
         private static LinkedList<Staff> _InitStaffs()
         {
@@ -66,7 +81,7 @@ namespace HCI.Model
 
     }
 
-    public class Staff
+    public class Staff : ICommonAttr
     {
         public string User;
         public string Pass;
@@ -76,6 +91,10 @@ namespace HCI.Model
             User = user;
             Pass = pass;
             Role = role;
+        }
+        public string GetName()
+        {
+            return User;
         }
     }
 }

@@ -8,11 +8,61 @@ namespace HCI.Model
     class CourseCollection
     {
         public static LinkedList<Programme> Programmes = _InitProgrammes();
+        public static LinkedList<string> Deleted = new LinkedList<string>();
         private Programme item;
 
         public static int Count
         {
             get { return Programmes.Count; }
+        }
+
+        public static Course ElementAt(string programme, string name)
+        {
+            for (int i = 0; i < Programmes.Count; i++)
+            {
+                Programme p = ((Programme)Programmes.ElementAt(i));
+                if (p.Category == programme)
+                    for (int j = 0; j < p.Courses.Length; j++)
+                        if (p.Courses[j].Name == name)
+                            return p.Courses[j];
+            }
+            return null;
+        }
+
+        public static object[] Search(bool searchPrice, int value)
+        {
+            LinkedList<ListItem> data = new LinkedList<ListItem>();
+            foreach (Course c in GetCourses())
+                if ((searchPrice && c.Cost <= value) || (!searchPrice && c.Seats <= value))
+                    data.AddLast(new ListItem(c.GetName(), c));
+            return data.ToArray();
+        }
+
+        public static string GetKeyByName(string name)
+        {
+            char currentCat = 'A';
+            int i = 1;
+            foreach (Programme p in Programmes)
+            {
+                i = 1;
+                currentCat = p.Key[0];
+                foreach (Course c in p.Courses)
+                {
+                    if (c.GetName() == name)
+                        return currentCat + "" + i;
+                    i++;
+                }
+            }
+            return null;
+        }
+
+        public static Programme Search(string key)
+        {
+            if (key.Length > 1)
+                foreach (Programme c in Programmes)
+                    if (c.Key[0] == key[0])
+                        return c;
+            return null;
         }
 
         public static Programme FindProgramme(string key)
@@ -23,7 +73,33 @@ namespace HCI.Model
                         return c;
             return null;
         }
-        
+
+        public static void Add(string progNo, Course c)
+        {
+            foreach (Programme p in Programmes)
+            {
+                if(progNo[0] == p.Key[0]){
+                    Course[] newCourses = new Course[p.Courses.Length + 1];
+                    for (int k = 0; k < p.Courses.Length; k++)
+                    {
+                        newCourses[k] = p.Courses[k];
+                    }
+                    newCourses[p.Courses.Length] = c;
+                    p.Courses = newCourses;
+                }
+            }
+        }
+
+        public static LinkedList<Course> GetCourses()
+        {
+            LinkedList<Course> courses = new LinkedList<Course>();
+            foreach (Programme p in Programmes)
+                foreach (Course c in p.Courses)
+                    if(!Deleted.Contains(c.GetName()))
+                        courses.AddLast(c);
+            return courses;
+        }
+
         private static LinkedList<Programme> _InitProgrammes()
         {
             LinkedList<Programme> programmes = new LinkedList<Programme>();
@@ -126,11 +202,10 @@ namespace HCI.Model
             }
             return null;
         }
-  
 
     }
 
-    class Course
+    class Course : ICommonAttr
     {
         public string Name;
         public string Desc;
@@ -146,5 +221,10 @@ namespace HCI.Model
             Cost = cost;
             Seats = seats;
         }
+        public string GetName()
+        {
+            return Name;
+        }
+
     }
 }

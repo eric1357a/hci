@@ -31,7 +31,52 @@ namespace HCI.Forms
         public Maintain()
         {
             InitializeComponent();
+            // add course records
+            SetupList(lb_Course, CourseCollection.GetCourses());
+            SetupList(lb_Student, StudentCollection.GetStudents());
+            SetupList(lb_Staff, StaffCollection.GetStaffs());
+        }
 
+        private void SetupList<T>(ListBox lb, LinkedList<T> list)
+        {
+            object[] obj = new object[list.Count];
+            int i = 0;
+            foreach (ICommonAttr el in list)
+            {
+                ListItem item = new ListItem(el.GetName(), el);
+                obj[i] = item;
+                i++;
+            }
+            lb.Items.Clear();
+            lb.Items.AddRange(obj);
+            if (list.Count > 0) lb.SelectedIndex = 0;
+        }
+
+        private void BindDelete(ListBox lb, LinkedList<string> deletedRef)
+        {
+            if (lb.Items.Count > 0)
+            {
+                ListItem obj = (ListItem)lb.Items[lb.SelectedIndex];
+                deletedRef.AddLast(obj.Text);
+                lb.Items.RemoveAt(lb.SelectedIndex);
+                if (lb.Items.Count > 0) lb.SelectedIndex = 0;
+            }
+        }
+
+        private void btn_Course_Delete_Click(object sender, EventArgs e)
+        {
+            BindDelete(lb_Course, CourseCollection.Deleted);
+        }
+
+
+        private void btn_Student_Delete_Click(object sender, EventArgs e)
+        {
+            BindDelete(lb_Student, StudentCollection.Deleted);
+        }
+
+        private void btn_Staff_Delete_Click(object sender, EventArgs e)
+        {
+            BindDelete(lb_Staff, StaffCollection.Deleted);
         }
 
         private void tb_ContactNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -260,12 +305,12 @@ namespace HCI.Forms
                 checkDesc(tb_Desc) &
                 checkCost(tb_Cost))
             {
-                string StrCost = tb_Cost.Text;
-                int Cost = int.Parse(StrCost);
-                new Course(tb_Course.Text,
+                int Cost = int.Parse(tb_Cost.Text);
+                Course c = new Course(tb_Course.Text,
                     tb_Desc.Text,
                     cb_Day.Text,
                     Cost);
+                CourseCollection.Add(tb_CourseNo.Text, c);
                 MessageBox.Show("Registered Successfully!");
                 new AdminForm() { Prev = this }.Show();
             }
@@ -297,13 +342,15 @@ namespace HCI.Forms
             {
                 JobPosition m = StaffCollection.ToJobPosition(
                      clb_Position.CheckedItems.Count > 0 ? clb_Position.CheckedItems[0].ToString() : "None");
-                new Staff(tb_staffName.Text,
+                Staff s = new Staff(tb_staffName.Text,
                     tb_Pw.Text,
                     m);
+                StaffCollection.Add(s);
                 MessageBox.Show("Registered Successfully!");
                 new AdminForm() { Prev = this }.Show();
             }
         }
+
     }
 }
 

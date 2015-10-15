@@ -21,15 +21,15 @@ namespace HCI.Forms
         private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
         private Course course;
         private Programme programme;
-        private String key;
+        private String key, orgCourse = "";
         public ModifyCourse(string key)
-
         {
             programme = CourseCollection.FindProgramme(key);
             course = CourseCollection.FindProgramme(key).Find(key);
             this.key = key;
-            InitializeComponent();   
+            InitializeComponent();
             tb_Course.Text = course.Name;
+            orgCourse = course.Name;
             cb_Day.Text = course.Day;
             tb_Desc.Text = course.Desc;
             tb_Cost.Text = course.Cost.ToString();
@@ -125,15 +125,23 @@ namespace HCI.Forms
             return true;
         }
 
-        private void btn_Submit_Click(object sender, EventArgs e) {
-            if(checkCost(tb_Cost)||
-                checkCourse(tb_Course)||
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            if (checkCost(tb_Cost) ||
+                checkCourse(tb_Course) ||
                 checkDesc(tb_Desc))
             {
-                CourseCollection.ElementAt(tb_Course.Text).name = tb_Course.Text;
-                /*StudentCollection.ElementAt("Cedric", Membership.Gold).name = "Carlyle";
-                StudentCollection.ElementAt("Cedric", Membership.Gold); //Cannot be found, since Cedric renamed to Carlyle*/
+                CourseCollection.ElementAt(programme.Category, orgCourse).Name = tb_Course.Text;
+                CourseCollection.ElementAt(programme.Category, orgCourse).Desc = tb_Desc.Text;
+                CourseCollection.ElementAt(programme.Category, orgCourse).Day = cb_Day.Text;
+                CourseCollection.ElementAt(programme.Category, orgCourse).Cost = Int32.Parse(tb_Cost.Text);
+                MessageBox.Show("Changed!");
+                new CourseDetail(key) { Prev = this }.Show();
             }
+        }
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            new CourseDetail(key) { Prev = this }.Show();
         }
     }
 }
