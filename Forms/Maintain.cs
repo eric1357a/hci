@@ -27,10 +27,10 @@ namespace HCI.Forms
 
         private readonly Color INCORRECT = Color.FromArgb(224, 224, 224);
         private readonly Color CORRECT = Color.FromArgb(243, 244, 248);
-      
+
         public Maintain()
         {
-            
+
             InitializeComponent();
             // add course records
             SetupList(lb_Course, CourseCollection.GetCourses());
@@ -49,6 +49,8 @@ namespace HCI.Forms
                 i++;
             }
             lb.Items.Clear();
+            // Add placeholder for unselecting items
+            lb.Items.Add("( Press here to ADD Item )");
             lb.Items.AddRange(obj);
             if (list.Count > 0) lb.SelectedIndex = 0;
         }
@@ -307,36 +309,50 @@ namespace HCI.Forms
 
         private void lb_Course_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lb_Course.SelectedIndex >= 0)
+            if (lb_Course.SelectedIndex > 0)
             {
                 btn_add.Text = "Change";
             }
             else
             {
+                resetAllControls(panel_Course);
                 btn_add.Text = "Add";
             }
         }
 
+        private void resetAllControls(Panel p)
+        {
+            foreach (Control c in p.Controls)
+                if (c.GetType().IsSubclassOf(typeof(ListBox)))
+                    ((ListBox)c).ClearSelected();
+                else if (c.GetType().IsSubclassOf(typeof(ListControl)))
+                    ((ListControl)c).SelectedIndex = -1;
+                else if (c.GetType().IsSubclassOf(typeof(TextBoxBase)))
+                    c.Text = "";
+        }
+
         private void lb_Student_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lb_Student.SelectedIndex >= 0)
+            if (lb_Student.SelectedIndex > 0)
             {
                 btn_add2.Text = "Change";
             }
             else
             {
+                resetAllControls(panel_Student);
                 btn_add2.Text = "Add";
             }
         }
 
         private void lb_Staff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lb_Staff.SelectedIndex >= 0)
+            if (lb_Staff.SelectedIndex > 0)
             {
                 btn_add3.Text = "Change";
             }
             else
             {
+                resetAllControls(panel_Staff);
                 btn_add3.Text = "Add";
             }
         }
@@ -359,13 +375,13 @@ namespace HCI.Forms
                 }
                 else if (btn_add.Text == "Change")
                 {
-                   
+
                     MessageBox.Show("Changed!");
-                    
+
                 }
             }
         }
-       
+
         private void btn_add2_Click(object sender, EventArgs e)
         {
             if (checkStudent(tb_studentName) &

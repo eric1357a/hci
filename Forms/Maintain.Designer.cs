@@ -32,7 +32,7 @@
             this.tbp_Course = new System.Windows.Forms.TabPage();
             this.divider1 = new System.Windows.Forms.Panel();
             this.btn_Course_Delete = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Course = new System.Windows.Forms.Panel();
             this.lb_ProgramNo = new System.Windows.Forms.Label();
             this.tb_CourseNo = new System.Windows.Forms.TextBox();
             this.cb_Day = new System.Windows.Forms.ComboBox();
@@ -48,7 +48,7 @@
             this.tbp_Student = new System.Windows.Forms.TabPage();
             this.divider2 = new System.Windows.Forms.Panel();
             this.btn_Student_Delete = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_Student = new System.Windows.Forms.Panel();
             this.clb_Member = new System.Windows.Forms.CheckedListBox();
             this.tb_email = new System.Windows.Forms.TextBox();
             this.tb_ContactNo = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@
             this.tbp_Staff = new System.Windows.Forms.TabPage();
             this.divider3 = new System.Windows.Forms.Panel();
             this.btn_Staff_Delete = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel_Staff = new System.Windows.Forms.Panel();
             this.btn_add3 = new System.Windows.Forms.Button();
             this.clb_Position = new System.Windows.Forms.CheckedListBox();
             this.tb_Pw = new System.Windows.Forms.TextBox();
@@ -79,11 +79,11 @@
             this.BaseNavigationAction.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tbp_Course.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel_Course.SuspendLayout();
             this.tbp_Student.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_Student.SuspendLayout();
             this.tbp_Staff.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panel_Staff.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,12 +117,12 @@
             // 
             this.tbp_Course.Controls.Add(this.divider1);
             this.tbp_Course.Controls.Add(this.btn_Course_Delete);
-            this.tbp_Course.Controls.Add(this.panel1);
+            this.tbp_Course.Controls.Add(this.panel_Course);
             this.tbp_Course.Controls.Add(this.lb_Course);
-            this.tbp_Course.Location = new System.Drawing.Point(4, 30);
+            this.tbp_Course.Location = new System.Drawing.Point(4, 32);
             this.tbp_Course.Name = "tbp_Course";
             this.tbp_Course.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_Course.Size = new System.Drawing.Size(712, 339);
+            this.tbp_Course.Size = new System.Drawing.Size(712, 337);
             this.tbp_Course.TabIndex = 0;
             this.tbp_Course.Text = "Course";
             this.tbp_Course.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.divider1.Location = new System.Drawing.Point(335, 3);
             this.divider1.Margin = new System.Windows.Forms.Padding(0);
             this.divider1.Name = "divider1";
-            this.divider1.Size = new System.Drawing.Size(1, 333);
+            this.divider1.Size = new System.Drawing.Size(1, 331);
             this.divider1.TabIndex = 15;
             // 
             // btn_Course_Delete
@@ -149,31 +149,31 @@
             this.btn_Course_Delete.UseVisualStyleBackColor = true;
             this.btn_Course_Delete.Click += new System.EventHandler(this.btn_Course_Delete_Click);
             // 
-            // panel1
+            // panel_Course
             // 
-            this.panel1.Controls.Add(this.lb_ProgramNo);
-            this.panel1.Controls.Add(this.tb_CourseNo);
-            this.panel1.Controls.Add(this.cb_Day);
-            this.panel1.Controls.Add(this.btn_add);
-            this.panel1.Controls.Add(this.tb_Desc);
-            this.panel1.Controls.Add(this.tb_Cost);
-            this.panel1.Controls.Add(this.tb_Course);
-            this.panel1.Controls.Add(this.lb_Desc);
-            this.panel1.Controls.Add(this.lb_Day);
-            this.panel1.Controls.Add(this.lb_Cost);
-            this.panel1.Controls.Add(this.lb_Courses);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(336, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(373, 333);
-            this.panel1.TabIndex = 2;
+            this.panel_Course.Controls.Add(this.lb_ProgramNo);
+            this.panel_Course.Controls.Add(this.tb_CourseNo);
+            this.panel_Course.Controls.Add(this.cb_Day);
+            this.panel_Course.Controls.Add(this.btn_add);
+            this.panel_Course.Controls.Add(this.tb_Desc);
+            this.panel_Course.Controls.Add(this.tb_Cost);
+            this.panel_Course.Controls.Add(this.tb_Course);
+            this.panel_Course.Controls.Add(this.lb_Desc);
+            this.panel_Course.Controls.Add(this.lb_Day);
+            this.panel_Course.Controls.Add(this.lb_Cost);
+            this.panel_Course.Controls.Add(this.lb_Courses);
+            this.panel_Course.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Course.Location = new System.Drawing.Point(336, 3);
+            this.panel_Course.Name = "panel_Course";
+            this.panel_Course.Size = new System.Drawing.Size(373, 331);
+            this.panel_Course.TabIndex = 2;
             // 
             // lb_ProgramNo
             // 
             this.lb_ProgramNo.AutoSize = true;
             this.lb_ProgramNo.Location = new System.Drawing.Point(23, 32);
             this.lb_ProgramNo.Name = "lb_ProgramNo";
-            this.lb_ProgramNo.Size = new System.Drawing.Size(106, 21);
+            this.lb_ProgramNo.Size = new System.Drawing.Size(132, 23);
             this.lb_ProgramNo.TabIndex = 21;
             this.lb_ProgramNo.Text = "Program No:";
             // 
@@ -181,7 +181,7 @@
             // 
             this.tb_CourseNo.Location = new System.Drawing.Point(136, 29);
             this.tb_CourseNo.Name = "tb_CourseNo";
-            this.tb_CourseNo.Size = new System.Drawing.Size(57, 27);
+            this.tb_CourseNo.Size = new System.Drawing.Size(57, 32);
             this.tb_CourseNo.TabIndex = 20;
             // 
             // cb_Day
@@ -198,7 +198,7 @@
             "Sat"});
             this.cb_Day.Location = new System.Drawing.Point(136, 146);
             this.cb_Day.Name = "cb_Day";
-            this.cb_Day.Size = new System.Drawing.Size(214, 29);
+            this.cb_Day.Size = new System.Drawing.Size(214, 31);
             this.cb_Day.TabIndex = 19;
             // 
             // btn_add
@@ -227,7 +227,7 @@
             // 
             this.tb_Cost.Location = new System.Drawing.Point(136, 109);
             this.tb_Cost.Name = "tb_Cost";
-            this.tb_Cost.Size = new System.Drawing.Size(103, 27);
+            this.tb_Cost.Size = new System.Drawing.Size(103, 32);
             this.tb_Cost.TabIndex = 15;
             this.tb_Cost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Cost_KeyPress);
             this.tb_Cost.Leave += new System.EventHandler(this.tb_Cost_Leave);
@@ -236,7 +236,7 @@
             // 
             this.tb_Course.Location = new System.Drawing.Point(136, 71);
             this.tb_Course.Name = "tb_Course";
-            this.tb_Course.Size = new System.Drawing.Size(214, 27);
+            this.tb_Course.Size = new System.Drawing.Size(214, 32);
             this.tb_Course.TabIndex = 14;
             this.tb_Course.Leave += new System.EventHandler(this.tb_Course_Leave);
             // 
@@ -245,7 +245,7 @@
             this.lb_Desc.AutoSize = true;
             this.lb_Desc.Location = new System.Drawing.Point(23, 188);
             this.lb_Desc.Name = "lb_Desc";
-            this.lb_Desc.Size = new System.Drawing.Size(101, 21);
+            this.lb_Desc.Size = new System.Drawing.Size(122, 23);
             this.lb_Desc.TabIndex = 6;
             this.lb_Desc.Text = "Description:";
             // 
@@ -254,7 +254,7 @@
             this.lb_Day.AutoSize = true;
             this.lb_Day.Location = new System.Drawing.Point(23, 149);
             this.lb_Day.Name = "lb_Day";
-            this.lb_Day.Size = new System.Drawing.Size(45, 21);
+            this.lb_Day.Size = new System.Drawing.Size(55, 23);
             this.lb_Day.TabIndex = 5;
             this.lb_Day.Text = "Day:";
             // 
@@ -263,7 +263,7 @@
             this.lb_Cost.AutoSize = true;
             this.lb_Cost.Location = new System.Drawing.Point(23, 112);
             this.lb_Cost.Name = "lb_Cost";
-            this.lb_Cost.Size = new System.Drawing.Size(50, 21);
+            this.lb_Cost.Size = new System.Drawing.Size(59, 23);
             this.lb_Cost.TabIndex = 4;
             this.lb_Cost.Text = "Cost:";
             // 
@@ -272,7 +272,7 @@
             this.lb_Courses.AutoSize = true;
             this.lb_Courses.Location = new System.Drawing.Point(23, 74);
             this.lb_Courses.Name = "lb_Courses";
-            this.lb_Courses.Size = new System.Drawing.Size(68, 21);
+            this.lb_Courses.Size = new System.Drawing.Size(83, 23);
             this.lb_Courses.TabIndex = 1;
             this.lb_Courses.Text = "Course:";
             // 
@@ -280,11 +280,11 @@
             // 
             this.lb_Course.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lb_Course.FormattingEnabled = true;
-            this.lb_Course.ItemHeight = 21;
+            this.lb_Course.ItemHeight = 23;
             this.lb_Course.Location = new System.Drawing.Point(3, 3);
             this.lb_Course.Margin = new System.Windows.Forms.Padding(0);
             this.lb_Course.Name = "lb_Course";
-            this.lb_Course.Size = new System.Drawing.Size(333, 252);
+            this.lb_Course.Size = new System.Drawing.Size(333, 230);
             this.lb_Course.TabIndex = 1;
             this.lb_Course.SelectedIndexChanged += new System.EventHandler(this.lb_Course_SelectedIndexChanged);
             // 
@@ -292,12 +292,12 @@
             // 
             this.tbp_Student.Controls.Add(this.divider2);
             this.tbp_Student.Controls.Add(this.btn_Student_Delete);
-            this.tbp_Student.Controls.Add(this.panel3);
+            this.tbp_Student.Controls.Add(this.panel_Student);
             this.tbp_Student.Controls.Add(this.lb_Student);
-            this.tbp_Student.Location = new System.Drawing.Point(4, 30);
+            this.tbp_Student.Location = new System.Drawing.Point(4, 32);
             this.tbp_Student.Name = "tbp_Student";
             this.tbp_Student.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_Student.Size = new System.Drawing.Size(712, 339);
+            this.tbp_Student.Size = new System.Drawing.Size(712, 337);
             this.tbp_Student.TabIndex = 1;
             this.tbp_Student.Text = "Student";
             this.tbp_Student.UseVisualStyleBackColor = true;
@@ -309,7 +309,7 @@
             this.divider2.Location = new System.Drawing.Point(335, 3);
             this.divider2.Margin = new System.Windows.Forms.Padding(0);
             this.divider2.Name = "divider2";
-            this.divider2.Size = new System.Drawing.Size(1, 333);
+            this.divider2.Size = new System.Drawing.Size(1, 331);
             this.divider2.TabIndex = 16;
             // 
             // btn_Student_Delete
@@ -324,22 +324,22 @@
             this.btn_Student_Delete.UseVisualStyleBackColor = true;
             this.btn_Student_Delete.Click += new System.EventHandler(this.btn_Student_Delete_Click);
             // 
-            // panel3
+            // panel_Student
             // 
-            this.panel3.Controls.Add(this.clb_Member);
-            this.panel3.Controls.Add(this.tb_email);
-            this.panel3.Controls.Add(this.tb_ContactNo);
-            this.panel3.Controls.Add(this.tb_studentName);
-            this.panel3.Controls.Add(this.lb_Member);
-            this.panel3.Controls.Add(this.lb_email);
-            this.panel3.Controls.Add(this.lb_ConNo);
-            this.panel3.Controls.Add(this.lb_studentName);
-            this.panel3.Controls.Add(this.btn_add2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(336, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(373, 333);
-            this.panel3.TabIndex = 1;
+            this.panel_Student.Controls.Add(this.clb_Member);
+            this.panel_Student.Controls.Add(this.tb_email);
+            this.panel_Student.Controls.Add(this.tb_ContactNo);
+            this.panel_Student.Controls.Add(this.tb_studentName);
+            this.panel_Student.Controls.Add(this.lb_Member);
+            this.panel_Student.Controls.Add(this.lb_email);
+            this.panel_Student.Controls.Add(this.lb_ConNo);
+            this.panel_Student.Controls.Add(this.lb_studentName);
+            this.panel_Student.Controls.Add(this.btn_add2);
+            this.panel_Student.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Student.Location = new System.Drawing.Point(336, 3);
+            this.panel_Student.Name = "panel_Student";
+            this.panel_Student.Size = new System.Drawing.Size(373, 331);
+            this.panel_Student.TabIndex = 1;
             // 
             // clb_Member
             // 
@@ -354,7 +354,7 @@
             this.clb_Member.Location = new System.Drawing.Point(179, 145);
             this.clb_Member.Margin = new System.Windows.Forms.Padding(0);
             this.clb_Member.Name = "clb_Member";
-            this.clb_Member.Size = new System.Drawing.Size(137, 44);
+            this.clb_Member.Size = new System.Drawing.Size(137, 27);
             this.clb_Member.TabIndex = 41;
             this.clb_Member.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_Member_ItemCheck);
             // 
@@ -362,7 +362,7 @@
             // 
             this.tb_email.Location = new System.Drawing.Point(179, 105);
             this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(173, 27);
+            this.tb_email.Size = new System.Drawing.Size(173, 32);
             this.tb_email.TabIndex = 40;
             this.tb_email.Leave += new System.EventHandler(this.tb_email_Leave);
             // 
@@ -370,7 +370,7 @@
             // 
             this.tb_ContactNo.Location = new System.Drawing.Point(179, 65);
             this.tb_ContactNo.Name = "tb_ContactNo";
-            this.tb_ContactNo.Size = new System.Drawing.Size(173, 27);
+            this.tb_ContactNo.Size = new System.Drawing.Size(173, 32);
             this.tb_ContactNo.TabIndex = 39;
             this.tb_ContactNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ContactNo_KeyPress);
             this.tb_ContactNo.Leave += new System.EventHandler(this.tb_conNo_Leave);
@@ -379,7 +379,7 @@
             // 
             this.tb_studentName.Location = new System.Drawing.Point(179, 25);
             this.tb_studentName.Name = "tb_studentName";
-            this.tb_studentName.Size = new System.Drawing.Size(173, 27);
+            this.tb_studentName.Size = new System.Drawing.Size(173, 32);
             this.tb_studentName.TabIndex = 38;
             this.tb_studentName.Leave += new System.EventHandler(this.tb_studentName_Leave);
             // 
@@ -388,7 +388,7 @@
             this.lb_Member.AutoSize = true;
             this.lb_Member.Location = new System.Drawing.Point(23, 145);
             this.lb_Member.Name = "lb_Member";
-            this.lb_Member.Size = new System.Drawing.Size(80, 21);
+            this.lb_Member.Size = new System.Drawing.Size(97, 23);
             this.lb_Member.TabIndex = 37;
             this.lb_Member.Text = "Member:";
             // 
@@ -397,7 +397,7 @@
             this.lb_email.AutoSize = true;
             this.lb_email.Location = new System.Drawing.Point(23, 105);
             this.lb_email.Name = "lb_email";
-            this.lb_email.Size = new System.Drawing.Size(121, 21);
+            this.lb_email.Size = new System.Drawing.Size(151, 23);
             this.lb_email.TabIndex = 22;
             this.lb_email.Text = "Email Address:";
             // 
@@ -406,7 +406,7 @@
             this.lb_ConNo.AutoSize = true;
             this.lb_ConNo.Location = new System.Drawing.Point(23, 65);
             this.lb_ConNo.Name = "lb_ConNo";
-            this.lb_ConNo.Size = new System.Drawing.Size(149, 21);
+            this.lb_ConNo.Size = new System.Drawing.Size(182, 23);
             this.lb_ConNo.TabIndex = 21;
             this.lb_ConNo.Text = "Contact Number:";
             // 
@@ -415,7 +415,7 @@
             this.lb_studentName.AutoSize = true;
             this.lb_studentName.Location = new System.Drawing.Point(23, 25);
             this.lb_studentName.Name = "lb_studentName";
-            this.lb_studentName.Size = new System.Drawing.Size(129, 21);
+            this.lb_studentName.Size = new System.Drawing.Size(157, 23);
             this.lb_studentName.TabIndex = 20;
             this.lb_studentName.Text = "Student Name:";
             // 
@@ -435,11 +435,11 @@
             // 
             this.lb_Student.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lb_Student.FormattingEnabled = true;
-            this.lb_Student.ItemHeight = 21;
+            this.lb_Student.ItemHeight = 23;
             this.lb_Student.Location = new System.Drawing.Point(3, 3);
             this.lb_Student.Margin = new System.Windows.Forms.Padding(0);
             this.lb_Student.Name = "lb_Student";
-            this.lb_Student.Size = new System.Drawing.Size(333, 252);
+            this.lb_Student.Size = new System.Drawing.Size(333, 230);
             this.lb_Student.TabIndex = 0;
             this.lb_Student.SelectedIndexChanged += new System.EventHandler(this.lb_Student_SelectedIndexChanged);
             // 
@@ -447,12 +447,12 @@
             // 
             this.tbp_Staff.Controls.Add(this.divider3);
             this.tbp_Staff.Controls.Add(this.btn_Staff_Delete);
-            this.tbp_Staff.Controls.Add(this.panel4);
+            this.tbp_Staff.Controls.Add(this.panel_Staff);
             this.tbp_Staff.Controls.Add(this.lb_Staff);
-            this.tbp_Staff.Location = new System.Drawing.Point(4, 30);
+            this.tbp_Staff.Location = new System.Drawing.Point(4, 32);
             this.tbp_Staff.Name = "tbp_Staff";
             this.tbp_Staff.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_Staff.Size = new System.Drawing.Size(712, 339);
+            this.tbp_Staff.Size = new System.Drawing.Size(712, 337);
             this.tbp_Staff.TabIndex = 2;
             this.tbp_Staff.Text = "Staff";
             this.tbp_Staff.UseVisualStyleBackColor = true;
@@ -464,7 +464,7 @@
             this.divider3.Location = new System.Drawing.Point(335, 3);
             this.divider3.Margin = new System.Windows.Forms.Padding(0);
             this.divider3.Name = "divider3";
-            this.divider3.Size = new System.Drawing.Size(1, 333);
+            this.divider3.Size = new System.Drawing.Size(1, 331);
             this.divider3.TabIndex = 17;
             // 
             // btn_Staff_Delete
@@ -479,20 +479,20 @@
             this.btn_Staff_Delete.UseVisualStyleBackColor = true;
             this.btn_Staff_Delete.Click += new System.EventHandler(this.btn_Staff_Delete_Click);
             // 
-            // panel4
+            // panel_Staff
             // 
-            this.panel4.Controls.Add(this.btn_add3);
-            this.panel4.Controls.Add(this.clb_Position);
-            this.panel4.Controls.Add(this.tb_Pw);
-            this.panel4.Controls.Add(this.tb_staffName);
-            this.panel4.Controls.Add(this.lb_Position);
-            this.panel4.Controls.Add(this.lb_pw);
-            this.panel4.Controls.Add(this.lb_staffName);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(336, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(373, 333);
-            this.panel4.TabIndex = 1;
+            this.panel_Staff.Controls.Add(this.btn_add3);
+            this.panel_Staff.Controls.Add(this.clb_Position);
+            this.panel_Staff.Controls.Add(this.tb_Pw);
+            this.panel_Staff.Controls.Add(this.tb_staffName);
+            this.panel_Staff.Controls.Add(this.lb_Position);
+            this.panel_Staff.Controls.Add(this.lb_pw);
+            this.panel_Staff.Controls.Add(this.lb_staffName);
+            this.panel_Staff.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Staff.Location = new System.Drawing.Point(336, 3);
+            this.panel_Staff.Name = "panel_Staff";
+            this.panel_Staff.Size = new System.Drawing.Size(373, 331);
+            this.panel_Staff.TabIndex = 1;
             // 
             // btn_add3
             // 
@@ -517,7 +517,7 @@
             "Admin"});
             this.clb_Position.Location = new System.Drawing.Point(144, 105);
             this.clb_Position.Name = "clb_Position";
-            this.clb_Position.Size = new System.Drawing.Size(120, 66);
+            this.clb_Position.Size = new System.Drawing.Size(120, 54);
             this.clb_Position.TabIndex = 46;
             this.clb_Position.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_Position_ItemCheck);
             this.clb_Position.Leave += new System.EventHandler(this.clb_Position_Leave);
@@ -527,7 +527,7 @@
             this.tb_Pw.Location = new System.Drawing.Point(144, 65);
             this.tb_Pw.Name = "tb_Pw";
             this.tb_Pw.PasswordChar = '．';
-            this.tb_Pw.Size = new System.Drawing.Size(173, 27);
+            this.tb_Pw.Size = new System.Drawing.Size(173, 32);
             this.tb_Pw.TabIndex = 45;
             this.tb_Pw.Leave += new System.EventHandler(this.tb_Pw_Leave);
             // 
@@ -535,7 +535,7 @@
             // 
             this.tb_staffName.Location = new System.Drawing.Point(144, 25);
             this.tb_staffName.Name = "tb_staffName";
-            this.tb_staffName.Size = new System.Drawing.Size(173, 27);
+            this.tb_staffName.Size = new System.Drawing.Size(173, 32);
             this.tb_staffName.TabIndex = 44;
             this.tb_staffName.Leave += new System.EventHandler(this.tb_staffName_Leave);
             // 
@@ -544,7 +544,7 @@
             this.lb_Position.AutoSize = true;
             this.lb_Position.Location = new System.Drawing.Point(23, 105);
             this.lb_Position.Name = "lb_Position";
-            this.lb_Position.Size = new System.Drawing.Size(72, 21);
+            this.lb_Position.Size = new System.Drawing.Size(86, 23);
             this.lb_Position.TabIndex = 43;
             this.lb_Position.Text = "Position:";
             // 
@@ -553,7 +553,7 @@
             this.lb_pw.AutoSize = true;
             this.lb_pw.Location = new System.Drawing.Point(23, 65);
             this.lb_pw.Name = "lb_pw";
-            this.lb_pw.Size = new System.Drawing.Size(86, 21);
+            this.lb_pw.Size = new System.Drawing.Size(108, 23);
             this.lb_pw.TabIndex = 41;
             this.lb_pw.Text = "Password:";
             // 
@@ -562,7 +562,7 @@
             this.lb_staffName.AutoSize = true;
             this.lb_staffName.Location = new System.Drawing.Point(23, 25);
             this.lb_staffName.Name = "lb_staffName";
-            this.lb_staffName.Size = new System.Drawing.Size(102, 21);
+            this.lb_staffName.Size = new System.Drawing.Size(125, 23);
             this.lb_staffName.TabIndex = 39;
             this.lb_staffName.Text = "Staff Name:";
             // 
@@ -570,19 +570,19 @@
             // 
             this.lb_Staff.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lb_Staff.FormattingEnabled = true;
-            this.lb_Staff.ItemHeight = 21;
+            this.lb_Staff.ItemHeight = 23;
             this.lb_Staff.Location = new System.Drawing.Point(3, 3);
             this.lb_Staff.Margin = new System.Windows.Forms.Padding(0);
             this.lb_Staff.Name = "lb_Staff";
-            this.lb_Staff.Size = new System.Drawing.Size(333, 252);
+            this.lb_Staff.Size = new System.Drawing.Size(333, 230);
             this.lb_Staff.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.listBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 30);
+            this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(712, 339);
+            this.tabPage1.Size = new System.Drawing.Size(712, 337);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Teacher";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -591,16 +591,16 @@
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
+            this.listBox1.ItemHeight = 23;
             this.listBox1.Location = new System.Drawing.Point(5, 0);
             this.listBox1.Margin = new System.Windows.Forms.Padding(0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(333, 252);
+            this.listBox1.Size = new System.Drawing.Size(333, 230);
             this.listBox1.TabIndex = 2;
             // 
             // Maintain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(720, 486);
             this.Name = "Maintain";
@@ -611,14 +611,14 @@
             this.BaseNavigationAction.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tbp_Course.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel_Course.ResumeLayout(false);
+            this.panel_Course.PerformLayout();
             this.tbp_Student.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_Student.ResumeLayout(false);
+            this.panel_Student.PerformLayout();
             this.tbp_Staff.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel_Staff.ResumeLayout(false);
+            this.panel_Staff.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -631,11 +631,11 @@
         private System.Windows.Forms.TabPage tbp_Course;
         private System.Windows.Forms.TabPage tbp_Student;
         private System.Windows.Forms.ListBox lb_Course;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_Course;
+        private System.Windows.Forms.Panel panel_Student;
         private System.Windows.Forms.TabPage tbp_Staff;
         private System.Windows.Forms.ListBox lb_Staff;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel_Staff;
         private System.Windows.Forms.Label lb_Courses;
         private System.Windows.Forms.Label lb_Cost;
         private System.Windows.Forms.Label lb_Day;
