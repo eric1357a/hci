@@ -5,6 +5,14 @@ using System.Text;
 
 namespace HCI.Model
 {
+    enum SearchCriteria
+    {
+        Price,
+        PriceRange,
+        AvailablePlaces,
+        AvailablePlacesForMonth
+    }
+
     class CourseCollection
     {
         public static LinkedList<Programme> Programmes = _InitProgrammes();
@@ -29,12 +37,29 @@ namespace HCI.Model
             return null;
         }
 
-        public static object[] Search(bool searchPrice, int value)
+        public static object[] Search(SearchCriteria sc, object[] args)
         {
             LinkedList<ListItem> data = new LinkedList<ListItem>();
             foreach (Course c in GetCourses())
-                if ((searchPrice && c.Cost <= value) || (!searchPrice && c.Seats <= value))
-                    data.AddLast(new ListItem(c.GetName(), c));
+                switch (sc)
+                {
+                    case SearchCriteria.Price:
+                        if (c.Cost == (Int32)args[0])
+                            data.AddLast(new ListItem(c.GetName(), c));
+                        break;
+                    case SearchCriteria.PriceRange:
+                        if (c.Cost >= (Int32)args[0] && c.Cost <= (Int32)args[1])
+                            data.AddLast(new ListItem(c.GetName(), c));
+                        break;
+                    case SearchCriteria.AvailablePlaces:
+                        if (c.Seats == (Int32)args[0])
+                            data.AddLast(new ListItem(c.GetName(), c));
+                        break;
+                    case SearchCriteria.AvailablePlacesForMonth:
+                        if (c.Seats == (Int32)args[0] && c.Day == (string)args[1])
+                            data.AddLast(new ListItem(c.GetName(), c));
+                        break;
+                }
             return data.ToArray();
         }
 

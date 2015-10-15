@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_Panel = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.lb_User = new System.Windows.Forms.Label();
             this.BaseContentPanel.SuspendLayout();
             this.BaseNavigation.SuspendLayout();
             this.BaseNavigationAction.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.btn_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseNavigationAction
             // 
             this.BaseNavigationAction.Controls.Add(this.lb_User);
-            this.BaseNavigationAction.Controls.Add(this.panel2);
+            this.BaseNavigationAction.Controls.Add(this.btn_Panel);
             this.BaseNavigationAction.Location = new System.Drawing.Point(360, 0);
             this.BaseNavigationAction.Margin = new System.Windows.Forms.Padding(0);
             this.BaseNavigationAction.Size = new System.Drawing.Size(360, 54);
             // 
-            // panel2
+            // btn_Panel
             // 
-            this.panel2.Controls.Add(this.btn_Logout);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(252, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(16, 12, 16, 12);
-            this.panel2.Size = new System.Drawing.Size(108, 54);
-            this.panel2.TabIndex = 2;
+            this.btn_Panel.Controls.Add(this.btn_Logout);
+            this.btn_Panel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_Panel.Location = new System.Drawing.Point(252, 0);
+            this.btn_Panel.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Panel.Name = "btn_Panel";
+            this.btn_Panel.Padding = new System.Windows.Forms.Padding(16, 12, 16, 12);
+            this.btn_Panel.Size = new System.Drawing.Size(108, 54);
+            this.btn_Panel.TabIndex = 2;
             // 
             // btn_Logout
             // 
@@ -92,7 +92,7 @@
             this.BaseContentPanel.ResumeLayout(false);
             this.BaseNavigation.ResumeLayout(false);
             this.BaseNavigationAction.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.btn_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,7 +100,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel btn_Panel;
         public System.Windows.Forms.Button btn_Logout;
         public System.Windows.Forms.Label lb_User;
     }
